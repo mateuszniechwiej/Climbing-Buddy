@@ -11,7 +11,7 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
     - [Site Goals](#site-goals)
     - [User Stories](#user-stories)
   - [The Scope Plane](#the-scope-plane)
-    - [Planed Features:](#planed-features)
+    - [Planed Features](#planed-features)
   - [The Structure Plane](#the-structure-plane)
   - [The Skeleton Plane](#the-skeleton-plane)
     - [Wireframes](#wireframes)
@@ -72,3 +72,40 @@ This website project will target the climbing community in Ireland. The primary 
 8. As a user, I want to find about any climbing events taking place.
 
 9. As a user, I want to be able to contact the site owner for any questions or suggestions I might have.
+
+## The Scope Plane
+
+### _Planed Features_
+
+:one: Users able to register.
+
+:two: Allow admin and users to login.
+
+:three: Allow admin and users to create climbing partner search event.
+
+:four: Allow users to read events created by others.
+
+:five: Display Users profile.
+
+:six: Climbing events displayed created by admin.
+
+:seven: Allow users to accept events created by others.
+
+:eight: Allow selecting date and hour for the climbing buddy search event.
+
+:nine: MongoDB database to store information about users and profiles.
+
+:one::zero: Responsive website with a navigation menu and website title.
+
+| -   | Planed Feature                                                     | Importance | Viability/Feasibility |
+| --- | ------------------------------------------------------------------ | ---------- | --------------------- |
+| 1   | Users able to register                                             | 5          | 3                     |
+| 2   | Allow admin and users to login                                     | 5          | 3                     |
+| 3   | Allow admin and users to create climbing partner search event      | 5          | 4                     |
+| 4   | Allow users to read and accept events created by others            | 4          | 5                     |
+| 5   | Display Users profile                                              | 4          | 4                     |
+| 6   | Climbing events displayed created by admin                         | 3          | 4                     |
+| 7   | Allow users to accept events created by others                     | 3          | 5                     |
+| 8   | Allow selecting date and hour for the climbing buddy search event  | 3          | 3                     |
+| 9   | Use MongoDB database to store information about users and profiles | 5          | 4                     |
+| 10  | Responsive website with a navigation menu and website title        | 5          | 2                     |
