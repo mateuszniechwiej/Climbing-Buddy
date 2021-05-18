@@ -2,7 +2,7 @@ import os
 from flask import Flask, flash, render_template, redirect, request, session, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -24,3 +24,10 @@ def events():
     events = mongo.db.events.find()
 
     return render_template("events.html", events=events)
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    """
+    registeration page for users without account 
+    """
+    return render_template("register.html")
