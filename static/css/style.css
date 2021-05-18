@@ -1,3 +1,7 @@
 background {
     background-color:grey;
 }
+
+.flash-msg {
+    line-height: 3;
+}

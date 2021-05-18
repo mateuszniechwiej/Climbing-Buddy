@@ -63,9 +63,24 @@
     
         <!-- Background image -->
     </header>
-    {% block content %}
-    {% endblock %}
 
+    <!-- flash messages-->
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flash-msg">
+                        <h3 class="d-flex justify-content-center mt-5">{{ message }}</h3> 
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+    <main class="container-fluid">
+        {% block content %}
+        {% endblock %}
+    </main>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
