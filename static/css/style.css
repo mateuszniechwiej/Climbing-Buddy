@@ -5,3 +5,11 @@ background {
 .flash-msg {
     line-height: 3;
 }
+
+.flash-error {
+    color: red;
+}
+
+.flash-message {
+    color:green;
+}

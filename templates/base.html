@@ -66,11 +66,12 @@
 
     <!-- flash messages-->
     <section>
-        {% with messages = get_flashed_messages() %}
+        <!-- to return list of tuples in the form of (category,message) -->   
+        {% with messages = get_flashed_messages(with_categories=True) %}
             {% if messages %}
-                {% for message in messages %}
+                {% for category, message in messages %}
                     <div class="row flash-msg">
-                        <h3 class="d-flex justify-content-center mt-5">{{ message }}</h3> 
+                        <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3> 
                     </div>
                 {% endfor %}
             {% endif %}
