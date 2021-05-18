@@ -22,7 +22,11 @@
             <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="20" pattern="^[a-zA-Z0-9]{6,20}$" required/>
             <label class="form-label" for="password">Password</label>
         </div>
-
+        <!-- Confirm Password input -->
+        <div class="form-outline mb-4">
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control" />
+            <label class="form-label" for="confirm_password">Confirm password</label>
+        </div>
         <!-- Checkbox -->
         <div class="form-check d-flex justify-content-center mb-4">
             <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
@@ -32,7 +36,7 @@
             </label>
         </div>
         <!-- Submit button -->
-        <button type="submit" name="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+        <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
 
         </div>
     </form>
