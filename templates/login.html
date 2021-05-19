@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="d-flex justify-content-center mt-5">Login</h3>
+
+    <div class="container col-4 mt-5">
+        <form method="POST" action="{{ url_for('login') }}">
+            <!-- Username input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="username" name="username" class="form-control" minlength="3" maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" required/>
+                <label class="form-label" for="username">Username</label>
+            </div>
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="20" pattern="^[a-zA-Z0-9]{6,20}$" required/>
+                <label class="form-label" for="password">Password</label>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block mb-4">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <p class="d-flex justify-content-center">
+                Not Yet Registered? 
+                <a href="{{ url_for('register') }}">Join our climbing community</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
