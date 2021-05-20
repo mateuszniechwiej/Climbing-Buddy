@@ -106,7 +106,6 @@ def profile(username):
 
     if session["user"]:
         return render_template("profile.html", username=username)
-    
     return redirect(url_for("login"))
 #TODO: Add raised climbing searches and for admin also climbing events
 
