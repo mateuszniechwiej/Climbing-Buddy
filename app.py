@@ -103,7 +103,21 @@ def profile(username):
     Taking session user's username and email from DataBase
     """
     username = mongo.db.users.find_one({"username": session["user"] })
-    return render_template("profile.html", username=username)
-    #TODO: Add raised climbing searches and for admin also climbing events
 
+    if session["user"]:
+        return render_template("profile.html", username=username)
+    
+    return redirect(url_for("login"))
+#TODO: Add raised climbing searches and for admin also climbing events
+
+
+@app.route("/logout")
+def logout():
+    """
+    To logout profile, remove the user session cookies and
+    return to login page.
+    """
+    flash("You've been logged out.See you again", "message")
+    session.pop("user")
+    return redirect(url_for("login"))
 
