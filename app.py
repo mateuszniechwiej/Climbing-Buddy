@@ -102,9 +102,8 @@ def profile(username):
     """
     Taking session user's username and email from DataBase
     """
-    username = mongo.db.users.find_one({"username": session["user"] })["username"]
-    user_email = mongo.db.users.find_one({"username": session["user"] })["user_email"]
-    return render_template("profile.html", username=username,user_email=user_email )
+    username = mongo.db.users.find_one({"username": session["user"] })
+    return render_template("profile.html", username=username)
     #TODO: Add raised climbing searches and for admin also climbing events
 
 
