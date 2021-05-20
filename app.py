@@ -120,3 +120,6 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+@app.route("/add_event")
+def add_event():
+    return render_template("add_event.html")
