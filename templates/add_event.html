@@ -1,9 +1,24 @@
-{% extends "base.html" %}  
+{% extends "base.html" %}
 {% block content %}
-    <h3 class="d-flex justify-content-center mt-5">Add Event</h3>
-    <div class="row">
-        <div class="col-8">
-            <input type="text" name="date" class="flatpickr js-flatpickr-dateTime" placeholder="select even date">
-        </div>
+<h3 class="d-flex justify-content-center mt-5">Add Event</h3>
+<div class="container col-4">
+    <div class="row py-3">
+        <form action="" method="POST">
+            <div class="input-group mb-3 " ">
+                <div class="input-group mt-3 mb-3">
+                    <input type="date" id="date" class="form-control" placeholder="Location" aria-label="Event location"
+                        aria-describedby="location" />
+                </div>
+            </div>
+            <div class="input-group mt-3 mb-3">
+                <input type="time" id="time" class="form-control" placeholder="Location" aria-label="Event location"
+                    aria-describedby="location" />
+            </div>
+            <div class="input-group">
+                <textarea id="textarea" class="form-control" aria-label="Event description"
+                    placeholder="event description" rows="4" style="height: max-content;"></textarea>
+            </div>
+        </form>
     </div>
+</div>
 {% endblock %}

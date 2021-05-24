@@ -13,3 +13,7 @@ background {
 .flash-message {
     color:green;
 }
+
+textarea {
+    height: max-content;
+}
