@@ -6,17 +6,21 @@
         <form action="" method="POST">
             <div class="input-group mb-3 " ">
                 <div class="input-group mt-3 mb-3">
-                    <input type="date" id="date" class="form-control" placeholder="Location" aria-label="Event location"
-                        aria-describedby="location" />
+                    <input type="date" id="event_date" name="event_date" class="form-control" placeholder="Date" aria-label="date of event"
+                        aria-describedby="date" />
                 </div>
             </div>
             <div class="input-group mt-3 mb-3">
-                <input type="time" id="time" class="form-control" placeholder="Location" aria-label="Event location"
-                    aria-describedby="location" />
+                <input type="time" id="event_time" name="event_time" class="form-control" placeholder="Time" aria-label="Time of event"
+                    aria-describedby="time" required/>
+            </div>
+            <div class="input-group mt-3 mb-3">
+                <input type="text" id="event_location" name="event_location" class="form-control" placeholder="Location" aria-label="Location"
+                    aria-describedby="time" required/>
             </div>
             <div class="input-group">
-                <textarea id="textarea" class="form-control" aria-label="Event description"
-                    placeholder="event description" rows="4" style="height: max-content;"></textarea>
+                <textarea id="event_description" name="event_description" class="form-control" aria-label="Event description"
+                    placeholder="event description" rows="4" required></textarea>
             </div>
         </form>
     </div>
