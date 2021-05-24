@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="d-flex justify-content-center mt-5">Add Event</h3>
+<h3 class="d-flex justify-content-center mt-5">Edit Event</h3>
 <div class="container col-4">
     <div class="row py-3">
-        <form action="{{ url_for('add_event') }}" method="POST">
+        <form action="{{ url_for('edit_event', event_id=event._id) }}" method="POST">
             <div class="input-group mb-3 " ">
                     <div class=" input-group mt-3 mb-3">
                 <input type="date" id="event_date" name="event_date" class="form-control" placeholder="Date"
@@ -28,7 +28,7 @@
                 </select>
             </div>
             <div class="input-group-append pt-3">
-                <button class="btn btn-primary" type="submit">Add Event</button>
+                <button class="btn btn-primary" type="submit">Edit Event</button>
             </div>
         </form>
     </div>

@@ -93,10 +93,6 @@ def login():
     return render_template("login.html")
 
 
-if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
-
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
@@ -120,6 +116,7 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+
 @app.route("/add_event",methods=["GET","POST"])
 def add_event():
     if request.method == "POST":
@@ -134,3 +131,14 @@ def add_event():
         flash("Event Created!!!", "message")
         return redirect(url_for("add_event"))
     return render_template("add_event.html")
+
+
+@app.route("/edit_event/<event_id>", methods=["GET","POST"])
+def edit_event(event_id):
+    event = mongo.db.events.find_one({"_id": ObjectId(event_id)})
+    return render_template("edit_event.html", event = event)
+
+
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
+
