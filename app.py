@@ -23,7 +23,7 @@ def events():
     """
     Renders events page
     """
-    events = mongo.db.events.find()
+    events = list(mongo.db.events.find())
 
     return render_template("events.html", events=events)
 
@@ -127,7 +127,8 @@ def add_event():
             "event_date": request.form.get("event_date"),
             "event_time": request.form.get("event_time"),
             "event_location": request.form.get("event_location"),
-            "event_description": request.form.get("event_description")  
+            "event_description": request.form.get("event_description"),
+            "event_type":request.form.get("event_type")  
         }
         mongo.db.events.insert_one(event)
         flash("Event Created!!!", "message")

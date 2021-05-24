@@ -8,3 +8,6 @@
 
 // });
 
+// classes for event image
+document.querySelector('.outdoor').src = "../static/images/outdoor.jpg";
+document.querySelector('.indoor').src = "../static/images/indoor.jpg";
