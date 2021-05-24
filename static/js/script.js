@@ -8,6 +8,14 @@
 
 // });
 
-// classes for event image
-document.querySelector('.outdoor').src = "../static/images/outdoor.jpg";
-document.querySelector('.indoor').src = "../static/images/indoor.jpg";
+// Dipsplaying different images depending on event type
+const outdoor = document.querySelectorAll('.outdoor')
+outdoor.forEach((image) => {
+    image.src = "../static/images/outdoor.jpg"
+});
+
+const indoor = document.querySelectorAll('.indoor')
+indoor.forEach((image) => {
+    image.src = "../static/images/indoor.jpg"
+});
+
