@@ -170,6 +170,14 @@ def climbs():
     return render_template("climbs.html",climbs=climbs)
 
 
+@app.route("/search_climber",methods=["GET","POST"])
+def search_climber():
+    """
+    Allows users to raise a climbing partner search event
+    """
+    return render_template("search_climber.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
 

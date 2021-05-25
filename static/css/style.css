@@ -17,3 +17,7 @@ background {
 #event_description {
     height: max-content;
 }
+
+#climb_description {
+    height: max-content;
+}
