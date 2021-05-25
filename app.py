@@ -175,9 +175,23 @@ def search_climber():
     """
     Allows users to raise a climbing partner search event
     """
+    if request.method == "POST":
+        full_equip = "yes" if request.form.get("full_equip") else "no"
+        climb = {
+            "climb_date": request.form.get("climb_date"),
+            "climb_time": request.form.get("climb_time"),
+            "climb_type": request.form.get("climb_type"),
+            "climb_location": request.form.get("climb_location"),
+            "climb_description": request.form.get("climb_description"),
+            "full_equip": full_equip,
+            "created_by": session["user"]
+        }
+        mongo.db.climbs.insert_one(climb)
+        flash("Climbing search added", "message")
+        return redirect(url_for("climbs"))
+
     return render_template("search_climber.html")
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
-

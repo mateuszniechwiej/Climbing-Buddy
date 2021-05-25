@@ -11,11 +11,11 @@
             </div>
             <div class="input-group mt-3 mb-3">
                 <input type="time" id="climb_time" name="climb_time" class="form-control" placeholder="Time"
-                    aria-label="Time of event" aria-describedby="time" required />
+                    aria-label="time of event" aria-describedby="time" required />
             </div>
             <div class="input-group pt-3">
                 <select class="form-select" name="climb_type" aria-label="climbing type">
-                    <option selected>Climbing type for that day</option>
+                    <option disabled selected>Climbing type for that day</option>
                     <option value="sport">Sport</option>
                     <option value="trad">Trad</option>
                     <option value="sport&trad">Sport&Trad</option>
@@ -30,10 +30,9 @@
                     aria-label="climb description" placeholder="climbing info" rows="4" required></textarea>
             </div>
             <div class="input-group pt-3">
-                <!-- Checked switch -->
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" />
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Providnig full climbing gear</label>
+                    <input class="form-check-input" type="checkbox" id="full_equip" name="full_equip" />
+                    <label class="form-check-label" for="full_equip">Providnig full climbing gear</label>
                 </div>
             </div>
             <div class="input-group-append pt-3">
