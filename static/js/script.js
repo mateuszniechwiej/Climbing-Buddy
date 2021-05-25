@@ -19,3 +19,10 @@ indoor.forEach((image) => {
     image.src = "../static/images/indoor.jpg"
 });
 
+// Modal script
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.mdb.modal', () => {
+  myInput.focus()
+})
