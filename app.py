@@ -153,6 +153,12 @@ def edit_event(event_id):
     return render_template("edit_event.html", event=event)
 
 
+@app.route("/delete_event/<event_id>")
+def delete_event(event_id):
+    mongo.db.events.remove({"_id": ObjectId(event_id)})
+    flash("Event successfully removed", "message")
+    return redirect(url_for("events"))
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
 
