@@ -159,6 +159,17 @@ def delete_event(event_id):
     flash("Event successfully removed", "message")
     return redirect(url_for("events"))
 
+
+@app.route("/climbs")
+def climbs():
+    """
+    Renders climbs events page
+    """
+    climbs = list(mongo.db.climbs.find())
+
+    return render_template("climbs.html",climbs=climbs)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
 
