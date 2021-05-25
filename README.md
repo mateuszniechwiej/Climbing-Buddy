@@ -167,13 +167,12 @@ A solution to satisfy user requirements:
 
 A solution to satisfy user requirements:
 
-- solution not yet found:question:
 
-Considered solutions:
+  - once the interested user clicks the "Accept Climb" button from the climbing buddy page a modal form with session username, email and message to fill out will appear for the user to submit. After submitting the modal form, an email will be sent to the climbing search event creator with the user name and email details of who accepted the request.
 
-:hash: Send automatic email to user once his request was approved.
+  - emailjs.com will be used to send mail after accepting the climbing request.
 
-:hash: Display participating(in the request) users emails.
+Comments: Feature implementation: private chat messages between users to be available for each climbing event so users emails don't need to be revealed(Consider solution: Sending private messages using Flask-SocketIO).
 
 > As a user, I want to find about any climbing events taking place.
 
