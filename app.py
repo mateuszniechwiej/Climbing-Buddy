@@ -135,8 +135,22 @@ def add_event():
 
 @app.route("/edit_event/<event_id>", methods=["GET","POST"])
 def edit_event(event_id):
+    """
+    Allows admin to update and delete climbing events.
+    """
+    if request.method == "POST":
+        submit = {
+            "event_date": request.form.get("event_date"),
+            "event_time": request.form.get("event_time"),
+            "event_location": request.form.get("event_location"),
+            "event_description": request.form.get("event_description"),
+            "event_type":request.form.get("event_type")  
+        }
+        mongo.db.events.update({"_id": ObjectId(event_id)}, submit)
+        flash("Event Successfully updated!!!", "message")
+
     event = mongo.db.events.find_one({"_id": ObjectId(event_id)})
-    return render_template("edit_event.html", event = event)
+    return render_template("edit_event.html", event=event)
 
 
 if __name__ == "__main__":
