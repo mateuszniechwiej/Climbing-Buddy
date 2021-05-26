@@ -193,5 +193,11 @@ def search_climber():
     return render_template("search_climber.html")
 
 
+@app.route("/edit_climb/<climb_id>", methods=["GET", "POST"])
+def edit_climb(climb_id):
+    climb = mongo.db.climbs.find_one({"_id": ObjectId(climb_id)})
+    return render_template("edit_climb.html", climb=climb)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
