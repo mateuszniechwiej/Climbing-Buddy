@@ -195,6 +195,20 @@ def search_climber():
 
 @app.route("/edit_climb/<climb_id>", methods=["GET", "POST"])
 def edit_climb(climb_id):
+    if request.method == "POST":
+        full_equip = "yes" if request.form.get("full_equip") else "no"
+        edit = {
+            "climb_date": request.form.get("climb_date"),
+            "climb_time": request.form.get("climb_time"),
+            "climb_type": request.form.get("climb_type"),
+            "climb_location": request.form.get("climb_location"),
+            "climb_description": request.form.get("climb_description"),
+            "full_equip": full_equip,
+            "created_by": session["user"]
+        }
+        mongo.db.climbs.update({"_id": ObjectId(climb_id)}, edit)
+        flash("Climbing request updated", "message")
+
     climb = mongo.db.climbs.find_one({"_id": ObjectId(climb_id)})
     return render_template("edit_climb.html", climb=climb)
 

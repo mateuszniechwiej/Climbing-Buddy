@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="d-flex justify-content-center mt-5">Edit climb</h3>
+<div class="container col-4">
+    <div class="row py-3">
+        <form action="{{ url_for('edit_climb', climb_id=climb._id) }}" method="POST">
+            <div class="input-group mb-3 ">
+                    <div class=" input-group mt-3 mb-3">
+                <input value="{{ climb.climb_date }}" type="date" id="climb_date" name="climb_date" class="form-control" placeholder="Date"
+                    aria-label="date of event" aria-describedby="date" />
+            </div>
+            <div class="input-group mt-3 mb-3">
+                <input value = "{{ climb.climb_time }}"type="time" id="climb_time" name="climb_time" class="form-control" placeholder="Time"
+                    aria-label="time of event" aria-describedby="time" required />
+            </div>
+            <div class="input-group pt-3">
+                <select class="form-select" name="climb_type" aria-label="climbing type">
+                    <option disabled selected>Climbing type for that day</option>
+                    <option value="sport">Sport</option>
+                    <option value="trad">Trad</option>
+                    <option value="sport&trad">Sport&Trad</option>
+                </select>
+            </div>
+            <div class="input-group mt-3 mb-3">
+                <input value="{{ climb.climb_location }}"type="text" id="climb_location" name="climb_location" class="form-control" placeholder="Location"
+                    aria-label="Location" aria-describedby="location" required />
+            </div>
+            <div class="input-group">
+                <textarea id="climb_description" name="climb_description" class="form-control"
+                    aria-label="climb description" placeholder="climbing info" rows="4" required>{{ climb.climb_description }}</textarea>
+            </div>
+            <div class="input-group pt-3">
+                <div class="form-check form-switch">
+                    {% if climb.full_equip == 'yes' %}
+                    <input class="form-check-input" type="checkbox" id="full_equip" name="full_equip" checked />
+                    {% else %}
+                    <input class="form-check-input" type="checkbox" id="full_equip" name="full_equip"/>
+                    {% endif %}
+                    <label class="form-check-label" for="full_equip">Providnig full climbing gear</label>
+                </div>
+            </div>
+            <div class="input-group-append pt-3">
+                <a href="{{ url_for('climbs') }}" class="btn btn-danger">Cancel
+                    <i class="far fa-window-close"></i>
+                </a>
+                <button class="btn btn-primary" type="edit">Edit Climb</button>
+            </div>
+        </form>
+    </div>
+    {% endblock %}
