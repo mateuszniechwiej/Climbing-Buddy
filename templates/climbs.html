@@ -17,6 +17,7 @@
             </div>
             {% if session.user|lower == climb.created_by %}
             <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
+            <a href="{{ url_for('delete_climb', climb_id=climb._id) }}" class="btn btn-danger">Delete</a>
             {% endif %}
             {% endfor %}            
         </div>

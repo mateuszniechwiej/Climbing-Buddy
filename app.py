@@ -195,6 +195,9 @@ def search_climber():
 
 @app.route("/edit_climb/<climb_id>", methods=["GET", "POST"])
 def edit_climb(climb_id):
+    """
+    Allows users to edit the climbing request and updated it in MongoDB.
+    """
     if request.method == "POST":
         full_equip = "yes" if request.form.get("full_equip") else "no"
         edit = {
@@ -211,6 +214,16 @@ def edit_climb(climb_id):
 
     climb = mongo.db.climbs.find_one({"_id": ObjectId(climb_id)})
     return render_template("edit_climb.html", climb=climb)
+
+
+@app.route("/delete_climb/<climb_id>")
+def delete_climb(climb_id):
+    """
+    Allows users to delete climbing requests created by them.
+    """
+    mongo.db.climbs.remove({"_id": ObjectId(climb_id)})
+    flash("Climb search removed", "message")
+    return redirect(url_for("climbs"))
 
 
 if __name__ == "__main__":
