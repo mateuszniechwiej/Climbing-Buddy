@@ -166,8 +166,9 @@ def climbs():
     Renders climbs events page
     """
     climbs = list(mongo.db.climbs.find())
+    username = mongo.db.users.find_one({"username": session["user"] })
 
-    return render_template("climbs.html",climbs=climbs)
+    return render_template("climbs.html",climbs=climbs,username=username)
 
 
 @app.route("/search_climber",methods=["GET","POST"])
@@ -175,6 +176,7 @@ def search_climber():
     """
     Allows users to raise a climbing partner search event
     """
+    user_email = mongo.db.users.find_one({"username": session["user"] })["user_email"]
     if request.method == "POST":
         full_equip = "yes" if request.form.get("full_equip") else "no"
         climb = {
@@ -184,7 +186,8 @@ def search_climber():
             "climb_location": request.form.get("climb_location"),
             "climb_description": request.form.get("climb_description"),
             "full_equip": full_equip,
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "email": user_email
         }
         mongo.db.climbs.insert_one(climb)
         flash("Climbing search added", "message")
