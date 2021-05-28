@@ -43,4 +43,16 @@
         {% endfor %}            
         </div>
     </div>
+    {% block script %}
+    {% for climb in climbs %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_Pe6VH6LXUub6khTthNcbC");
+            emailjs.send("service_yq6u3bm","climbing_buddy",{user:"{{ climb.created_by }}"}, );
+        })();
+    </script>
+    {% endfor %}
+    {% endblock %}
 {% endblock %}
