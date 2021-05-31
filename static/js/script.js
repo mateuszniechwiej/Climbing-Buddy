@@ -19,10 +19,17 @@ indoor.forEach((image) => {
     image.src = "../static/images/indoor.jpg"
 });
 
-// Modal script
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+// Modals script
+const acceptModal = document.getElementById('accept_climb')
+const acceptfocus = document.getElementById('message')
+const deleteModal = document.getElementByClassName('delete')
+const deletefocus = document.getElementById('')
 
-myModal.addEventListener('shown.mdb.modal', () => {
-  myInput.focus()
-})
+const deleteModal = document.getElementsByClassName('delete') 
+
+acceptModal.addEventListener('shown.mdb.modal', () => {
+    myInput.focus()
+});
+
+deleteModal.addEventListener('shown.mdb.modal')
+    
