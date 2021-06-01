@@ -25,37 +25,37 @@
         <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal" role="button">Delete</a>
         <!-- Accept climb modal -->
         <!-- TODO: succes info for usser and close modal after submitting -->
-        <div class="modal fade " id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb"
-            aria-hidden="true">
+        <div class="modal fade " id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content ">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex justify-content-center" id="confirm_climb">Confirm climb</h5>
                     </div>
-                    <div class="modal-body"><i class="fas fa-times"></i>
-                        <form onsubmit="return sendMail(this);">
+                    <div class="modal-body">
+                        <form id="submit_climb" onsubmit="return sendMail(this);">
                             <!-- Name input -->
                             <div class="form-outline mb-4">
-                              <input type="text" id="name" class="form-control" value="{{ username.username  }}" />
-                              <label class="form-label" for="name">Your Profile name</label>
+                                <input type="text" id="name" class="form-control" value="{{ username.username  }}" />
+                                <label class="form-label" for="name">Your Profile name</label>
                             </div>
-                          
+        
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                              <input type="email" id="email" class="form-control" value=" {{ username.user_email }}" />
-                              <label class="form-label" for="email">Email address</label>
+                                <input type="email" id="email" class="form-control" value=" {{ username.user_email }}" />
+                                <label class="form-label" for="email">Email address</label>
                             </div>
-                          
+        
                             <!-- Message input -->
                             <div class="form-outline mb-4">
-                              <textarea class="form-control" id="message" rows="4"></textarea>
-                              <label class="form-label" for="">Message</label>
+                                <textarea class="form-control" id="message" rows="4"></textarea>
+                                <label class="form-label" for="">Message</label>
                             </div>
-                          
+                            <div class="response" style="width:100%; height:100%;">
+                            </div>
                             <!-- Submit button -->
-                            <a href="#" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</a>
-                            <button id="submit_climb" type="submit" class="btn btn-primary btn-block mb-4">Send</button>
-                          </form>
+                            <a href="#" class="btn btn-danger" data-mdb-dismiss="modal"><i class="fas fa-times"></i> Close</a>
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+                        </form>
                     </div>
                 </div>
             </div>
