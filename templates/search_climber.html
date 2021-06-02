@@ -22,8 +22,8 @@
                 </select>
             </div>
             <div class="input-group mt-3 mb-3">
-                <input type="text" id="climb_location" name="climb_location" class="form-control" placeholder="Location"
-                    aria-label="Location" aria-describedby="location" required />
+                <input type="text" id="autocomplete" name="climb_location" class="form-control" placeholder="Enter location"
+                    aria-label="Location" aria-describedby="location"/>
             </div>
             <div class="input-group">
                 <textarea id="climb_description" name="climb_description" class="form-control"
@@ -40,4 +40,10 @@
             </div>
         </form>
     </div>
+    {% block script %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxmvO8Q4IkYaxhRkesueMk7Qpin2lYjY&libraries=places&callback=initAutocomplete"
+            async defer>
+    </script>
+    <script src="{{ url_for('static', filename='js/places.js') }}"></script>
+    {% endblock %}
     {% endblock %}

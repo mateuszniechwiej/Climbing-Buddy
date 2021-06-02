@@ -1,4 +1,3 @@
-const response = document.querySelector('.response')
 
 function sendMail(acceptForm) {
   emailjs
@@ -11,10 +10,10 @@ function sendMail(acceptForm) {
     })
     .then(
       function () {
-        response.innerHTML = "Your message was sent!";
+        document.querySelector('.response').innerHTML = "Your message was sent!";
       },
       function () {
-        response.innerHtml = "There was an error to send your message. Try again later..."
+        document.querySelector('.response').innerHtml = "There was an error to send your message. Try again later..."
       }
     );
   return false;

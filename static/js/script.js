@@ -1,4 +1,4 @@
-// TODO: // "flapickr" date and time picker 
+// TODO: // "flapickr" date and time picker
 // flatpickr('.flatpickr', {
 //     enableTime: true,
 //     time_24hr: true,
@@ -9,26 +9,24 @@
 // });
 
 // Dipsplaying different images depending on event type
-const outdoor = document.querySelectorAll('.outdoor')
+const outdoor = document.querySelectorAll(".outdoor");
 outdoor.forEach((image) => {
-    image.src = "../static/images/outdoor.jpg"
+  image.src = "../static/images/outdoor.jpg";
 });
 
-const indoor = document.querySelectorAll('.indoor')
+const indoor = document.querySelectorAll(".indoor");
 indoor.forEach((image) => {
-    image.src = "../static/images/indoor.jpg"
+  image.src = "../static/images/indoor.jpg";
 });
 
 // Modals script
-const acceptModal = document.querySelector('#accept_climb')
-const acceptFocus = document.querySelector('#message')
-const deleteModal = document.querySelector('.delete') 
+const Modal = document.querySelector(".modal");
+const acceptFocus = document.querySelector("#message");
 
-acceptModal.addEventListener('shown.mdb.modal', () => {
-    acceptFocus.focus()
+Modal.addEventListener("shown.mdb.modal", () => {
+  acceptFocus.focus();
 });
 
-deleteModal.addEventListener('shown.mdb.modal', () => {
+// deleteModal.addEventListener("shown.mdb.modal", () => {});
 
-});
 

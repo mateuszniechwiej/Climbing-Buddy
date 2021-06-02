@@ -61,7 +61,7 @@
             </div>
         </div>
         <!-- Confirm delete modal -->
-        <div class="modal fade delete" id="delete_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Delete Climb"
+        <div class="modal fade" id="delete_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Delete Climb"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content ">
@@ -91,6 +91,7 @@
         emailjs.init("user_Pe6VH6LXUub6khTthNcbC");
     })();
 </script>
+<script src="static/js/email.js"></script>
 <!-- variables to pass values to send mail-->
 <script type="text/javascript">
     var user = "{{ climb.created_by }}"
@@ -98,7 +99,7 @@
     var other_user = "{{ username.username }}"
     var other_email = "{{ username.user_email }}"
 </script>
-<script src="static/js/email.js"></script>
+
 {% endfor %}
 {% endblock %}
 {% endblock %}
