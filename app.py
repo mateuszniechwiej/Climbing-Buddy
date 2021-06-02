@@ -21,16 +21,15 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     """
-    Website home page
+    Renders home page when main website loaded
     """
     return render_template("index.html")
-
 
 
 @app.route("/events")
 def events():
     """
-    Renders events page
+    Renders events page and display all events added by admin
     """
     events = list(mongo.db.events.find())
 
@@ -40,8 +39,9 @@ def events():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    registeration page cheking if account exits
+    Registration page checking if account exits
      and if not allowing user to register.
+     checking if password match confirm password.
     """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
@@ -56,10 +56,14 @@ def register():
 
         if password == confirm_password:
             new_member = {
-                # using the name= "" attribiute to grab the correct username,email and password
-                "username": request.form.get("username").lower(),
-                "user_email": request.form.get("email").lower(),
-                "password": generate_password_hash(request.form.get("password")),
+                # using the name="" attribiute to grab the correct
+                #  username,email and password
+                "username":
+                request.form.get("username").lower(),
+                "user_email":
+                request.form.get("email").lower(),
+                "password":
+                generate_password_hash(request.form.get("password")),
             }
             # insert new member into Database
             mongo.db.users.insert_one(new_member)
@@ -76,7 +80,7 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    Login user after checking if user in DB
+    Login user after checking if user in Database
     """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
@@ -107,12 +111,11 @@ def profile(username):
     """
     Taking session user's username and email from DataBase
     """
-    username = mongo.db.users.find_one({"username": session["user"] })
+    username = mongo.db.users.find_one({"username": session["user"]})
 
     if session["user"]:
         return render_template("profile.html", username=username)
     return redirect(url_for("login"))
-#TODO: Add raised climbing searches and for admin also climbing events
 
 
 @app.route("/logout")
@@ -126,15 +129,19 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_event",methods=["GET","POST"])
+@app.route("/add_event", methods=["GET", "POST"])
 def add_event():
+    """
+    Allows admin to add climbing events by getting add_event
+    form and stores into DB.Finaly renders add_event.html.
+    """
     if request.method == "POST":
         event = {
             "event_date": request.form.get("event_date"),
             "event_time": request.form.get("event_time"),
             "event_location": request.form.get("event_location"),
             "event_description": request.form.get("event_description"),
-            "event_type":request.form.get("event_type")  
+            "event_type": request.form.get("event_type")
         }
         mongo.db.events.insert_one(event)
         flash("Event Created!!!", "message")
@@ -142,10 +149,11 @@ def add_event():
     return render_template("add_event.html")
 
 
-@app.route("/edit_event/<event_id>", methods=["GET","POST"])
+@app.route("/edit_event/<event_id>", methods=["GET", "POST"])
 def edit_event(event_id):
     """
-    Allows admin to update and delete climbing events.
+    Allows admin to update climbing events.
+    Flash message displays if successful.
     """
     if request.method == "POST":
         submit = {
@@ -153,7 +161,7 @@ def edit_event(event_id):
             "event_time": request.form.get("event_time"),
             "event_location": request.form.get("event_location"),
             "event_description": request.form.get("event_description"),
-            "event_type":request.form.get("event_type")  
+            "event_type": request.form.get("event_type")
         }
         mongo.db.events.update({"_id": ObjectId(event_id)}, submit)
         flash("Event Successfully updated!!!", "message")
@@ -164,6 +172,10 @@ def edit_event(event_id):
 
 @app.route("/delete_event/<event_id>")
 def delete_event(event_id):
+    """
+    Alows admin to delete event.
+    Flash message displays if successful.
+    """
     mongo.db.events.remove({"_id": ObjectId(event_id)})
     flash("Event successfully removed", "message")
     return redirect(url_for("events"))
@@ -172,20 +184,23 @@ def delete_event(event_id):
 @app.route("/climbs")
 def climbs():
     """
-    Renders climbs events page
+    Renders climbs events page and display climbs request raised by
+    all registered users.
     """
     climbs = list(mongo.db.climbs.find())
-    username = mongo.db.users.find_one({"username": session["user"] })
+    username = mongo.db.users.find_one({"username": session["user"]})
 
-    return render_template("climbs.html",climbs=climbs,username=username)
+    return render_template("climbs.html", climbs=climbs, username=username)
 
 
-@app.route("/search_climber",methods=["GET","POST"])
+@app.route("/search_climber", methods=["GET", "POST"])
 def search_climber():
     """
-    Allows users to raise a climbing partner search event
+    Allows users to add climbing events by getting search climber
+    form and stores into DB.Finaly renders search_climber.html.html.
     """
-    user_email = mongo.db.users.find_one({"username": session["user"] })["user_email"]
+    user_email = (
+        mongo.db.users.find_one({"username": session["user"]})["user_email"])
     if request.method == "POST":
         full_equip = "yes" if request.form.get("full_equip") else "no"
         climb = {
@@ -232,6 +247,7 @@ def edit_climb(climb_id):
 def delete_climb(climb_id):
     """
     Allows users to delete climbing requests created by them.
+    Flash message displays if successful.
     """
     mongo.db.climbs.remove({"_id": ObjectId(climb_id)})
     flash("Climb search removed", "message")
@@ -239,4 +255,6 @@ def delete_climb(climb_id):
 
 
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)
