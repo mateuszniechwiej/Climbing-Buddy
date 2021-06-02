@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--Error page-->
+<div class="row">
+    <div class="col col-md-6 offset-md-3">
+        <h2 id="error">Ups, something went wrong</h2>
+        <h1 >{{ error }}</h1><br>
+        <h2 >{{ error_msg }}</h2>
+        <a href="{{ url_for('home') }}">Click here to got to Climbing Buddy homepage.</a>
+
+    </div>
+</div>
+
+{% endblock %}

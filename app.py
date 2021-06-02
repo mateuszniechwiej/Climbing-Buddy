@@ -1,6 +1,6 @@
 import os
 from flask import Flask, flash, render_template,\
- redirect, request, session, url_for
+ redirect, request, session, url_for, abort
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -252,6 +252,29 @@ def delete_climb(climb_id):
     mongo.db.climbs.remove({"_id": ObjectId(climb_id)})
     flash("Climb search removed", "message")
     return redirect(url_for("climbs"))
+
+
+# Error handlers
+# Testing errrors by importing abort from flask and return it in homepage
+@app.errorhandler(404)
+def page_not_found(error):
+    error = 404
+    error_msg = "I'm sorry but the page you looking for doesn't exist."
+    return render_template("error.html", error=error, error_msg=error_msg), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    error = 500
+    error_msg = "We're sorry! There is an internal server error.\
+        please try again later."
+    return render_template("error.html", error = error, error_msg=error_msg ), 500
+
+
+@app.errorhandler(Exception)
+def other_exceptions(error):
+    error_msg = "We're sorry but the error above has occured"
+    return render_template("error.html", error=error, error_msg=error_msg ) 
 
 
 if __name__ == "__main__":
