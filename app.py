@@ -18,6 +18,15 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    """
+    Website home page
+    """
+    return render_template("index.html")
+
+
+
 @app.route("/events")
 def events():
     """

@@ -20,13 +20,12 @@ indoor.forEach((image) => {
 });
 
 // Modals script
-const Modal = document.querySelector(".modal");
+const Modals = document.querySelector(".modal");
 const acceptFocus = document.querySelector("#message");
 
-Modal.addEventListener("shown.mdb.modal", () => {
+Modals.forEach((modal) => {
+    modal.addEventListener("shown.mdb.modal", () => {
   acceptFocus.focus();
 });
 
-// deleteModal.addEventListener("shown.mdb.modal", () => {});
-
-
+// deleteModal.addEventListener("shown.mdb.modal", () => {})
