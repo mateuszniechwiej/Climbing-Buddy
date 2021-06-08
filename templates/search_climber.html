@@ -1,37 +1,44 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="d-flex justify-content-center mt-5">Search for a climber</h3>
-<div class="container col-4">
+<h3 class="d-flex justify-content-center mt-5" style="font-family: Chiller; font-size: 2em;">SEARCH FOR A CLIMBER </h3>
+<div class="container col-11 sol-sm-8 col-lg-6 cb-add_climb">
     <div class="row py-3">
         <form action="{{ url_for('search_climber') }}" method="POST">
-            <div class="input-group mb-3 " ">
-                    <div class=" input-group mt-3 mb-3">
-                <input type="date" id="climb_date" name="climb_date" class="form-control" placeholder="Date"
-                    aria-label="date of event" aria-describedby="date" />
-            </div>
-            <div class="input-group mt-3 mb-3">
-                <input type="time" id="climb_time" name="climb_time" class="form-control" placeholder="Time"
-                    aria-label="time of event" aria-describedby="time" required />
+            <div class="input-group mb-3 flatpickr">
+                <input type="text" class="form-control" placeholder="Select Date.." data-input>
+                <div class="input-group-append">
+                    <a class="input-button btn" title="toggle" data-toggle>
+                        <i class="far fa-calendar"></i>
+                    </a>
+                    <a class="input-button btn" title="clear" data-clear>
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+              
+                
             </div>
             <div class="input-group pt-3">
+                <span class="input-group-text"><i class="fas fa-mountain"></i></span>
                 <select class="form-select" name="climb_type" aria-label="climbing type">
-                    <option disabled selected>Climbing type for that day</option>
+                    <option disabled selected>Climbing type </option>
                     <option value="sport">Sport</option>
                     <option value="trad">Trad</option>
                     <option value="sport&trad">Sport&Trad</option>
                 </select>
             </div>
             <div class="input-group mt-3 mb-3">
-                <input type="text" id="autocomplete" name="climb_location" class="form-control" placeholder="Enter location"
-                    aria-label="Location" aria-describedby="location"/>
+                <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+                <input type="text" id="autocomplete" name="climb_location" class="form-control"
+                    placeholder="Enter location" aria-label="Location" aria-describedby="location" />
             </div>
             <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-align-left"></i></span>
                 <textarea id="climb_description" name="climb_description" class="form-control"
                     aria-label="climb description" placeholder="climbing info" rows="4" required></textarea>
             </div>
             <div class="input-group pt-3">
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="full_equip" name="full_equip" />
+                    <input class="form-check-input switcher" type="checkbox" id="full_equip" name="full_equip" />
                     <label class="form-check-label" for="full_equip">Providnig full climbing gear</label>
                 </div>
             </div>
@@ -41,9 +48,10 @@
         </form>
     </div>
     {% block script %}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxmvO8Q4IkYaxhRkesueMk7Qpin2lYjY&libraries=places&callback=initAutocomplete"
-            async defer>
-    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxmvO8Q4IkYaxhRkesueMk7Qpin2lYjY&libraries=places&callback=initAutocomplete"
+        async defer>
+        </script>
     <script src="{{ url_for('static', filename='js/places.js') }}"></script>
     {% endblock %}
     {% endblock %}

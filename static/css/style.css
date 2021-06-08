@@ -37,6 +37,10 @@ a {
     color: #fafafa;
 }
 
+i {
+    color: #3b945E;
+}
+
  nav {
  height:4em;
  }
@@ -52,6 +56,22 @@ nav a:hover {
 }
 a:hover {
     color: #03dd84;
+}
+
+.cb-add_climb {
+    background-color: #f2f2f2;
+    padding: 2em;
+    border: 1px solid #03dd84;
+    border-radius: 0.5em;
+}
+
+.cb-add_climb button{
+    background-color: #3B945E;
+    color: #f2f2f2;
+}
+
+.switcher::after {
+    background-color:#03dd84;
 }
 /* background {
     background-image: url(/static/images/Bg_ladies.jpg);
