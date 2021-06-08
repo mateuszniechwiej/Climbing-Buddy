@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container ">
     {% for event in events %}
-    <div class="row  text-center ">
-        <div class="card col-8 offset-md-2">
-            <img src="" class="card-img-top hover-shadow {{ event.event_type }}" alt="events" />
+    <div class="row  text-center justify-content-center cb-events my-5">
+        <div class="card col-8 ">            
             <div class="card-body">
+                <img src="" class="card-img-top hover-shadow {{ event.event_type }}" alt="..." />
                 <h5 class="card-title">{{ event.event_date }}</h5>
                 <h5 class="card-title">{{ event.event_time }}</h5>
                 <h4 class="card-title">{{ event.event_location }}</h4>
@@ -35,5 +34,4 @@
             </div>
         </div>
         {% endfor %}
-    </div>
     {% endblock %}

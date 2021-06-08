@@ -6,10 +6,24 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
 }
+.cb-bg-events {
+    background-color: #03dd84;
+}
+img {
+    padding:auto;
+    margin-bottom: 0.5em;
+}
+.cb-events {
+    max-width: 1000px;
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+}
 
 .nav-item {
-    margin-right: 20px;
-    font-size: 1.5em;
+    padding-right: 15px;
+    font-size: 1em; 
 }
 
 h1 {
@@ -34,6 +48,7 @@ h3 {
 nav a:hover {
     color: #03dd84;
     border-style:solid;
+    border-width: thin;
 }
 a:hover {
     color: #03dd84;
