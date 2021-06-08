@@ -190,3 +190,22 @@ A solution to satisfy user requirements:
 
 ### _Wireframes_
 [Wireframes](https://xd.adobe.com/view/b3b26688-13e3-4b8a-94fd-98b06524cdf9-e6e1/)
+
+## The Surface Plane
+
+### Design
+
+#### Colour Scheme
+* Two colours used in this project are green ![#03dd84][https://via.placeholder.com/15/03dd84/000000?text=+] and shade of white ![#fafafa][https://via.placeholder.com/15/#fafafa/000000?text=+]
+
+#### Typography
+
+:black_nib:
+
+* The primary font used in this project is "Chiller".A fun font with modern look widely used for entertaiment suitable for the topic of Climbing presented in this project.
+
+### Imagery
+
+Images used in this project come from [Unsplash](unsplash.com)
+- [Background Image by Patrick Hendry](https://unsplash.com/photos/WrCvD2Cgb4c)
+
