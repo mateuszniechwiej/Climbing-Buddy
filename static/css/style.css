@@ -1,7 +1,50 @@
-background {
-    background-color:grey;
+body, html {
+    height: 100%;
+    background-image: url(/static/images/darkbg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+.nav-item {
+    margin-right: 20px;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-family:Chiller, sans-serif;
+    color: #fafafa;
+    font-size: 10em;
+    padding-top: 150px;
+}
+
+a {
+    color: #fafafa;
+}
+
+ nav {
+ height:4em;
+ }
+
+h3 {
+    color: #03dd84;
+}
+
+nav a:hover {
+    color: #03dd84;
+    border-style:solid;
+}
+a:hover {
+    color: #03dd84;
+}
+/* background {
+    background-image: url(/static/images/Bg_ladies.jpg);
+} */
+.cb-text span {
+    background-color: black;
+    padding:0, 1em;
+}
 .flash-msg {
     line-height: 3;
 }
@@ -20,4 +63,8 @@ background {
 
 #climb_description {
     height: max-content;
+}
+
+img {
+    max-width: 720px;
 }

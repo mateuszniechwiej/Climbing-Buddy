@@ -1,6 +1,6 @@
 import os
 from flask import Flask, flash, render_template,\
- redirect, request, session, url_for, abort
+ redirect, request, session, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -268,13 +268,14 @@ def internal_error(error):
     error = 500
     error_msg = "We're sorry! There is an internal server error.\
         please try again later."
-    return render_template("error.html", error = error, error_msg=error_msg ), 500
+    return render_template("error.html",
+                           error=error, error_msg=error_msg), 500
 
 
 @app.errorhandler(Exception)
 def other_exceptions(error):
     error_msg = "We're sorry but the error above has occured"
-    return render_template("error.html", error=error, error_msg=error_msg ) 
+    return render_template("error.html", error=error, error_msg=error_msg)
 
 
 if __name__ == "__main__":
