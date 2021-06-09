@@ -1,4 +1,4 @@
-// TODO: // "flapickr" date and time picker
+//  "flapickr" date and time picker
 flatpickr('.flatpickr', {
     enableTime: true,
     time_24hr: true,

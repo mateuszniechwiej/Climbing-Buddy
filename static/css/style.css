@@ -6,13 +6,16 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
 }
+
 .cb-bg-events {
     background-color: #03dd84;
 }
+
 img {
     padding:auto;
     margin-bottom: 0.5em;
 }
+
 .cb-events {
     max-width: 1000px;
     height: auto;
@@ -68,6 +71,13 @@ nav a:hover {
 
 a:hover {
     color: #03dd84;
+}
+
+.cb-login {
+    background-color: #f2f2f2;
+    border: 1px solid #03dd84;
+    border-radius: 0.5em ; 
+    padding: 2em;
 }
 
 .cb-register {
@@ -132,11 +142,11 @@ a:hover {
 }
 
 .flash-error {
-    color: red;
+    color:red;
 }
 
 .flash-message {
-    color:green;
+    color:#03dd84;
 }
 
 #event_description {
