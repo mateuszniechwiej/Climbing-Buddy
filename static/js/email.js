@@ -2,10 +2,10 @@
 function sendMail(acceptForm) {
   emailjs
     .send("gmail", "climbing_buddy", {
-      user: user,
-      user_email: user_email,
-      other_user: other_user,
-      other_email: other_email,
+      user: acceptForm.name.value,
+      user_email: acceptForm.email.value,
+      other_user: acceptForm.creator.value,
+      other_email: acceptForm.receiver.value,
       message: acceptForm.message.value,
     })
     .then(

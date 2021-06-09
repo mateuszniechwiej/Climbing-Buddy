@@ -11,7 +11,7 @@
                     </p>
                     <p>{{ climb.created_by }}</p>            
             {% if session.user != climb.created_by %}
-            <a href="#accept_climb" class="btn btn-success"  role="button" data-mdb-toggle="modal">Accept Climb</a>
+            <a href="#accept_climb{{ climb._id }}" class="btn btn-success"  role="button" data-mdb-toggle="modal">Accept Climb</a>
             {% endif %}
             {% if session.user|lower == climb.created_by or session.user|lower == 'admin' %}
                 {% if session.user|lower == climb.created_by %}
@@ -22,7 +22,7 @@
             </div>
         </div>  
             <!-- Accept climb modal -->
-            <div class="modal fade " id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true">
+            <div class="modal fade " id="accept_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content ">
                         <div class="modal-header">
@@ -41,11 +41,17 @@
                                     <input type="email" id="email" class="form-control" value=" {{ username.user_email }}" />
                                     <label class="form-label" for="email">Email address</label>
                                 </div>
-            
+                                <!-- Reciver name -->
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="creator" class="form-control" value="{{ climb.created_by  }}" />
+                                    <label class="form-label" for="creator">Event creator</label>
+                                </div>
+                                <!-- Reciver email -->
+                                    <input type="hidden" id="receiver" class="form-control" value=" {{ climb.email }}">
                                 <!-- Message input -->
                                 <div class="form-outline mb-4">
                                     <textarea class="form-control" id="message" rows="4"></textarea>
-                                    <label class="form-label" for="">Message</label>
+                                    <label class="form-label" for="message">Message</label>
                                 </div>
                                 <div class="response" style="width:100%; height:100%;">
                                 </div>
@@ -88,12 +94,12 @@
         </script>
         <script src="static/js/email.js"></script>
         <!-- variables to pass values to send mail-->
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             var user = "{{ climb.created_by }}"
             var user_email = "{{ climb.email }}"
             var other_user = "{{ username.username }}"
             var other_email = "{{ username.user_email }}"
-        </script>
+        </script> -->
 
         {% endfor %}
     {% endblock %}
