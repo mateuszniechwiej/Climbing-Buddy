@@ -1,27 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="d-flex justify-content-center mt-5">Add Event</h3>
-<div class="container col-4">
+<h3 class="d-flex justify-content-center mt-5" style="font-family: Chiller; font-size: 2em;">ADD EVENT</h3>
+<div class="container col-11 col-sm-8 col-lg-6 cb-add_event">
     <div class="row py-3">
         <form action="{{ url_for('add_event') }}" method="POST">
-            <div class="input-group mb-3 " ">
-                    <div class=" input-group mt-3 mb-3">
-                <input type="date" id="event_date" name="event_date" class="form-control" placeholder="Date"
-                    aria-label="date of event" aria-describedby="date" />
+            <div class="input-group mb-3 flatpickr">
+                <input type="text" class="form-control" placeholder="Select Date.." data-input>
+                <div class="input-group-append">
+                    <a class="input-button btn" title="toggle" data-toggle>
+                        <i class="far fa-calendar"></i>
+                    </a>
+                    <a class="input-button btn" title="clear" data-clear>
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
             </div>
             <div class="input-group mt-3 mb-3">
-                <input type="time" id="event_time" name="event_time" class="form-control" placeholder="Time"
-                    aria-label="Time of event" aria-describedby="time" required />
-            </div>
-            <div class="input-group mt-3 mb-3">
-                <input type="text" id="event_location" name="event_location" class="form-control" placeholder="Location"
+                <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+                <input type="text" id="autocomplete" name="event_location" class="form-control" placeholder="Location"
                     aria-label="Location" aria-describedby="time" required />
             </div>
             <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-align-left"></i></span>
                 <textarea id="event_description" name="event_description" class="form-control"
                     aria-label="Event description" placeholder="event description" rows="4" required></textarea>
             </div>
             <div class="input-group pt-3">
+                <span class="input-group-text"><i class="fas fa-thumbtack"></i></span>
                 <select class="form-select" name="event_type" aria-label="Select indoor/outdoor name">
                     <option value="indoor" selected>indoor</option>
                     <option value="outdoor"">outdoor</option>
