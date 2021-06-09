@@ -5,7 +5,7 @@
     <div class="row py-3">
         <form action="{{ url_for('add_event') }}" method="POST">
             <div class="input-group mb-3 flatpickr">
-                <input type="text" class="form-control" placeholder="Select Date.." data-input>
+                <input type="text" name="event_date" class="form-control" placeholder="Select Date.." data-input>
                 <div class="input-group-append">
                     <a class="input-button btn" title="toggle" data-toggle>
                         <i class="far fa-calendar"></i>

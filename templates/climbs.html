@@ -1,20 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container ">
         {% for climb in climbs %}
-        <div class="row  text-center ">
-            <div class="card col-8 offset-md-2 cb-events">
+        <div class="row justify-content-center cb-climbs my-5">
+            <div class="card col-8 cb-climb_card text-center" >
                 <div class="card-body">
                     <h5 class="card-title">{{ climb.climb_date }}</h5>
-                    <h5 class="card-title">{{ climb.climb_time }}</h5>
                     <h4 class="card-title">{{ climb.climb_location }}</h4>
                     <p class="card-text">
                         {{ climb.climb_description }}
                     </p>
-                    <p>{{ climb.created_by }}</p>
-
-                </div>
-            </div>
+                    <p>{{ climb.created_by }}</p>            
             {% if session.user != climb.created_by %}
             <a href="#accept_climb" class="btn btn-success"  role="button" data-mdb-toggle="modal">Accept Climb</a>
             {% endif %}
@@ -24,6 +19,8 @@
                 {% endif %}
                 <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal" role="button">Delete</a>
             {% endif %}
+            </div>
+        </div>  
             <!-- Accept climb modal -->
             <div class="modal fade " id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -80,7 +77,6 @@
             </div>
         {% endfor %}
         </div>
-    </div>
     {% block script %}
         {% for climb in climbs %}
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">

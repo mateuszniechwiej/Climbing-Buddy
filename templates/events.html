@@ -4,10 +4,9 @@
     <div class="row  text-center justify-content-center cb-events my-5">
         <div class="card col-8 ">            
             <div class="card-body">
+                <h4 class="card-title">{{ event.event_location }}</h4>
                 <img src="" class="card-img-top hover-shadow {{ event.event_type }}" alt="..." />
                 <h5 class="card-title">{{ event.event_date }}</h5>
-                <h5 class="card-title">{{ event.event_time }}</h5>
-                <h4 class="card-title">{{ event.event_location }}</h4>
                 <p class="card-text">
                     {{ event.event_description }}
                 </p>
