@@ -21,6 +21,14 @@ img {
     margin: auto;
 }
 
+.cb-climbs {
+    max-width: 600px;
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+}
+
 .nav-item {
     padding-right: 15px;
     font-size: 1em; 
@@ -58,21 +66,49 @@ a:hover {
     color: #03dd84;
 }
 
+.cb-climb_card {
+    background-color:#f2f2f2 ;
+    border-radius: 0.5em;
+    border: 1px solid #03dd84;
+}
+
 .cb-add_event {
     background-color: #f2f2f2;
     padding: 2em;
     border: 1px solid #03dd84;
     border-radius: 0.5em;
 }
-
+/*---------------------------------------- Buttons */
 .cb-add_event button{
     background-color: #3B945E;
     color: #f2f2f2;
 }
 
-.switcher::after {
-    background-color:#03dd84;
+.cb-btn--submit {
+    background-color: #3B945E;
+    color:#f2f2f2
 }
+
+.cb-btn--submit:hover {
+    background-color: #03dd84;
+}
+
+.cb-btn--submit i {
+    color: #f2f2f2;
+}
+
+.cb-btn--cancel {
+    background-color: brown;
+    color: #fafafa;
+}
+
+.cb-btn--cancel i {
+    color: #fafafa;
+}
+
+/* .switcher::after {
+    background-color:#03dd84;
+} */
 /* background {
     background-image: url(/static/images/Bg_ladies.jpg);
 } */
