@@ -40,6 +40,9 @@ h1 {
     font-size: 10em;
     padding-top: 70px;
 }
+p {
+    color: #3b945e;
+}
 
 a {
     color: #fafafa;
@@ -62,8 +65,16 @@ nav a:hover {
     border-style:solid;
     border-width: thin;
 }
+
 a:hover {
     color: #03dd84;
+}
+
+.cb-register {
+    background-color: #f2f2f2;
+    border: 1px solid #03dd84;
+    border-radius: 0.5em ; 
+    padding: 2em;   
 }
 
 .cb-climb_card {

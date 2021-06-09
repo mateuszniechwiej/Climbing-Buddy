@@ -27,7 +27,7 @@
             </div>
             <div class="input-group mt-3 mb-3">
                 <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
-                <input value="{{ climb.climb_location }}"type="text" id="climb_location" name="climb_location" class="form-control" placeholder="Location"
+                <input value="{{ climb.climb_location }}"type="text" id="autocomplete2" name="climb_location" class="form-control" placeholder="Location"
                     aria-label="Location" aria-describedby="location" required />
             </div>
             <div class="input-group">
@@ -53,4 +53,11 @@
             </div>
         </form>
     </div>
+    {% block script %}
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxmvO8Q4IkYaxhRkesueMk7Qpin2lYjY&libraries=places&callback=initAutocomplete"
+        async defer>
+        </script>
+    <script src="{{ url_for('static', filename='js/places.js') }}"></script>
+    {% endblock %}
     {% endblock %}

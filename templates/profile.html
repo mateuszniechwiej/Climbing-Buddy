@@ -1,16 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-    <div class="row d-flex justify-content-center mt-5">
-            <div class="card text-center">
-                <h3>Your Climbing Profile</h3>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">USERNAME: {{ username.username }}</li>
-                  <li class="list-group-item">EMAIL: {{ username.user_email }}</li>
-                </ul>
-              </div>  
-    </div>
-
-    
+<h3 class="d-flex justify-content-center mt-5" style="font-family: Chiller; font-size: 2em;">YOUR CLIMBING PROFILE</h3>
+<div class="row justify-content-center">
+        <div class="card col-12 col-lg-8 text-center">
+            <div class="col card-body" style="background-color: #fafafa;">
+                <h4 class="card-title">USERNAME: {{ username.username }}</h4>
+                <h4 class="crad title">EMAIL: {{ username.user_email }}</h4>
+            </div>
+        </div>
+</div>
 {% endblock %}

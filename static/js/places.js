@@ -1,15 +1,24 @@
 //location autocomplate for Uk and Ireland
 
 let autocomplete;
+let autocomplete2;
 function initAutocomplete() {
-  autocomplete = new google.maps.places.Autocomplete(
-    document.getElementById("autocomplete"),
-    {
-      componentRestrictions: { country: ["UK", "IE"] },
-      fields: ["place_id", "name", "geometry"],
-    }
-  );
-  autocomplete.addListener("place_changed", onPlaceChanged);
+    autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById("autocomplete"),
+        {
+            componentRestrictions: { country: ["UK", "IE"] },
+            fields: ["place_id", "name", "geometry"],
+        }
+        );
+    autocomplete2 = new google.maps.places.Autocomplete(
+        document.getElementById("autocomplete2"),
+        {
+            componentRestrictions: { country: ["UK", "IE"] },
+            fields: ["place_id", "name", "geometry"],
+        }
+        );
+    autocomplete.addListener("place_changed", onPlaceChanged);
+    autocomplete2.addListener("place_changed", onPlaceChanged);
 }
 
 function onPlaceChanged() {
