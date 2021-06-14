@@ -32,7 +32,13 @@ def events():
     Renders events page and display all events added by admin
     """
     events = list(mongo.db.events.find())
+    return render_template("events.html", events=events)
 
+# FIXME: not every word searched in event description
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    events = list(mongo.db.events.find({"$text": {"$search":query}}))
     return render_template("events.html", events=events)
 
 
@@ -138,7 +144,6 @@ def add_event():
     if request.method == "POST":
         event = {
             "event_date": request.form.get("event_date"),
-            "event_time": request.form.get("event_time"),
             "event_location": request.form.get("event_location"),
             "event_description": request.form.get("event_description"),
             "event_type": request.form.get("event_type")
