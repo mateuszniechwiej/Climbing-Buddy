@@ -5,7 +5,7 @@
     <div class="row py-3">
         <form action="{{ url_for('search_climber') }}" method="POST">
             <div class="input-group mb-3 flatpickr">
-                <input type="text" name="climb_date" class="form-control" placeholder="Select Date.." data-input>
+                <input type="text" name="climb_date" class="form-control flatpickr-date" placeholder="Select Date.." data-input>
                 <div class="input-group-append">
                     <a class="input-button btn" title="toggle" data-toggle>
                         <i class="far fa-calendar"></i>
@@ -13,9 +13,7 @@
                     <a class="input-button btn" title="clear" data-clear>
                         <i class="fas fa-times"></i>
                     </a>
-                </div>
-              
-                
+                </div>            
             </div>
             <div class="input-group pt-3">
                 <span class="input-group-text"><i class="fas fa-mountain"></i></span>

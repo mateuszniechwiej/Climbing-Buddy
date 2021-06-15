@@ -1,10 +1,10 @@
-//  "flapickr" date and time picker
+//  "flatpickr" date picker
 flatpickr('.flatpickr', {
-    enableTime: true,
-    time_24hr: true,
+    minDate: "today",
+    enableTime: false,
     altInput: true,
-    altFormat: 'd M Y H:i',
-    dateFormat: 'Y-m-d H:i',
+    altFormat: 'd M Y',
+    dateFormat: 'Y-m-d',
     wrap: true
 });
 

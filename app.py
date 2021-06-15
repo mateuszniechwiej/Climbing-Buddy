@@ -38,7 +38,7 @@ def events():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    events = list(mongo.db.events.find({"$text": {"$search":query}}))
+    events = list(mongo.db.events.find({"$text": {"$search": query}}))
     return render_template("events.html", events=events)
 
 
@@ -163,7 +163,6 @@ def edit_event(event_id):
     if request.method == "POST":
         submit = {
             "event_date": request.form.get("event_date"),
-            "event_time": request.form.get("event_time"),
             "event_location": request.form.get("event_location"),
             "event_description": request.form.get("event_description"),
             "event_type": request.form.get("event_type")
@@ -198,6 +197,26 @@ def climbs():
     return render_template("climbs.html", climbs=climbs, username=username)
 
 
+@app.route("/filter", methods=["GET", "POST"])
+def filter():
+    """
+    Filters available climbs from select drop dwon menues and autocolpete places location field 
+    """
+    climb_date = request.form.get("climbing_date")
+    climb_type = request.form.get("climbing_style")
+    climb_location = request.form.get("climbing_location")
+    full_equip = request.form.get("equipment")
+
+
+    climbs = list(mongo.db.climbs.find({"$or": [{"climb_date": climb_date},
+                                                 {"climb_type": climb_type},
+                                                 {"climb_location": climb_location},
+                                                 {"full_equip": full_equip}]}))
+
+    username = mongo.db.users.find_one({"username": session["user"]})
+    return render_template("climbs.html", climbs=climbs, username=username)
+
+
 @app.route("/search_climber", methods=["GET", "POST"])
 def search_climber():
     """
@@ -210,7 +229,6 @@ def search_climber():
         full_equip = "yes" if request.form.get("full_equip") else "no"
         climb = {
             "climb_date": request.form.get("climb_date"),
-            "climb_time": request.form.get("climb_time"),
             "climb_type": request.form.get("climb_type"),
             "climb_location": request.form.get("climb_location"),
             "climb_description": request.form.get("climb_description"),
@@ -234,7 +252,6 @@ def edit_climb(climb_id):
         full_equip = "yes" if request.form.get("full_equip") else "no"
         edit = {
             "climb_date": request.form.get("climb_date"),
-            "climb_time": request.form.get("climb_time"),
             "climb_type": request.form.get("climb_type"),
             "climb_location": request.form.get("climb_location"),
             "climb_description": request.form.get("climb_description"),

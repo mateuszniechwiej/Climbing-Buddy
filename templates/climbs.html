@@ -1,106 +1,148 @@
 {% extends "base.html" %}
 {% block content %}
-        {% for climb in climbs %}
-        <div class="row justify-content-center cb-climbs my-5">
-            <div class="card col-8 cb-climb_card text-center" >
-                <div class="card-body ">
-                    <h5 class="card-title">{{ climb.climb_date }}</h5>
-                    <h4 class="card-title">{{ climb.climb_location }}</h4>
-                    <p class="card-text">
-                        {{ climb.climb_description }}
-                    </p>
-                    <p>{{ climb.created_by }}</p>            
-            {% if session.user != climb.created_by %}
-            <a href="#accept_climb{{ climb._id }}" class="btn btn-success"  role="button" data-mdb-toggle="modal">Accept Climb</a>
-            {% endif %}
-            {% if session.user|lower == climb.created_by or session.user|lower == 'admin' %}
+    <div class="container col-11 col-sm-8 col-lg-6 cb-add_event">
+        <h5 class="d-flex justify-content-center " style="font-family: Chiller; font-size: 2em;">Filter climbs</h3>
+        <div class="row text-center">
+            <form action="{{ url_for('filter') }}" method="POST">
+                <div class="input-group mb-3 flatpickr">
+                    <input type="text" name="climbing_date" class="form-control flatpickr-date" placeholder="Select Date.."
+                        data-input>
+                    <div class="input-group-append">
+                        <a class="input-button btn" title="toggle" data-toggle>
+                            <i class="far fa-calendar"></i>
+                        </a>
+                        <a class="input-button btn" title="clear" data-clear>
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="input-group pt-3">
+                    <span class="input-group-text"><i class="fas fa-mountain"></i></span>
+                    <select class="form-select" name="climbing_style" aria-label="climbing type">
+                        <option disabled selected>Climbing type </option>
+                        <option value="sport">Sport</option>
+                        <option value="trad">Trad</option>
+                        <option value="sport&trad">Sport&Trad</option>
+                    </select>
+                </div>
+                <div class="input-group mt-3 mb-3">
+                    <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
+                    <input type="text" id="autocomplete3" name="climbing_location" class="form-control"
+                        placeholder="Enter location" aria-label="Location" aria-describedby="location" />
+                </div>
+                <div class="input-group pt-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input switcher" type="checkbox" id="equip" name="equipment" />
+                        <label class="form-check-label" for="equip">Required full equipment</label>
+                    </div>
+                </div>
+                <div class="input-group-append pt-3">
+                    <button class="btn btn-primary" type="submit">Filter</button>
+                    <a href="{{ url_for('climbs') }}" class="btn btn-danger"><i class="far fa-times-circle"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% for climb in climbs %}
+    <div class="row justify-content-center cb-climbs my-5">
+        <div class="card col-8 cb-climb_card text-center">
+            <div class="card-body ">
+                <h4 class="card-title">{{ climb.climb_location }}</h4>
+                <h5 class="card-title">{{ climb.climb_date }}</h5>
+                <p class="card-text">
+                    {{ climb.climb_description }}
+                </p>
+                <p>{{ climb.created_by }}</p>
+                {% if session.user != climb.created_by %}
+                <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button" data-mdb-toggle="modal">Accept
+                    Climb</a>
+                {% endif %}
+                {% if session.user|lower == climb.created_by or session.user|lower == 'admin' %}
                 {% if session.user|lower == climb.created_by %}
                 <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
                 {% endif %}
-                <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal" role="button">Delete</a>
-            {% endif %}
+                <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal"
+                    role="button">Delete</a>
+                {% endif %}
             </div>
-        </div>  
-            <!-- Accept climb modal -->
-            <div class="modal fade " id="accept_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title d-flex justify-content-center" id="confirm_climb">Confirm climb</h5>
-                        </div>
-                        <div class="modal-body">
-                            <form id="submit_climb" onsubmit="return sendMail(this);">
-                                <!-- Name input -->
-                                <div class="form-outline mb-4">
-                                    <input type="text" id="name" class="form-control" value="{{ username.username  }}" />
-                                    <label class="form-label" for="name">Your Profile name</label>
-                                </div>
-            
-                                <!-- Email input -->
-                                <div class="form-outline mb-4">
-                                    <input type="email" id="email" class="form-control" value=" {{ username.user_email }}" />
-                                    <label class="form-label" for="email">Email address</label>
-                                </div>
-                                <!-- Reciver name -->
-                                <div class="form-outline mb-4">
-                                    <input type="text" id="creator" class="form-control" value="{{ climb.created_by  }}" />
-                                    <label class="form-label" for="creator">Event creator</label>
-                                </div>
-                                <!-- Reciver email -->
-                                    <input type="email" id="receiver" class="form-control" value=" {{ climb.email }}" hidden>
-                                <!-- Message input -->
-                                <div class="form-outline mb-4">
-                                    <textarea class="form-control" id="message" rows="4"></textarea>
-                                    <label class="form-label" for="message">Message</label>
-                                </div>
-                                <div class="response" style="width:100%; height:100%;">
-                                </div>
-                                <!-- Submit button -->
-                                <a href="#" class="btn btn-danger" data-mdb-dismiss="modal"><i class="fas fa-times"></i> Close</a>
-                                <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Confirm delete modal -->
-            <div class="modal fade" id="delete_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Delete Climb"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title d-flex justify-content-center" id="deleteClimb">Are you sure you want to
-                                delete
-                                this climbing request?</h5>
-                        </div>
-                        <div class="modal-body"><i class="fas fa-times"></i></div>
-                        <div class="modal-footer">
-                            <a href="#" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</a>
-                            <a href="{{ url_for('delete_climb', climb_id=climb._id) }}" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
         </div>
-    {% block script %}
-        {% for climb in climbs %}
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-            (function () {
-                emailjs.init("user_Pe6VH6LXUub6khTthNcbC");
-            })();
-        </script>
-        <script src="static/js/email.js"></script>
-        <!-- variables to pass values to send mail-->
-        <!-- <script type="text/javascript">
-            var user = "{{ climb.created_by }}"
-            var user_email = "{{ climb.email }}"
-            var other_user = "{{ username.username }}"
-            var other_email = "{{ username.user_email }}"
-        </script> -->
-
+        <!-- Accept climb modal -->
+        <div class="modal fade " id="accept_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Accept Climb"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h5 class="modal-title d-flex justify-content-center" id="confirm_climb">Confirm climb</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="submit_climb" onsubmit="return sendMail(this);">
+                            <!-- Name input -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="name" class="form-control" value="{{ username.username  }}" />
+                                <label class="form-label" for="name">Your Profile name</label>
+                            </div>
+    
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="email" class="form-control" value=" {{ username.user_email }}" />
+                                <label class="form-label" for="email">Email address</label>
+                            </div>
+                            <!-- Reciver name -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="creator" class="form-control" value="{{ climb.created_by  }}" />
+                                <label class="form-label" for="creator">Event creator</label>
+                            </div>
+                            <!-- Reciver email -->
+                            <input type="email" id="receiver" class="form-control" value=" {{ climb.email }}" hidden>
+                            <!-- Message input -->
+                            <div class="form-outline mb-4">
+                                <textarea class="form-control" id="message" rows="4"></textarea>
+                                <label class="form-label" for="message">Message</label>
+                            </div>
+                            <div class="response" style="width:100%; height:100%;">
+                            </div>
+                            <!-- Submit button -->
+                            <a href="#" class="btn btn-danger" data-mdb-dismiss="modal"><i class="fas fa-times"></i>
+                                Close</a>
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Confirm delete modal -->
+        <div class="modal fade" id="delete_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Delete Climb"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h5 class="modal-title d-flex justify-content-center" id="deleteClimb">Are you sure you want to
+                            delete
+                            this climbing request?</h5>
+                    </div>
+                    <div class="modal-body"><i class="fas fa-times"></i></div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</a>
+                        <a href="{{ url_for('delete_climb', climb_id=climb._id) }}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
+    </div>
+    {% block script %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_Pe6VH6LXUub6khTthNcbC");
+        })();
+    </script>
+    <script src="static/js/email.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxmvO8Q4IkYaxhRkesueMk7Qpin2lYjY&libraries=places&callback=initAutocomplete"
+        async defer>
+        </script>
+    <script src="{{ url_for('static', filename='js/places.js') }}"></script>
     {% endblock %}
 {% endblock %}
