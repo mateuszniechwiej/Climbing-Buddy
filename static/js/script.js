@@ -28,3 +28,6 @@ Modals.forEach(modal => {
         acceptFocus.focus()
     })
 });
+
+// Pagination 
+

@@ -1,6 +1,7 @@
 import os
 from flask import Flask, flash, render_template,\
  redirect, request, session, url_for
+from flask_paginate import Pagination, get_page_args
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -15,6 +16,34 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+ELEMENTS_PER_PAGE = 2
+
+
+def get_elements(elements):
+    """
+    Getting added elements for pagination 
+    on events and climbing request pages
+    to organize the content.
+    """
+    page,per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+
+    offset = page * ELEMENTS_PER_PAGE - ELEMENTS_PER_PAGE
+
+    return elements[offset: offset + ELEMENTS_PER_PAGE]
+
+
+def pagination_elements(elements):
+    """
+    Adding pagination to the long content pages.
+    """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    total = len(elements)
+
+    return Pagination(page=page, per_page=ELEMENTS_PER_PAGE, total=total)    
 
 
 @app.route("/")
@@ -32,7 +61,11 @@ def events():
     Renders events page and display all events added by admin
     """
     events = list(mongo.db.events.find())
-    return render_template("events.html", events=events)
+    paginated_events = get_elements(events)
+    pagination = pagination_elements(events)
+    return render_template("events.html", 
+                          events=paginated_events,
+                          pagination=pagination)
 
 # FIXME: not every word searched in event description
 @app.route("/search", methods=["GET", "POST"])
@@ -192,9 +225,11 @@ def climbs():
     all registered users.
     """
     climbs = list(mongo.db.climbs.find())
+    paginated_climbs = get_elements(climbs)
+    pagination = pagination_elements(climbs)
     username = mongo.db.users.find_one({"username": session["user"]})
 
-    return render_template("climbs.html", climbs=climbs, username=username)
+    return render_template("climbs.html", climbs=paginated_climbs,pagination=pagination, username=username)
 
 
 @app.route("/filter", methods=["GET", "POST"])
