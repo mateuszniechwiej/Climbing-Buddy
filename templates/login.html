@@ -2,18 +2,24 @@
 {% block content %}
 
     
-<div class="container cb-login col-11 col-sm-8 col-lg-6 text-center mt-5 mb-2">
+<div class="container cb-login col-11 col-sm-8 col-lg-4 text-center mt-5 mb-2">
     <h3 class="d-flex justify-content-center" style="font-family: Chiller; font-size: 2em;">Login</h3>
     <form method="POST" action="{{ url_for('login') }}">
         <!-- Username input -->
         <div class="input-group mb-3">
-            <span class="input-group-text"><i class="far fa-user"></i></span>
+            <div class="input-group-prepend input-descriptions col-2">
+                <span class="input-group-text border-0">Username</span>
+            </div>            
+            <span class="input-group-text form-icons"><i class="far fa-user"></i></span>            
             <input type="text" id="username" name="username" class="form-control" minlength="3" maxlength="20"
                 pattern="^[a-zA-Z0-9]{3,20}$" required />
         </div>
         <!-- Password input -->
         <div class="input-group mb-3">
-            <span class="input-group-text"><i class="fas fa-key"></i></span>
+            <div class="input-group-prepend input-descriptions col-2">
+                <span class="input-group-text border-0">Password</span>
+            </div>
+            <span class="input-group-text form-icons"><i class="fas fa-key"></i></span> 
             <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="20"
                 pattern="^[a-zA-Z0-9]{6,20}$" required />
         </div>

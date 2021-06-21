@@ -18,7 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 ELEMENTS_PER_PAGE = 2
 
-
+# to learn how to make pagination using flask https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
 def get_elements(elements):
     """
     Getting added elements for pagination 

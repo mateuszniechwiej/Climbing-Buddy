@@ -5,8 +5,8 @@ body, html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* background-position: center;
-    background-repeat: no-repeat; */
+    background-position: center;
+    /* background-repeat: no-repeat; */
 
 }
 
@@ -90,6 +90,12 @@ a:hover {
     padding: 2em;   
 }
 
+.cb-register label {
+    margin-right: 2em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
 .cb-climb_card {
     background-color:#f2f2f2 ;
     border-radius: 0.5em;
@@ -114,7 +120,8 @@ a:hover {
 }
 
 .cb-btn--submit:hover {
-    background-color: #03dd84;
+    background-color:green;
+    color:#f2f2f2;
 }
 
 .cb-btn--submit i {
@@ -123,6 +130,11 @@ a:hover {
 
 .cb-btn--cancel {
     background-color: brown;
+    color: #fafafa;
+}
+
+.cb-btn--cancel:hover {
+    background-color: red;
     color: #fafafa;
 }
 
@@ -163,3 +175,51 @@ a:hover {
 img {
     max-width: 720px;
 }
+
+/* Forms styling */
+.cb-accept--content h5{
+    font-family: Chiller;
+    font-size: 3em;
+}
+.cb-accept--content {
+    background-color: #fafafa;
+    border: 1px solid #03dd84;
+    border-radius: 0.5em ;
+}
+.accept-icons {
+    color: #3b945E;
+    font-size: 1.2em;
+}
+.response {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    color: #3b945E;
+    font-family: Chiller;
+} 
+
+.input-descriptions {
+    margin-right: 1em;
+}
+/* to change default blue color for form-outline mdbootstrap*/
+/* https://mdbootstrap.com/snippets/standard/grzegorz-bujanski/2852722#css-tab-view */
+.form-outline .form-control:focus~.form-notch .form-notch-leading {
+    border-top: .125rem solid #3b945e;
+    border-bottom: .125rem solid #3b945e;
+    border-left: .125rem solid #3b945e;
+}
+ .form-outline .form-control:focus~.form-notch .form-notch-middle {
+    border-bottom: .125rem solid;
+    border-color: #3b945e;
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-color: currentcolor currentcolor currentcolor #3b945e;
+    border-bottom: .125rem solid #3b945e;
+    border-right: .125rem solid #3b945e;
+    border-top: .125rem solid #3b945e;
+}
+
+.form-outline .form-control:focus~.form-label {
+    color: #3b945e;
+}		
