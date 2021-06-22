@@ -1,17 +1,14 @@
 body, html {
-    height: 100%;
-    background-image: url(/static/images/darkbg.jpg);
+    background: url(/static/images/darkbg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: center;
-    /* background-repeat: no-repeat; */
 
 }
 
 .cb-bg-events {
-    background-color: #03dd84;
+    background-color: #777777;
 }
 
 img {
@@ -44,7 +41,6 @@ h1 {
     font-family:Chiller, sans-serif;
     color: #fafafa;
     font-size: 10em;
-    padding-top: 70px;
 }
 p {
     color: #3b945e;
@@ -142,12 +138,6 @@ a:hover {
     color: #fafafa;
 }
 
-/* .switcher::after {
-    background-color:#03dd84;
-} */
-/* background {
-    background-image: url(/static/images/Bg_ladies.jpg);
-} */
 .cb-text span {
     color: #3b945E;
     padding:0, 1em;
@@ -175,8 +165,16 @@ a:hover {
 img {
     max-width: 720px;
 }
+/*---------------------------------------- Toggle Switch */
 
-/* Forms styling */
+.cb-form-switch .switcher:checked[type=checkbox]::after {
+    background-color: #3B945E;
+    box-shadow: 0 0 0 .625rem rgba(59, 148, 94, 0.5) ;
+}
+.switcher[type=checkbox]:checked[type=checkbox]:checked {
+    background-color: #3B945E;
+}
+/*------------------------------------------Forms styling */
 .cb-accept--content h5{
     font-family: Chiller;
     font-size: 3em;
@@ -223,3 +221,32 @@ img {
 .form-outline .form-control:focus~.form-label {
     color: #3b945e;
 }		
+
+/* Profile page */
+
+.cb-container {
+    min-height: 45em;
+}
+
+.cb-profile {
+    background-color: #fafafa;
+    border-radius: 0.5em;
+    border: 1px solid #03dd84;
+}
+
+.cb-profile h3{
+    font-family: Chiller, sans-serif;
+    font-size: 3em;
+}
+
+
+
+/* ----------- Media Query ------------- */
+@media screen and (max-width: 350px) {
+    .cb-profile span{
+        font-size: 0.8em;
+    }
+    .cb-profile h3{
+        font-size: 1.8em;
+    }
+}

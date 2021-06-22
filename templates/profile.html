@@ -1,13 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="d-flex align-items-center justify-content-center cb-container" >
+    <div class="card col-11 col-lg-6  cb-profile text-center">
+        <div class="col card-body">
+            <h3 class="my-2">YOUR CLIMBING
+                PROFILE
+            </h3>
+            <div class="input-group mb-2 d-flex justify-content-center">
+                <span class="input-group-text form-icons"><i class="far fa-user"></i></span>
+                <span class="input-group-text border-0">{{ username.username }}</span>
 
-<h3 class="d-flex justify-content-center mt-5" style="font-family: Chiller; font-size: 2em;">YOUR CLIMBING PROFILE</h3>
-<div class="row justify-content-center">
-        <div class="card col-12 col-lg-8 text-center">
-            <div class="col card-body" style="background-color: #fafafa;">
-                <h4 class="card-title">USERNAME: {{ username.username }}</h4>
-                <h4 class="crad title">EMAIL: {{ username.user_email }}</h4>
+            </div>
+            <div class="input-group mb-2 d-flex justify-content-center">
+                <span class="input-group-text form-icons"><i class="far fa-envelope"></i></span>
+                <span class="input-group-text border-0">{{ username.user_email }}</span>
             </div>
         </div>
+    </div>
 </div>
+
 {% endblock %}
