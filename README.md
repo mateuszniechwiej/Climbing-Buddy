@@ -21,8 +21,8 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
     - [Typography](#typography)
     - [Imagery](#imagery)
 - [Features](#features)
-  - [Existing Features:](#existing-features)
-  - [Future Features:](#future-features)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
   - [Frameworks, Programmes and Libraries](#frameworks-programmes-and-libraries)
@@ -208,4 +208,57 @@ A solution to satisfy user requirements:
 
 Images used in this project come from [Unsplash](unsplash.com)
 - [Background Image by Patrick Hendry](https://unsplash.com/photos/WrCvD2Cgb4c)
+
+## Features
+
+### Existing Features
+
+:one: The landing page displaying information about the website's purpose.
+:two: Events page displaying three events per page.    
+:three: Create events page available for the admin.  
+:four: Register and login functionality.   
+:five: Climbing events displaying three climbs per page.   
+:six: Climber search event available for all registered users.   
+:seven: Profile page with username name and email.   
+:eight: Accept climb request form using EmailJS functionality.   
+:nine: Email link on all pages to contact the website owner for any information needed.  
+:one::zero: Places Autocomplete by Google(a feature of Places library in the Maps JavaScript API) to look for locations in Ireland and the Uk only.   
+:one::one: Mobile responsive design.
+:one::two: Error page to display error messages with website background.
+
+### Future Features
+
+:one: Private chat messages between users to be available for each climbing event so users emails don't need to be revealed.
+
+:two: A gallery page to allow the user to add photos from events and climbs.
+
+## Technologies Used
+
+### Languages Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+* [JavaScript](https://pl.wikipedia.org/wiki/JavaScript)
+
+* [Python](https://www.python.org/)
+
+## Frameworks, Programmes and Libraries
+* [JIRA](https://www.atlassian.com/software/jira) - project management tool to organize workflow.
+* [Adobe Xd](https://www.adobe.com/ie/products/xd/wireframing-tool.html#:~:text=Adobe%20XD%20is%20a%20powerful,all%20in%20one%20design%20tool.) - to create wireframes
+* [Canva](https://www.canva.com/) - Canva was used to create logo for the website.
+* [JPEG-OPTIMIZER](http://jpeg-optimizer.com/) - optimized the size of images used in this project.
+* [techsini](https://techsini.com/) - to generate website mock-up.=
+* [Font Awesome](https://fontawesome.com/) - for social media links and forms icons.
+* [MDBootstrap](https://mdbootstrap.com/) - Material design for bootstrap is used for layouts, styling and responsiveness.
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Flask Python micro framework is used in this project to help develop the application.
+* [Heroku](https://heroku.com) - Heroku was to deploy and host the live website.
+* [MongoDB](https://www.mongodb.com/) - MongoDb document-oriented database used to store information about users,events and climbs.
+* [Visual Studio Code](https://code.visualstudio.com/) - used for developing this website and commit the project to GitHub repository.
+* [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - used to debug the styling issues, test the website responsiveness  and to ensure colour contrast.
+* [Github](https://github.com/) - Github as the hosting site was used to store the source code of this Website.
+* [Git](https://git-scm.com/) - used Git to commit and push code to the GitHub repository.
+* [Favicon](https://favicon.io/) - to create a favicon for this Website.
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse) - as a part of the chrome dev tool was used to improve the quality of the web page.
 
