@@ -78,21 +78,20 @@
                         <form id="submit_climb" onsubmit="return sendMail(this);">
                             <!-- Name input -->
                             <div class="form-outline mb-4">
-                                <i class="fas fa-user-check trailing accept-icons"></i>
-                                <input type="text" id="name" class="form-control" value="{{ username.username  }}" readonly/>
+                                <i class="fas fa-user-check trailing accept-icons "></i>
+                                <input type="text" id="name" class="form-control active" value="{{ username.username  }}" readonly />
                                 <label class="form-label" for="name">Your Profile Name</label>
                             </div>
-    
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <i class="fas fa-at trailing accept-icons" ></i>
-                                <input type="email" id="email" class="form-control" value=" {{ username.user_email }}" readonly/>
+                                <i class="fas fa-at trailing accept-icons " ></i>
+                                <input type="email" id="email" class="form-control active" value=" {{ username.user_email }}" readonly />
                                 <label class="form-label" for="email">Your Email Address</label>
                             </div>
                             <!-- Reciver name -->
                             <div class="form-outline mb-4">
-                                <i class="fas fa-id-badge trailing accept-icons"></i>
-                                <input type="text" id="creator" class="form-control" value="{{ climb.created_by  }}" readonly />
+                                <i class="fas fa-id-badge trailing accept-icons "></i>
+                                <input type="text" id="creator" class="form-control active" value="{{ climb.created_by  }}" readonly />
                                 <label class="form-label" for="creator">Event Creator</label>
                             </div>
                             <!-- Reciver email -->

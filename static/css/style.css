@@ -7,8 +7,30 @@ body, html {
 
 }
 
+/*------------------------------------- Home page styling */
+
+.cb-home h1{
+    background-color: #3b945E;
+    margin: .5em 0 .5em 0;
+    padding: .1em;
+    border-radius: .1em;
+}
+
+.cb-home h3 {
+    background-color:rgba(0,0,0, 0.6);
+    color: #f2f2f2;
+    padding: .5em;
+}
+
 .cb-bg-events {
     background-color: #777777;
+}
+
+.cb-home p {
+    font-size: 2em;
+    font-family: sans-serif;
+    background-color:rgba(0,0,0, 0.6) ;
+    color: #f2f2f2;
 }
 
 img {
@@ -114,6 +136,20 @@ a:hover {
     background-color: #3B945E;
     color:#f2f2f2
 }
+.cb-btn--rows {
+    margin: 0;
+}
+.cb-btn--home {
+    background-color: #3b945e;
+    color: #f2f2f2;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.cb-btn--home:hover {
+    background-color: #03dd84;
+    color: #f2f2f2;
+}
 
 .cb-btn--submit:hover {
     background-color:green;
@@ -138,10 +174,6 @@ a:hover {
     color: #fafafa;
 }
 
-.cb-text span {
-    color: #3b945E;
-    padding:0, 1em;
-}
 .flash-msg {
     line-height: 3;
 }
@@ -222,12 +254,6 @@ img {
     color: #3b945e;
 }		
 
-/* Profile page */
-
-.cb-container {
-    min-height: 45em;
-}
-
 .cb-profile {
     background-color: #fafafa;
     border-radius: 0.5em;
@@ -243,6 +269,9 @@ img {
 
 /* ----------- Media Query ------------- */
 @media screen and (max-width: 350px) {
+    .cb-home h1 {
+        font-size: 5em;
+    }
     .cb-profile span{
         font-size: 0.8em;
     }
