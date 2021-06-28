@@ -7,6 +7,34 @@ body, html {
 
 }
 
+/*------------------------------------- Navbar*/
+#cb-navbar--collapse {
+    background-color: rgba(0,0,0, 0.8);
+    padding: 1em;
+    z-index: 999;
+}
+
+#cb-navbar--collapse li {
+    max-width: max-content;
+    padding: 0;
+}
+#cb-navbar--collapse li span {
+    margin:.5em;
+    color:#f2f2f2;
+}
+
+#cb-navbar--collapse li span:hover {
+    color: #3b945E;
+    border-bottom:1px solid #3b945E;
+    padding-bottom: 2px;
+} 
+
+/* #cb-navbar--collapse li:hover {
+    border-bottom:1px solid #3b945E;
+    padding-bottom: 2px;
+    color: ;
+} */
+
 /*------------------------------------- Home page styling */
 
 .cb-home h1{
@@ -84,11 +112,11 @@ h3 {
     color: #3b945E;
 }
 
-nav a:hover {
-    color: #03dd84;
+/* nav a:hover {
+    color: #f2f2f2;
     border-style:solid;
     border-width: thin;
-}
+} */
 
 a:hover {
     color: #03dd84;
