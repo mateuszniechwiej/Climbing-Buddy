@@ -219,6 +219,18 @@ a:hover {
     border: 1px solid #03dd84;
     border-radius: 0.5em;
 }
+/*---------------------------------------- Pagination */
+.pagination {
+    justify-content: center;
+}
+.pagination li {
+    display: inline-block;
+    padding: 0 .5em 0 .5em;
+    margin-top:1em ;
+    font-family: Chiller;
+    font-size: 2.5em;
+    background-color: rgba(0,0,0, 0.6);
+}
 /*---------------------------------------- Buttons */
 
 .cb-add_event button{
@@ -329,7 +341,8 @@ a:hover {
 }
 
 img {
-    max-width: 500px;
+    max-width: 100%;
+    max-height: 80%;
 }
 /*---------------------------------------- Toggle Switch */
 
