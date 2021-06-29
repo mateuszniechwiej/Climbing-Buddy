@@ -1,20 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 justify-content-center">
+<div class="container">
+    <div class="row ">
+        <div class="col-12 col-md-8 ">
             <form action="{{ url_for('search') }}" method="POST">
                 <div class="input-group mt-5 justify-content-center">
                     <div class="form-outline cb-search ">
-                        <input type="search" id="query" name="query" class="form-control" minlength="3" required />
+                        <input type="search" id="query" name="query" class="form-control" minlength="3" />
                     <label class="form-label" for="query"><span>Search for Events</span></label>
                     </div>
                     <button type="submit" class="btn cb-btn--search">
                         <i class="fas fa-search"></i>
-                    </button>            
+                    </button>
+                    <a href="{{ url_for('events') }}" class="btn cb-btn--back" ><span>Back to All Events</span><i class="fas fa-undo"></i></a>            
                 </div>
-            </form>        
+            </form>  
+        </div>
+        {% if session.user|lower == 'admin' %}
+        <div class="col-12 col-md-4 mt-5 text-center">
+            <a href="{{ url_for('add_event') }}" class="btn cb-btn--add" type="submit">Add Event<i class="far fa-plus-square"></i></a>
+        </div> 
+        {% endif %}     
     </div>
-
+</div>
     {% for event in events %}
     <div class="row  text-center justify-content-center cb-events my-5">
         <div class="card col-8 ">            

@@ -65,7 +65,7 @@ body, html {
 
 .cb-search {
     background-color: rgba(0,0,0, 0.8);
-    width: 80%;
+    width: 50%;
 }
 
 .cb-search span {
@@ -204,11 +204,42 @@ a:hover {
     color: #f2f2f2;
 }
 
+.cb-btn--add {
+    background-color: #3B945E;
+    color:#f2f2f2;
+    min-width: 40%;
+    font-size: 1em;
+}
+
+.cb-btn--add i {
+    font-size: 1em;
+    padding-left: .8em;
+    color:#f2f2f2;
+
+}
+
+.cb-btn--add:hover{
+    background-color: #03dd84;
+    color:#f2f2f2;
+}
+
+.cb-btn--back {
+    margin-left: 1em;
+    background-color: #f2f2f2;
+    color: #3b945E;
+    /* width:50%; */
+}
+
+.cb-btn--back i {
+    font-size: 1.2em;
+    padding-left: .8em;
+}
 
 .cb-btn--submit {
     background-color: #3B945E;
     color:#f2f2f2
 }
+
 .cb-btn--rows {
     margin: 0;
 }
