@@ -4,7 +4,7 @@ body, html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
+    scroll-behavior: initial;
 }
 
 /*------------------------------------- Navbar*/
@@ -12,7 +12,6 @@ body, html {
     background-color: rgba(0,0,0, 0.8);
     padding: 1em;
     z-index: 999;
-    overflow: hidden;
 }
 
 #cb-navbar--collapse li {
@@ -29,12 +28,6 @@ body, html {
     border-bottom:1px solid #3b945E;
     padding-bottom: 2px;
 } 
-
-/* #cb-navbar--collapse li:hover {
-    border-bottom:1px solid #3b945E;
-    padding-bottom: 2px;
-    color: ;
-} */
 
 /*------------------------------------- Home page styling */
 
@@ -86,6 +79,7 @@ body, html {
 
 .cb-btn--search i {
     color:#f2f2f2;
+    font-size: 1.5em;
 }
 
 .cb-btn--search:hover {
@@ -98,11 +92,29 @@ img {
 }
 
 .cb-events {
-    /* max-width: 1000px; */
     height: auto;
     overflow: hidden;
     padding: 0;
     margin: 0;
+}
+
+.cb-events-card {
+    border: 1px solid #3b945E;
+    padding: 0;
+    max-width: 500px;
+}
+
+.cb-events-body {
+    padding: 0;
+}
+
+.cb-events-body i {
+    color:red;
+    padding-right: 1em;
+}
+
+.cb-card--footer {
+    background-color: #000;
 }
 
 .cb-climbs {
@@ -124,7 +136,8 @@ h1 {
     font-size: 10em;
 }
 p {
-    color: #3b945e;
+    font-size: 1.6em;
+    color: #000;
 }
 
 a {
@@ -141,6 +154,15 @@ i {
 
 h3 {
     color: #3b945E;
+    font-family: Chiller;
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+h5 {
+    color:red;
+    font-family: Chiller;
+    font-size: 2em;
 }
 
 /* nav a:hover {
@@ -208,7 +230,7 @@ a:hover {
     background-color: #3B945E;
     color:#f2f2f2;
     min-width: 40%;
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .cb-btn--add i {
@@ -227,12 +249,20 @@ a:hover {
     margin-left: 1em;
     background-color: #f2f2f2;
     color: #3b945E;
-    /* width:50%; */
 }
 
 .cb-btn--back i {
     font-size: 1.2em;
     padding-left: .8em;
+}
+
+.cb-btn--back:hover {
+    color: #3b945E;
+    background-color: #fff;
+}
+
+.cb-btn--edit {
+    background-color: #3b945E;
 }
 
 .cb-btn--submit {
@@ -299,7 +329,7 @@ a:hover {
 }
 
 img {
-    max-width: 720px;
+    max-width: 500px;
 }
 /*---------------------------------------- Toggle Switch */
 
