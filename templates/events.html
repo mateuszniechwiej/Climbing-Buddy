@@ -1,76 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row text-center">
-        <form action="{{ url_for('search') }}" method="POST">
-            <div class="input-group justify-content-center">               
-                <div class="form-outline">
-                    <input type="text" id="query" name="query" class="form-control" minlength="3" required />
-                    <label class="form-label" for="query">Search Event</label>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 justify-content-center">
+            <form action="{{ url_for('search') }}" method="POST">
+                <div class="input-group mt-5 justify-content-center">
+                    <div class="form-outline cb-search ">
+                        <input type="search" id="query" name="query" class="form-control" minlength="3" required />
+                    <label class="form-label" for="query"><span>Search for Events</span></label>
+                    </div>
+                    <button type="submit" class="btn cb-btn--search">
+                        <i class="fas fa-search"></i>
+                    </button>            
                 </div>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-search"></i>
-                </button>
-                <a href="{{ url_for('events') }}" class="btn btn-danger"><i class="far fa-times-circle"></i></a>                
-            </div>
-        </form>
+            </form>        
     </div>
+
     {% for event in events %}
-        <div class="row  text-center justify-content-center my-5 cb-events">
-            <div class="card col-6 ">            
-                <h4 class="card-title pt-2">{{ event.event_location }}</h4>
-                <h5 class="card-title">{{ event.event_date }}</h5>
+    <div class="row  text-center justify-content-center cb-events my-5">
+        <div class="card col-8 ">            
+            <div class="card-body">
+                <h4 class="card-title">{{ event.event_location }}</h4>
                 <img src="" class="card-img-top hover-shadow {{ event.event_type }}" alt="..." />
+                <h5 class="card-title">{{ event.event_date }}</h5>
                 <p class="card-text">
-                {{ event.event_description }}
+                    {{ event.event_description }}
                 </p>
                 {% if session.user|lower == 'admin' %}
-                    <a class="btn btn-success" href="{{ url_for('edit_event', event_id=event._id) }}" role="button">Edit</a>
-                    <a class="btn btn-danger" href="#delete_event{{ event._id }}" role="button" data-mdb-toggle="modal" >Delete</a>
-                    <div class="modal fade " id="delete_event{{ event._id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content ">
-                                <div class="modal-header">
-                                    <h5 class="modal-title d-flex justify-content-center" id="deleteModal">Are you sure you want to delete this event?</h5>
-                                </div>
-                                <div class="modal-body"><i class="fas fa-times"></i></div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</a>
-                                    <a href="{{ url_for('delete_event', event_id=event._id) }}" class="btn btn-danger">Delete</a>
-                                </div>
+                <a class="btn btn-success" href="{{ url_for('edit_event', event_id=event._id) }}" role="button">Edit</a>
+                <a class="btn btn-danger" href="#delete_event{{ event._id }}" role="button" data-mdb-toggle="modal" >Delete</a>
+                <div class="modal fade " id="delete_event{{ event._id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h5 class="modal-title d-flex justify-content-center" id="deleteModal">Are you sure you want to delete this event?</h5>
+                            </div>
+                            <div class="modal-body"><i class="fas fa-times"></i></div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</a>
+                                <a href="{{ url_for('delete_event', event_id=event._id) }}" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>
+                </div>
                 {% endif %}
+
             </div>
-            <div class="card col-6 ">            
-                <h4 class="card-title pt-2">{{ event.event_location }}</h4>
-                <h5 class="card-title">{{ event.event_date }}</h5>
-                <img src="" class="card-img-top hover-shadow {{ event.event_type }}" alt="..." />
-                <p class="card-text">
-                {{ event.event_description }}
-                </p>
-                {% if session.user|lower == 'admin' %}
-                    <a class="btn btn-success" href="{{ url_for('edit_event', event_id=event._id) }}" role="button">Edit</a>
-                    <a class="btn btn-danger" href="#delete_event{{ event._id }}" role="button" data-mdb-toggle="modal" >Delete</a>
-                    <div class="modal fade " id="delete_event{{ event._id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content ">
-                                <div class="modal-header">
-                                    <h5 class="modal-title d-flex justify-content-center" id="deleteModal">Are you sure you want to delete this event?</h5>
-                                </div>
-                                <div class="modal-body"><i class="fas fa-times"></i></div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</a>
-                                    <a href="{{ url_for('delete_event', event_id=event._id) }}" class="btn btn-danger">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-            </div>
-    {% endfor %}
+        </div>
+        {% endfor %}
         <div class="row justify-content-center">
             <div class="col-4">
                 {{ pagination.links}}

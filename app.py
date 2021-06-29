@@ -72,7 +72,9 @@ def events():
 def search():
     query = request.form.get("query")
     events = list(mongo.db.events.find({"$text": {"$search": query}}))
-    return render_template("events.html", events=events)
+    paginated_events = get_elements(events)
+    pagination = pagination_elements(events)
+    return render_template("events.html", events=paginated_events, pagination=pagination)
 
 
 @app.route("/register", methods=["GET", "POST"])

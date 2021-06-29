@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container col-11 col-sm-8 col-lg-6 cb-add_event mt-2">
+    <div class="container col-11 col-sm-8 col-lg-6 cb-add_event mt-5">
         <div class="row py-3">
             <form action="{{ url_for('edit_climb', climb_id=climb._id) }}" method="POST">
                 <h3 class="d-flex justify-content-center " style="font-family: Chiller; font-size: 2em;">EDIT CLIMB</h3>
@@ -36,11 +36,11 @@
                         aria-label="climb description" placeholder="climbing info" rows="4" required>{{ climb.climb_description }}</textarea>
                 </div>
                 <div class="input-group pt-3">
-                    <div class="form-check form-switch">
+                    <div class="form-check form-switch cb-form-switch">
                         {% if climb.full_equip == 'yes' %}
                         <input class="form-check-input" type="checkbox" id="full_equip" name="full_equip" checked />
                         {% else %}
-                        <input class="form-check-input" type="checkbox" id="full_equip" name="full_equip"/>
+                        <input class="form-check-input switcher" type="checkbox" id="full_equip" name="full_equip"/>
                         {% endif %}
                         <label class="form-check-label" for="full_equip">Providnig full climbing gear</label>
                     </div>

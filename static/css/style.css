@@ -12,6 +12,7 @@ body, html {
     background-color: rgba(0,0,0, 0.8);
     padding: 1em;
     z-index: 999;
+    overflow: hidden;
 }
 
 #cb-navbar--collapse li {
@@ -59,6 +60,36 @@ body, html {
     font-family: sans-serif;
     background-color:rgba(0,0,0, 0.6) ;
     color: #f2f2f2;
+}
+/*------------------------------------ Events page*/
+
+.cb-search {
+    background-color: rgba(0,0,0, 0.8);
+    width: 80%;
+}
+
+.cb-search span {
+    color:#fafafa
+}
+
+.cb-search input:focus {
+    color:#fafafa
+}
+
+.cb-search input i:hover {
+    font-size: 3em;
+}
+
+.cb-btn--search {
+    background-color: #3b945E;
+}
+
+.cb-btn--search i {
+    color:#f2f2f2;
+}
+
+.cb-btn--search:hover {
+    background-color: #03dd84;
 }
 
 img {
@@ -167,10 +198,12 @@ a:hover {
     border-radius: 0.5em;
 }
 /*---------------------------------------- Buttons */
+
 .cb-add_event button{
     background-color: #3B945E;
     color: #f2f2f2;
 }
+
 
 .cb-btn--submit {
     background-color: #3B945E;
