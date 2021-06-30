@@ -279,15 +279,15 @@ a:hover {
 }
 /*---------------------------------------- Buttons */
 
-.cb-add_event button{
-    background-color: #3B945E;
-    color: #f2f2f2;
+.cb-btn-add button{
+    padding:1em;
+
 }
 
 .cb-btn--add {
     background-color: #3B945E;
     color:#f2f2f2;
-    min-width: 40%;
+    min-width: 50%;
     font-size: .8em;
 }
 
@@ -303,18 +303,42 @@ a:hover {
     color:#f2f2f2;
 }
 
+.cb-btn--add_event {
+    background-color: #3b945E;
+    color: #f2f2f2;
+    font-size: .8em;
+}
+
+.cb-btn--add_event:hover {
+    background-color: #03dd84;
+    color:#f2f2f2;
+}
+
+.cb-btn--add_event i {
+    color: #f2f2f2;
+    padding-left: 1.5em;
+    font-size: 1.2em;
+}
+
 .cb-btn--back {
-    margin-left: 1em;
+    padding: .8em;
     background-color: #f2f2f2;
     color: #3b945E;
 }
 
-.cb-btn--back i {
+.cb-btn--back_events {
+    margin: 1em .5em 0 .5em;
+    padding: .8em;
+    background-color: #f2f2f2;
+    color: #3b945E;
+}
+
+.cb-btn--back i, .cb-btn--back_events i {
     font-size: 1.2em;
     padding-left: .8em;
 }
 
-.cb-btn--back:hover {
+.cb-btn--back:hover, .cb-btn--back_events:hover {
     color: #3b945E;
     background-color: #fff;
 }
