@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container col-11 col-sm-8 col-lg-6 mt-5 cb-add_event">
+    <div class="container col-11 col-sm-8 col-lg-6 mt-5 cb-add_climb">
         <div class="row py-3">
             <form action="{{ url_for('search_climber') }}" method="POST">
-                <h3 class="d-flex justify-content-center" style="font-family: Chiller; font-size: 2em;">SEARCH FOR A CLIMBER </h3>
+                <h3 class="d-flex justify-content-center">SEARCH FOR A CLIMBER </h3>
                 <div class="input-group mb-3 flatpickr">
                     <input type="text" name="climb_date" class="form-control flatpickr-date" placeholder="Select Date.." data-input>
                     <div class="input-group-append">
@@ -41,7 +41,8 @@
                     </div>
                 </div>
                 <div class="input-group-append pt-3">
-                    <button class="btn cb-btn--submit" type="submit">Search climber</button>
+                    <button class="btn cb-btn--submit" type="submit">Add Climb<i class="fas fa-search-plus"></i></button>
+                    <a href="{{ url_for('climbs') }}" class="btn cb-btn--back_climbs" >Back to Climbs<i class="fas fa-undo"></i></a> 
                 </div>
             </form>
         </div>

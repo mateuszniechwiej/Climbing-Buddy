@@ -153,13 +153,38 @@ img {
     margin-top: .3em;
 }
 
-/*--------------------------------------   */
+/*-------------------------------------- Climbing buddy page */
+.cb-filter--container i {
+    color:#3B945E;
+    padding-left:1em;
+}
+
+.cb-filter--container a {
+    background-color: #f2f2f2;
+    color: #3B945E;
+}
+
+.cb-filter--container a:hover, .cb-filter--container a:focus {
+    background-color: #fff;
+    color:#3B945E;
+}
+
 .cb-climbs {
     max-width: 600px;
     height: auto;
     overflow: hidden;
     padding: 0;
     margin: auto;
+}
+
+
+/*--------------------------------- Search for Climber page */
+
+.cb-add_climb {
+    background-color: #f2f2f2;
+    padding: 2em;
+    border: 1px solid #03dd84;
+    border-radius: 0.5em;
 }
 
 .nav-item {
@@ -259,11 +284,12 @@ a:hover {
     border: 1px solid #03dd84;
 }
 
-.cb-add_event {
+#cb-filter {
     background-color: #f2f2f2;
     padding: 2em;
     border: 1px solid #03dd84;
     border-radius: 0.5em;
+    margin: 2em;
 }
 /*---------------------------------------- Pagination */
 .pagination {
@@ -326,19 +352,19 @@ a:hover {
     color: #3b945E;
 }
 
-.cb-btn--back_events {
+.cb-btn--back_events, .cb-btn--back_climbs {
     margin: 1em .5em 0 .5em;
-    padding: .8em;
+    padding: .8em 2em .8em 2.4em;
     background-color: #f2f2f2;
     color: #3b945E;
 }
 
-.cb-btn--back i, .cb-btn--back_events i {
+.cb-btn--back i, .cb-btn--back_events i, .cb-btn--back_climbs i {
     font-size: 1.2em;
     padding-left: .8em;
 }
 
-.cb-btn--back:hover, .cb-btn--back_events:hover {
+.cb-btn--back:hover, .cb-btn--back_events:hover, .cb-btn--back_climbs:hover {
     color: #3b945E;
     background-color: #fff;
 }
@@ -347,9 +373,29 @@ a:hover {
     background-color: #3b945E;
 }
 
+.cb-btn--add_climb {
+    color: #f2f2f2;
+    background-color: #3B945E;
+}
+
+.cb-btn--add_climb:hover {
+    background-color: #03dd84;
+    color: #f2f2f2;
+}
+
+.cb-btn--add_climb i {
+    font-size: 1.2em;
+    padding-left: .8em;
+    color: #f2f2f2;
+}
+
 .cb-btn--submit {
     background-color: #3B945E;
     color:#f2f2f2
+}
+
+.cb-btn--submit i {
+    padding-left: .8em;
 }
 
 .cb-btn--rows {
