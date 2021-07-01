@@ -74,6 +74,7 @@ def search():
     events = list(mongo.db.events.find({"$text": {"$search": query}}))
     paginated_events = get_elements(events)
     pagination = pagination_elements(events)
+
     return render_template("events.html", events=paginated_events, pagination=pagination)
 
 
@@ -251,7 +252,12 @@ def filter():
                                                  {"full_equip": full_equip}]}))
 
     username = mongo.db.users.find_one({"username": session["user"]})
-    return render_template("climbs.html", climbs=climbs, username=username)
+    
+    paginated_climbs = get_elements(climbs)
+    pagination = pagination_elements(climbs)
+
+
+    return render_template("climbs.html", climbs=paginated_climbs, pagination=pagination, username=username)
 
 
 @app.route("/search_climber", methods=["GET", "POST"])

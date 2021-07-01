@@ -3,7 +3,7 @@
 <div class="row justify-content-center">
     <div class="container cb-filter--container col-12 col-lg-7 mt-5 text-center">
         <a
-        class="btn btn-primary"
+        class="btn cb-btn-filter"
         data-mdb-toggle="collapse"
         href="#cb-filter"
         role="button"
@@ -12,7 +12,6 @@
         >
         Filter Climbs<i class="fas fa-filter"></i>
         </a>
-        <!-- Collapsed content -->
         <div class="collapse mt-3" id="cb-filter">
                 <div class="row text-end">
                     <form action="{{ url_for('filter') }}" method="POST">
@@ -48,9 +47,8 @@
                                 <label class="form-check-labelr" for="equip">Required full equipment</label>
                             </div>
                         </div>
-                        <div class="input-group-append pt-3">
-                            <button class="btn btn-primary" type="submit">Filter</button>
-                            <a href="{{ url_for('climbs') }}" class="btn btn-danger"><i class="far fa-times-circle"></i></a>
+                        <div class="input-group-append pt-3 text-center">
+                            <button class="btn cb-btn--submit" type="submit">Filter <i class="fas fa-filter"></i></button>
                         </div>
                     </form>
                 </div>
@@ -61,28 +59,64 @@
     </div>
 </div>
     {% for climb in climbs %}
-    <div class="row justify-content-center cb-climbs my-5">
-        <div class="card col-8 cb-climb_card text-center">
-            <div class="card-body ">
-                <h4 class="card-title">{{ climb.climb_location }}</h4>
-                <h5 class="card-title">{{ climb.climb_date }}</h5>
+<div class="container-fluid">
+    <div class="row justify-content-between cb-climbs my-5">
+        <div class="card col-5 cb-climb_card text-center">
+            <div class="card-body cb-climbs_body">
+                <h3 class="card-title">WHERE?  {{ climb.climb_location }}</h4>
+                <h5 class="card-title">WHEN? </i> {{ climb.climb_date }}</h5>
+                <p>PROVIDING EQUIPMENT: {{ climb.full_equip|capitalize }}</p>
                 <p class="card-text">
                     {{ climb.climb_description }}
                 </p>
                 <p>{{ climb.created_by }}</p>
                 {% if session.user != climb.created_by %}
-                <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button" data-mdb-toggle="modal">Accept
-                    Climb</a>
+                <div class="card-footer cb-card--footer pb-2">
+                    <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button"
+                        data-mdb-toggle="modal">Accept
+                        Climb</a>
+                </div>
                 {% endif %}
                 {% if session.user|lower == climb.created_by or session.user|lower == 'admin' %}
                 {% if session.user|lower == climb.created_by %}
-                <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
-                {% endif %}
-                <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal"
-                    role="button">Delete</a>
+                <div class="card-footer cb-card--footer pb-2">
+                    <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
+                    {% endif %}
+                    <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal"
+                        role="button">Delete</a>
+                </div>
                 {% endif %}
             </div>
         </div>
+        <div class="card col-5 cb-climb_card text-center">
+            <div class="card-body ">
+                <h3 class="card-title">WHERE?  {{ climb.climb_location }}</h4>
+                <h5 class="card-title">WHEN? </i> {{ climb.climb_date }}</h5>
+                <p>PROVIDING EQUIPMENT: {{ climb.full_equip|capitalize }}</p>
+                <p class="card-text">
+                    {{ climb.climb_description }}
+                </p>
+                <p>{{ climb.created_by }}</p>
+                {% if session.user != climb.created_by %}
+                <div class="card-footer cb-card--footer pb-2">
+                    <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button"
+                        data-mdb-toggle="modal">Accept
+                        Climb</a>
+                </div>
+                {% endif %}
+                {% if session.user|lower == climb.created_by or session.user|lower == 'admin' %}
+                {% if session.user|lower == climb.created_by %}
+                <div class="card-footer cb-card--footer pb-2">
+                    <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
+                    {% endif %}
+                    <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal"
+                        role="button">Delete</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
         <!-- Accept climb modal -->
         <div class="modal fade " id="accept_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Accept Climb"
             aria-hidden="true">

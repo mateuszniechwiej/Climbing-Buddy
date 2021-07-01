@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 body, html {
     background: url(/static/images/darkbg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -8,15 +10,26 @@ body, html {
 }
 
 /*------------------------------------- Navbar*/
+.cb-navbar {
+    background-color:black;
+    padding: 0;
+}
+
+.cb-navbar img {
+    margin: 0 1em 0 1em;
+    height: 2.5em;
+}
+
 #cb-navbar--collapse {
     background-color: rgba(0,0,0, 0.8);
-    padding: 1em;
     z-index: 999;
 }
 
 #cb-navbar--collapse li {
     max-width: max-content;
     padding: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2em;
 }
 #cb-navbar--collapse li span {
     margin:.5em;
@@ -28,6 +41,7 @@ body, html {
     border-bottom:1px solid #3b945E;
     padding-bottom: 2px;
 } 
+
 
 /*------------------------------------- Home page styling */
 
@@ -42,6 +56,10 @@ body, html {
     background-color:rgba(0,0,0, 0.6);
     color: #f2f2f2;
     padding: .5em;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2em;
+    text-decoration: none;
+
 }
 
 .cb-bg-events {
@@ -86,10 +104,10 @@ body, html {
     background-color: #03dd84;
 }
 
-img {
+/* img {
     padding:auto;
     margin-bottom: 0.5em;
-}
+} */
 
 .cb-events {
     height: auto;
@@ -154,7 +172,7 @@ img {
 }
 
 /*-------------------------------------- Climbing buddy page */
-.cb-filter--container i {
+.cb-btn--filter {
     color:#3B945E;
     padding-left:1em;
 }
@@ -170,17 +188,24 @@ img {
 }
 
 .cb-climbs {
-    max-width: 600px;
+    max-width: 80%;
     height: auto;
     overflow: hidden;
     padding: 0;
     margin: auto;
 }
 
+.cb-climbs i {
+    color: red;
+}
+
+.cb-climbs h3 {
+    text-decoration: none;
+}
 
 /*--------------------------------- Search for Climber page */
 
-.cb-add_climb {
+.cb-add_climb, .cb-add_event {
     background-color: #f2f2f2;
     padding: 2em;
     border: 1px solid #03dd84;
@@ -191,6 +216,8 @@ img {
     padding-right: 15px;
     font-size: 1em; 
 }
+
+
 
 h1 {
     font-family:Chiller, sans-serif;
@@ -279,9 +306,15 @@ a:hover {
 }
 
 .cb-climb_card {
+    max-height: 400px;
     background-color:#f2f2f2 ;
     border-radius: 0.5em;
     border: 1px solid #03dd84;
+    padding: 0;
+}
+
+.cb-climbs_body {
+    padding: 0;
 }
 
 #cb-filter {
@@ -387,6 +420,10 @@ a:hover {
     font-size: 1.2em;
     padding-left: .8em;
     color: #f2f2f2;
+}
+
+.cb-btn-filter i {
+    padding-left: .8em;
 }
 
 .cb-btn--submit {

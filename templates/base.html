@@ -24,46 +24,46 @@
 
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md">
-            <!-- <div class="container-fluid">  -->
-                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#cb-navbar--collapse"
-                    aria-controls="cb-navbar--collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="cb-navbar--collapse">
-                    <ul class="navbar-nav mb-2 mb-lg-0 cb-navbar--menu">
-                        <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="/"><span>Home</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('events') }}"><span>Events</span></a>
-                        </li>
-                        {% if session.user %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('climbs') }}"><span>Climbing Buddy</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><span>Profile</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('logout') }}"><span>Logout</span></a>
-                            </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('register') }}"><span>Register</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('login') }}"><span>Login</span></a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-md cb-navbar">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#cb-navbar--collapse"
+                aria-controls="cb-navbar--collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('home') }}"><img src="/static/images/logo.png" alt="logo"></a>
+            <div class="collapse navbar-collapse justify-content-center" id="cb-navbar--collapse">
+                <ul class="navbar-nav mb-2 mb-lg-0 cb-navbar--menu">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('events') }}"><span>Events</span></a>
+                    </li>
+                    {% if session.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('climbs') }}"><span>Climbing Buddy</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><span>Profile</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}"><span>Logout</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('register') }}"><span>Register</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}"><span>Login</span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
             <!-- </div>  -->
         </nav>
-
-    
+        
+        
         <!-- Background image -->
-    </header>
+        </header>
 
     <!-- flash messages-->
     <section>
