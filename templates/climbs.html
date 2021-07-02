@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="row justify-content-center">
-    <div class="container cb-filter--container col-12 col-lg-7 mt-5 text-center">
+    <div class="container cb-filter--container col-12 col-lg-7 mt-5 pt-5 text-center">
         <a
         class="btn cb-btn-filter"
         data-mdb-toggle="collapse"
@@ -54,69 +54,73 @@
                 </div>
         </div>    
     </div>
-    <div class="container col-12 col-lg-5 mt-5 text-center">
+    <div class="container col-12 col-lg-5 mt-5 pt-5 text-center">
         <a href="{{ url_for('search_climber') }}" class="btn cb-btn--add_climb">Search Climber <i class="fas fa-search-plus"></i></a>
     </div>
 </div>
     {% for climb in climbs %}
-<div class="container-fluid">
-    <div class="row justify-content-between cb-climbs my-5">
-        <div class="card col-5 cb-climb_card text-center">
-            <div class="card-body cb-climbs_body">
-                <h3 class="card-title">WHERE?  {{ climb.climb_location }}</h4>
-                <h5 class="card-title">WHEN? </i> {{ climb.climb_date }}</h5>
-                <p>PROVIDING EQUIPMENT: {{ climb.full_equip|capitalize }}</p>
-                <p class="card-text">
-                    {{ climb.climb_description }}
-                </p>
-                <p>{{ climb.created_by }}</p>
-                {% if session.user != climb.created_by %}
-                <div class="card-footer cb-card--footer pb-2">
-                    <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button"
-                        data-mdb-toggle="modal">Accept
-                        Climb</a>
+    <div class="container">
+        <div class="row justify-content-center cb-climbs">
+            <div class="card col-12 col-lg-5 cb-climbs_card text-center">
+                <div class="card-body cb-climbs_body">
+                    <h3 class="card-title">{{ climb.climb_location }}</h3>
+                        <h5 class="card-title">{{ climb.climb_date }}</h5>
+                        <p>PROVIDING EQUIPMENT: {{ climb.full_equip|capitalize }}</p>
+                        <p class="card-text">
+                            {{ climb.climb_description }}
+                        </p>
+                        <p>{{ climb.created_by }}</p>
+                        {% if session.user|lower != climb.created_by %}
+                            <div class="card-footer cb-card--footer pb-2">
+                                <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button" data-mdb-toggle="modal">Accept
+                                    Climb</a>
+                                {% if session.user|lower == 'admin' %}
+                                    <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal" role="button">Delete</a>
+                            
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                            {% if session.user|lower == climb.created_by and session.user|lower == 'admin' %}
+                                {% if session.user|lower == climb.created_by %}
+                                    <div class="card-footer cb-card--footer pb-2">
+                                        <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
+                                {% endif %}
+                                        <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal" role="button">Delete</a>
+                                    </div>
+                            {% endif %}
                 </div>
-                {% endif %}
-                {% if session.user|lower == climb.created_by or session.user|lower == 'admin' %}
-                {% if session.user|lower == climb.created_by %}
-                <div class="card-footer cb-card--footer pb-2">
-                    <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
-                    {% endif %}
-                    <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal"
-                        role="button">Delete</a>
+            </div>
+            <div class="card col-12 col-lg-5 cb-climbs_card text-center">
+                <div class="card-body cb-climbs_body">
+                    <h3 class="card-title">{{ climb.climb_location }}</h3>
+                        <h5 class="card-title">{{ climb.climb_date }}</h5>
+                        <p>PROVIDING EQUIPMENT: {{ climb.full_equip|capitalize }}</p>
+                        <p class="card-text">
+                            {{ climb.climb_description }}
+                        </p>
+                        <p>{{ climb.created_by }}</p>
+                        {% if session.user|lower != climb.created_by %}
+                            <div class="card-footer cb-card--footer pb-2">
+                                <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button" data-mdb-toggle="modal">Accept
+                                    Climb</a>
+                                {% if session.user|lower == 'admin' %}
+                                    <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal" role="button">Delete</a>
+                            
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                            {% if session.user|lower == climb.created_by and session.user|lower == 'admin' %}
+                                {% if session.user|lower == climb.created_by %}
+                                    <div class="card-footer cb-card--footer pb-2">
+                                        <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
+                                {% endif %}
+                                        <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal" role="button">Delete</a>
+                                    </div>
+                            {% endif %}
                 </div>
-                {% endif %}
             </div>
         </div>
-        <div class="card col-5 cb-climb_card text-center">
-            <div class="card-body ">
-                <h3 class="card-title">WHERE?  {{ climb.climb_location }}</h4>
-                <h5 class="card-title">WHEN? </i> {{ climb.climb_date }}</h5>
-                <p>PROVIDING EQUIPMENT: {{ climb.full_equip|capitalize }}</p>
-                <p class="card-text">
-                    {{ climb.climb_description }}
-                </p>
-                <p>{{ climb.created_by }}</p>
-                {% if session.user != climb.created_by %}
-                <div class="card-footer cb-card--footer pb-2">
-                    <a href="#accept_climb{{ climb._id }}" class="btn btn-success" role="button"
-                        data-mdb-toggle="modal">Accept
-                        Climb</a>
-                </div>
-                {% endif %}
-                {% if session.user|lower == climb.created_by or session.user|lower == 'admin' %}
-                {% if session.user|lower == climb.created_by %}
-                <div class="card-footer cb-card--footer pb-2">
-                    <a class="btn btn-success" href="{{ url_for('edit_climb', climb_id=climb._id) }}" role="button">Edit</a>
-                    {% endif %}
-                    <a href="#delete_climb{{ climb._id  }}" class="btn btn-danger" data-mdb-toggle="modal"
-                        role="button">Delete</a>
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
+        <!-- </div> -->
         <!-- Accept climb modal -->
         <div class="modal fade " id="accept_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Accept Climb"
             aria-hidden="true">
@@ -153,7 +157,8 @@
                                 <textarea class="form-control" id="message" rows="4"></textarea>
                                 <label class="form-label" for="message">Message</label>
                             </div>
-                            <div class="response mt-2 text-center" >
+                            <div class="response text-center" >
+                            </div>
                             </div>
                             <!-- Submit button -->
                             <div class="form-outline mb-4 text-center" >
@@ -186,7 +191,7 @@
                 </div>
             </div>
         </div>
-        {% endfor %}
+    {% endfor %}
     </div>
     {% block script %}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">

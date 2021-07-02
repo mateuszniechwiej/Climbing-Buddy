@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 ">
             <form action="{{ url_for('search') }}" method="POST">
-                <div class="input-group mt-5 justify-content-center">
+                <div class="input-group mt-5 justify-content-center mt-5 pt-5">
                     <div class="form-outline cb-search ">
                         <input type="search" id="query" name="query" class="form-control" minlength="3" />
                     <label class="form-label" for="query"><span>Search in Events</span></label>
@@ -17,7 +17,7 @@
             </form>  
         </div>
         {% if session.user|lower == 'admin' %}
-        <div class="col-12 col-md-4 mt-5 text-center">
+        <div class="col-12 col-md-4 mt-5 text-center mt-5 pt-5">
             <a href="{{ url_for('add_event') }}" class="btn cb-btn--add" type="submit">Add Event<i class="fas fa-plus-square"></i></a>
         </div> 
         {% endif %}     
@@ -58,7 +58,7 @@
         </div>
         {% endfor %}
         <div class="row justify-content-center">
-            <div class="col-4">
+            <div class="col-9 col-lg-4 text-center">
                 {{ pagination.links}}
             </div>
         </div>

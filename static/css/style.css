@@ -11,7 +11,7 @@ body, html {
 
 /*------------------------------------- Navbar*/
 .cb-navbar {
-    background-color:black;
+    background-color:#000;
     padding: 0;
 }
 
@@ -37,8 +37,8 @@ body, html {
 }
 
 #cb-navbar--collapse li span:hover {
-    color: #3b945E;
-    border-bottom:1px solid #3b945E;
+    color: #208347;
+    border-bottom:1px solid #208347;
     padding-bottom: 2px;
 } 
 
@@ -46,7 +46,7 @@ body, html {
 /*------------------------------------- Home page styling */
 
 .cb-home h1{
-    background-color: #3b945E;
+    background-color: #208347;
     margin: .5em 0 .5em 0;
     padding: .1em;
     border-radius: .1em;
@@ -92,7 +92,7 @@ body, html {
 }
 
 .cb-btn--search {
-    background-color: #3b945E;
+    background-color: #208347;
 }
 
 .cb-btn--search i {
@@ -101,7 +101,7 @@ body, html {
 }
 
 .cb-btn--search:hover {
-    background-color: #03dd84;
+    background-color: #1bab74;
 }
 
 /* img {
@@ -117,7 +117,7 @@ body, html {
 }
 
 .cb-events-card {
-    border: 1px solid #3b945E;
+    border: 1px solid #208347;
     padding: 0;
     max-width: 500px;
 }
@@ -127,12 +127,14 @@ body, html {
 }
 
 .cb-events-body i {
-    color:red;
+    color:#992C1D;
     padding-right: 1em;
 }
 
 .cb-card--footer {
     background-color: #000;
+    border-bottom-left-radius:.2em;
+    border-bottom-right-radius:.2em;
 }
 
 /*---------------------------------- Error page*/
@@ -151,13 +153,13 @@ body, html {
 }
 
 .cb-error a {
-    color: #3b945E;
+    color: #208347;
     text-decoration: underline;
     font-size: 1.2em;
 }
 
-.cb-error h1 span, h4 span{
-    color: red;
+.cb-error h2 span, h4 span{
+    color: #992C1D;
     background-color: rgba(0,0,0, 0.6);
     padding: .2em;
     border-radius: .2em;
@@ -173,43 +175,53 @@ body, html {
 
 /*-------------------------------------- Climbing buddy page */
 .cb-btn--filter {
-    color:#3B945E;
+    color:#208347;
     padding-left:1em;
 }
 
 .cb-filter--container a {
     background-color: #f2f2f2;
-    color: #3B945E;
+    color: #208347;
 }
 
 .cb-filter--container a:hover, .cb-filter--container a:focus {
     background-color: #fff;
-    color:#3B945E;
+    color:#208347;
 }
 
 .cb-climbs {
-    max-width: 80%;
     height: auto;
     overflow: hidden;
     padding: 0;
-    margin: auto;
 }
 
 .cb-climbs i {
-    color: red;
+    color: #992C1D;
 }
 
 .cb-climbs h3 {
     text-decoration: none;
 }
 
+.cb-climbs_card {
+    margin: 1.5em;
+    border: 1px solid #208347;
+    border-radius: 0.5em;
+}
+
+
+
+.cb-climbs_body {
+    padding: 0;
+}
 /*--------------------------------- Search for Climber page */
 
 .cb-add_climb, .cb-add_event {
     background-color: #f2f2f2;
     padding: 2em;
-    border: 1px solid #03dd84;
+    border: 1px solid #208347;
     border-radius: 0.5em;
+    margin-top: 6em;
 }
 
 .nav-item {
@@ -234,7 +246,7 @@ a {
 }
 
 i {
-    color: #3b945E;
+    color: #208347;
 }
 
  nav {
@@ -242,15 +254,15 @@ i {
  }
 
 h3 {
-    color: #3b945E;
+    color: #208347;
     font-family: Chiller;
     font-size: 2.5em;
     text-decoration: underline;
 }
 
 h5 {
-    color:red;
-    font-family: Chiller;
+    color:#992C1D;
+    font-family: Chiller, sans-serif;
     font-size: 2em;
 }
 
@@ -261,14 +273,15 @@ h5 {
 } */
 
 a:hover {
-    color: #03dd84;
+    color: #208347;
 }
 /* ------------------------------login and registration page */
 .cb-login {
     background-color: #f2f2f2;
-    border: 1px solid #03dd84;
+    border: 1px solid #208347;
     border-radius: 0.5em ; 
     padding: 2em;
+    margin-top:6em;
 }
 
 .cb-login h3 {
@@ -278,9 +291,10 @@ a:hover {
 
 .cb-register {
     background-color: #f2f2f2;
-    border: 1px solid #03dd84;
+    border: 1px solid #208347;
     border-radius: 0.5em ; 
-    padding: 2em;   
+    padding: 2em;
+    margin-top: 6em;   
 }
 
 .cb-register label {
@@ -297,30 +311,25 @@ a:hover {
 }
 .cb-redirect a {
     margin-left: .5em;
-    color: #3b945E;
+    color: #208347;
 }
 
 .cb-redirect a:hover {
     text-decoration: underline;
-    color: #03dd84;
+    color: #208347;
 }
 
-.cb-climb_card {
+.cb-climbs_card {
     max-height: 400px;
     background-color:#f2f2f2 ;
-    border-radius: 0.5em;
-    border: 1px solid #03dd84;
     padding: 0;
 }
 
-.cb-climbs_body {
-    padding: 0;
-}
 
 #cb-filter {
     background-color: #f2f2f2;
     padding: 2em;
-    border: 1px solid #03dd84;
+    border: 1px solid #208347;
     border-radius: 0.5em;
     margin: 2em;
 }
@@ -344,7 +353,7 @@ a:hover {
 }
 
 .cb-btn--add {
-    background-color: #3B945E;
+    background-color: #208347;
     color:#f2f2f2;
     min-width: 50%;
     font-size: .8em;
@@ -358,18 +367,18 @@ a:hover {
 }
 
 .cb-btn--add:hover{
-    background-color: #03dd84;
+    background-color: #1bab74;
     color:#f2f2f2;
 }
 
 .cb-btn--add_event {
-    background-color: #3b945E;
+    background-color: #1bab74;
     color: #f2f2f2;
     font-size: .8em;
 }
 
 .cb-btn--add_event:hover {
-    background-color: #03dd84;
+    background-color: #208347;
     color:#f2f2f2;
 }
 
@@ -382,14 +391,14 @@ a:hover {
 .cb-btn--back {
     padding: .8em;
     background-color: #f2f2f2;
-    color: #3b945E;
+    color: #208347;
 }
 
 .cb-btn--back_events, .cb-btn--back_climbs {
     margin: 1em .5em 0 .5em;
     padding: .8em 2em .8em 2.4em;
     background-color: #f2f2f2;
-    color: #3b945E;
+    color: #208347;
 }
 
 .cb-btn--back i, .cb-btn--back_events i, .cb-btn--back_climbs i {
@@ -398,21 +407,21 @@ a:hover {
 }
 
 .cb-btn--back:hover, .cb-btn--back_events:hover, .cb-btn--back_climbs:hover {
-    color: #3b945E;
+    color: #208347;
     background-color: #fff;
 }
 
 .cb-btn--edit {
-    background-color: #3b945E;
+    background-color: #208347;
 }
 
 .cb-btn--add_climb {
     color: #f2f2f2;
-    background-color: #3B945E;
+    background-color: #208347;
 }
 
 .cb-btn--add_climb:hover {
-    background-color: #03dd84;
+    background-color: #1bab74;
     color: #f2f2f2;
 }
 
@@ -427,7 +436,7 @@ a:hover {
 }
 
 .cb-btn--submit {
-    background-color: #3B945E;
+    background-color: #208347;
     color:#f2f2f2
 }
 
@@ -439,19 +448,20 @@ a:hover {
     margin: 0;
 }
 .cb-btn--home {
-    background-color: #3b945e;
-    color: #f2f2f2;
+    background-color: #fafafa;
+    color: #208347;
     font-size: 1.2em;
     width: 100%;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .cb-btn--home:hover {
-    background-color: #03dd84;
+    background-color: #1bab74;
     color: #f2f2f2;
 }
 
 .cb-btn--submit:hover {
-    background-color:green;
+    background-color:#1bab74;
     color:#f2f2f2;
 }
 
@@ -460,12 +470,12 @@ a:hover {
 }
 
 .cb-btn--cancel {
-    background-color: brown;
-    color: #fafafa;
+    background-color: #992C1D;
+    color: #f2f2f2;
 }
 
 .cb-btn--cancel:hover {
-    background-color: red;
+    background-color: #992C1D;
     color: #fafafa;
 }
 
@@ -478,11 +488,11 @@ a:hover {
 }
 
 .flash-error {
-    color:red;
+    color:#992C1D;
 }
 
 .flash-message {
-    color:#03dd84;
+    color:#208347;
 }
 
 #event_description {
@@ -500,11 +510,11 @@ img {
 /*---------------------------------------- Toggle Switch */
 
 .cb-form-switch .switcher:checked[type=checkbox]::after {
-    background-color: #3B945E;
+    background-color: #208347;
     box-shadow: 0 0 0 .625rem rgba(59, 148, 94, 0.5) ;
 }
 .switcher[type=checkbox]:checked[type=checkbox]:checked {
-    background-color: #3B945E;
+    background-color: #208347;
 }
 /*------------------------------------------Forms styling */
 .cb-accept--content h5{
@@ -513,18 +523,18 @@ img {
 }
 .cb-accept--content {
     background-color: #fafafa;
-    border: 1px solid #03dd84;
+    border: 1px solid #208347;
     border-radius: 0.5em ;
 }
 .accept-icons {
-    color: #3b945E;
+    color: #208347;
     font-size: 1.2em;
 }
 .response {
     width: 100%;
     height: 100%;
     font-size: 1.5em;
-    color: #3b945E;
+    color: #208347;
     font-family: Chiller;
 } 
 
@@ -557,7 +567,7 @@ img {
 .cb-profile {
     background-color: #fafafa;
     border-radius: 0.5em;
-    border: 1px solid #03dd84;
+    border: 1px solid #208347;
 }
 
 .cb-profile h3{
@@ -568,6 +578,13 @@ img {
 
 
 /* ----------- Media Query ------------- */
+@media screen and (max-width: 540px) and (min-width: 351px) {
+    .pagination li {
+        font-size: 1.5em;
+    }
+}
+
+
 @media screen and (max-width: 350px) {
     .cb-home h1 {
         font-size: 5em;
@@ -577,6 +594,9 @@ img {
     }
     .cb-profile h3{
         font-size: 1.8em;
+    }
+    .pagination li {
+        font-size:1.3em;
     }
 
 }

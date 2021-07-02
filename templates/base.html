@@ -29,13 +29,13 @@
 
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md cb-navbar">
+        <nav class="navbar navbar-expand-md cb-navbar fixed-top">
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#cb-navbar--collapse"
                 aria-controls="cb-navbar--collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <a class="navbar-brand" href="{{ url_for('home') }}"><img src="/static/images/logo.png" alt="logo"></a>
-            <div class="collapse navbar-collapse justify-content-center" id="cb-navbar--collapse">
+            <div class="collapse navbar-collapse " id="cb-navbar--collapse">
                 <ul class="navbar-nav mb-2 mb-lg-0 cb-navbar--menu">
                     <li class="nav-item active">
                         <a class="nav-link" aria-current="page" href="/"><span>Home</span></a>
@@ -76,7 +76,7 @@
         {% with messages = get_flashed_messages(with_categories=True) %}
             {% if messages %}
                 {% for category, message in messages %}
-                    <div class="row flash-msg">
+                    <div class="row flash-msg mt-5">
                         <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3> 
                     </div>
                 {% endfor %}
