@@ -9,10 +9,18 @@ body, html {
     scroll-behavior: initial;
 }
 
-/*------------------------------------- Navbar*/
+p { font-style: 'Exo 2', sans-serif;
+    font-size: 1.6em;
+    color: #000;
+} 
+
+
+
+/*------------------------------------- Base page*/
 .cb-navbar {
     background-color:#000;
     padding: 0;
+    border-bottom: .5px solid #f2f2f2;
 }
 
 .cb-navbar img {
@@ -42,10 +50,34 @@ body, html {
     padding-bottom: 2px;
 } 
 
+footer {
+    background-color: #000;
+    border-top: .5px solid #f2f2f2;
+}
+
+footer a span {
+    color: #f2f2f2;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.6em;
+}
+
+footer i {
+    color: #f2f2f2;
+    font-size: 1.6em;
+}
+
+footer a span:hover, footer i:hover {
+    color: #1bab74;
+}
+
+
 
 /*------------------------------------- Home page styling */
 
-.cb-home h1{
+.cb-home h1 {
+    font-family:Chiller, sans-serif;
+    color: #fafafa;
+    font-size: 10em;
     background-color: #208347;
     margin: .5em 0 .5em 0;
     padding: .1em;
@@ -104,17 +136,17 @@ body, html {
     background-color: #1bab74;
 }
 
-/* img {
-    padding:auto;
-    margin-bottom: 0.5em;
-} */
-
 .cb-events {
     height: auto;
     overflow: hidden;
     padding: 0;
     margin: 0;
 }
+
+.cb-events img {
+    max-width: 100%;
+    max-height: 70%;
+} 
 
 .cb-events-card {
     border: 1px solid #208347;
@@ -193,6 +225,7 @@ body, html {
     height: auto;
     overflow: hidden;
     padding: 0;
+    margin:0;
 }
 
 .cb-climbs i {
@@ -204,17 +237,15 @@ body, html {
 }
 
 .cb-climbs_card {
-    margin: 1.5em;
+    /* margin: 1.5em; */
     border: 1px solid #208347;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
 }
-
-
 
 .cb-climbs_body {
     padding: 0;
 }
-/*--------------------------------- Search for Climber page */
+/*------------------------------------ Search for Climber page */
 
 .cb-add_climb, .cb-add_event {
     background-color: #f2f2f2;
@@ -227,22 +258,6 @@ body, html {
 .nav-item {
     padding-right: 15px;
     font-size: 1em; 
-}
-
-
-
-h1 {
-    font-family:Chiller, sans-serif;
-    color: #fafafa;
-    font-size: 10em;
-}
-p {
-    font-size: 1.6em;
-    color: #000;
-}
-
-a {
-    color: #fafafa;
 }
 
 i {
@@ -275,7 +290,7 @@ h5 {
 a:hover {
     color: #208347;
 }
-/* ------------------------------login and registration page */
+/* -------------------------------------   login and registration page */
 .cb-login {
     background-color: #f2f2f2;
     border: 1px solid #208347;
@@ -333,10 +348,19 @@ a:hover {
     border-radius: 0.5em;
     margin: 2em;
 }
-/*---------------------------------------- Pagination */
+/*-------------------------------------------------------- Pagination */
 .pagination {
     justify-content: center;
 }
+
+.pagination a {
+    color: #f2f2f2;
+}
+
+.pagination a:hover {
+    color: #208347;
+}
+
 .pagination li {
     display: inline-block;
     padding: 0 .5em 0 .5em;
@@ -345,7 +369,7 @@ a:hover {
     font-size: 2.5em;
     background-color: rgba(0,0,0, 0.6);
 }
-/*---------------------------------------- Buttons */
+/*---------------------------------------------------------- Buttons */
 
 .cb-btn-add button{
     padding:1em;
@@ -482,7 +506,7 @@ a:hover {
 .cb-btn--cancel i {
     color: #fafafa;
 }
-
+/*------------------------------------ flash mseggaes*/
 .flash-msg {
     line-height: 3;
 }
@@ -503,10 +527,6 @@ a:hover {
     height: max-content;
 }
 
-img {
-    max-width: 100%;
-    max-height: 80%;
-}
 /*---------------------------------------- Toggle Switch */
 
 .cb-form-switch .switcher:checked[type=checkbox]::after {
@@ -582,6 +602,12 @@ img {
     .pagination li {
         font-size: 1.5em;
     }
+    .cb-home h1 {
+        font-size: 7em;
+    }
+    .cb-climbs p {
+        font-size: 1.5em;
+    }
 }
 
 
@@ -598,5 +624,10 @@ img {
     .pagination li {
         font-size:1.3em;
     }
-
+    .cb-climbs p {
+        font-size: 1em;
+    }
+    .cb-climbs h3 {
+        font-size: 1.5em;
+    }
 }
