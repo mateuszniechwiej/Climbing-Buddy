@@ -84,7 +84,7 @@ footer a span:hover, footer i:hover {
 /*------------------------------------- Home page styling */
 
 .cb-home h1 {
-    font-family: Chiller, sans-serif;
+    font-family: 'Chiller' , sans-serif;
     color: #fafafa;
     font-size: 10em;
     background-color: #208347;
@@ -185,7 +185,7 @@ footer a span:hover, footer i:hover {
     background-color: rgba(0,0,0, 0.6);
     padding: .2em;
     border-radius: .2em;
-    font-family: Chiller,sans-serif;
+    font-family: 'Chiller',sans-serif;
     font-size: 2em;
 }
 
@@ -232,7 +232,6 @@ footer a span:hover, footer i:hover {
 
 .cb-climbs {
     height: auto;
-    overflow: hidden;
     padding: 0;
     margin:0;
 }
@@ -246,13 +245,17 @@ footer a span:hover, footer i:hover {
 }
 
 .cb-climbs_card {
-    /* margin: 1.5em; */
     border: 1px solid #208347;
     border-radius: 0.25em;
 }
 
 .cb-climbs_body {
     padding: 0;
+    border: 1px solid #208347;
+    border-radius: 0.25em;
+}
+#climber_msg p {
+    padding-bottom: .5em;
 }
 /*------------------------------------ Search for Climber page */
 
@@ -279,14 +282,14 @@ i {
 
 h3 {
     color: #208347;
-    font-family: Chiller;
+    font-family: 'Chiller';
     font-size: 2.5em;
     text-decoration: underline;
 }
 
 h5 {
     color:#992C1D;
-    font-family: Chiller, sans-serif;
+    font-family: 'Chiller', sans-serif;
     font-size: 2em;
 }
 
@@ -309,7 +312,7 @@ a:hover {
 }
 
 .cb-login h3 {
-    font-family: Chiller, sans-serif;
+    font-family: 'Chiller', sans-serif;
     font-size: 2em;
 }
 
@@ -374,7 +377,7 @@ a:hover {
     display: inline-block;
     padding: 0 .5em 0 .5em;
     margin-top:1em ;
-    font-family: Chiller;
+    font-family: 'Chiller';
     font-size: 2.5em;
     background-color: rgba(0,0,0, 0.6);
 }
@@ -444,8 +447,14 @@ a:hover {
     background-color: #fff;
 }
 
-.cb-btn--edit {
-    background-color: #208347;
+.cb-btn--edit, .cb-btn--accept {
+    background-color: #f2f2f2;
+    color: #208347;
+}
+
+.cb-btn--edit:hover, .cb-btn--accept:hover {
+    background-color: #1bab74;
+    color: #f2f2f2;
 }
 
 .cb-btn--add_climb {
@@ -468,7 +477,7 @@ a:hover {
     padding-left: .8em;
 }
 
-.cb-btn--submit {
+.cb-btn--submit, .cb-btn--read_more {
     background-color: #208347;
     color:#f2f2f2
 }
@@ -493,7 +502,7 @@ a:hover {
     color: #f2f2f2;
 }
 
-.cb-btn--submit:hover {
+.cb-btn--submit:hover, .cb-btn--read_more:hover {
     background-color:#1bab74;
     color:#f2f2f2;
 }
@@ -508,7 +517,7 @@ a:hover {
 }
 
 .cb-btn--cancel:hover {
-    background-color: #992C1D;
+    background-color: rgb(255, 0, 0);
     color: #fafafa;
 }
 
@@ -547,7 +556,7 @@ a:hover {
 }
 /*------------------------------------------Forms styling */
 .cb-accept--content h5{
-    font-family: Chiller;
+    font-family: 'Chiller';
     font-size: 3em;
 }
 .cb-accept--content {
@@ -564,7 +573,7 @@ a:hover {
     height: 100%;
     font-size: 1.5em;
     color: #208347;
-    font-family: Chiller;
+    font-family: 'Chiller';
 } 
 
 .input-descriptions {
@@ -600,7 +609,7 @@ a:hover {
 }
 
 .cb-profile h3{
-    font-family: Chiller, sans-serif;
+    font-family: 'Chiller', sans-serif;
     font-size: 3em;
 }
 
