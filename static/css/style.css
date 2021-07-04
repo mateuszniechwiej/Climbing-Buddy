@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Chiller';
-    src: url('static/font/chiller-webfont.woff') format('woff2'),
-         url('static/font/chiller-webfont.woff') format('woff'); 
+    src: url('/static/font/chiller-webfont.woff2') format('woff2'),
+         url('/static/font/chiller-webfont.woff') format('woff'); 
     font-weight: normal;
     font-style: normal;
 
@@ -85,6 +85,7 @@ footer a span:hover, footer i:hover {
 
 .cb-home h1 {
     font-family: 'Chiller';
+    font-weight: normal;
     color: #fafafa;
     font-size: 10em;
     background-color: #208347;
