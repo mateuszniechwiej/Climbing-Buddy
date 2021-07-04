@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Chiller';
-    src: url('/static/font/chiller-webfont.woff') format('woff2'),
-         url('./static/font/chiller-webfont.woff') format('woff'); 
+    src: url('chiller-webfont.woff') format('woff2'),
+         url('chiller-webfont.woff') format('woff'); 
     font-weight: normal;
     font-style: normal;
 
