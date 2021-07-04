@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="d-flex justify-content-center mt-5" style="font-family: Chiller; font-size: 2em;">EDIT EVENT</h3>
 <div class="container col-11 col-sm-8 col-lg-6 cb-add_event">
     <div class="row py-3">
+        <h3 class="d-flex justify-content-center " >EDIT EVENT</h3>
         <form action="{{ url_for('edit_event', event_id=event._id) }}" method="POST">
             <div class="input-group mb-3 flatpickr" >
                 <input type="text" name="event_date" id="event_date" class="form-control" value="{{ event.event_date }}"   

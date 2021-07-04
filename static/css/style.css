@@ -93,8 +93,8 @@ footer a span:hover, footer i:hover {
 }
 
 .cb-home h3 {
-    background-color:rgba(0,0,0, 0.6);
-    color: #f2f2f2;
+    background-color:rgba(0,0,0, 0.8);
+    color: #208347;
     padding: .5em;
     font-family: 'Lato', sans-serif;
     font-size: 2em;
@@ -311,7 +311,8 @@ a:hover {
 
 .cb-login h3 {
     font-family: 'Indie Flower', sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
+    padding-bottom: .2em;
 }
 
 .cb-register {
@@ -579,7 +580,7 @@ a:hover {
 }
 /* to change default blue color for form-outline mdbootstrap*/
 /* https://mdbootstrap.com/snippets/standard/grzegorz-bujanski/2852722#css-tab-view */
-.form-outline .form-control:focus~.form-notch .form-notch-leading {
+/* .form-outline .form-control:focus~.form-notch .form-notch-leading {
     border-top: .125rem solid #3b945e;
     border-bottom: .125rem solid #3b945e;
     border-left: .125rem solid #3b945e;
@@ -598,7 +599,7 @@ a:hover {
 
 .form-outline .form-control:focus~.form-label {
     color: #3b945e;
-}		
+}		 */
 
 .cb-profile {
     background-color: #fafafa;
@@ -614,15 +615,18 @@ a:hover {
 
 
 /* ----------- Media Query ------------- */
-@media screen and (max-width: 540px) and (min-width: 351px) {
+@media screen and (max-width: 500px) and (min-width: 351px) {
     .pagination li {
         font-size: 1.5em;
     }
     .cb-home h1 {
-        font-size: 7em;
+        font-size: 5em;
     }
     .cb-climbs p {
         font-size: 1.5em;
+    }
+    .cb-btn--back {
+        margin-top: 2em;
     }
 }
 
@@ -651,5 +655,11 @@ a:hover {
     }
     .cb-climbs h3 {
         font-size: 1.5em;
+    }
+    .cb-btn--back {
+        margin-top: 2em;
+    }
+    .cb-search {
+        width: 70%;
     }
 }
