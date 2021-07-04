@@ -1,13 +1,12 @@
-@font-face {
+/* @font-face {
     font-family: 'Chiller';
     src: url('/static/font/chiller-webfont.woff2') format('woff2'),
          url('/static/font/chiller-webfont.woff') format('woff'); 
     font-weight: normal;
     font-style: normal;
 
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rakkas&display=swap');
 
 body, html {
     background: url(/static/images/darkbg.jpg) no-repeat center center fixed;
@@ -18,7 +17,7 @@ body, html {
     scroll-behavior: initial;
 }
 
-p { font-style: 'Exo 2', sans-serif;
+p { font-style: 'Montserrat', sans-serif;
     font-size: 1.6em;
     color: #000;
 } 
@@ -45,7 +44,7 @@ p { font-style: 'Exo 2', sans-serif;
 #cb-navbar--collapse li {
     max-width: max-content;
     padding: 0;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
 }
 #cb-navbar--collapse li span {
@@ -66,7 +65,7 @@ footer {
 
 footer a span {
     color: #f2f2f2;
-    font-family: 'Exo 2', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.6em;
 }
 
@@ -84,10 +83,9 @@ footer a span:hover, footer i:hover {
 /*------------------------------------- Home page styling */
 
 .cb-home h1 {
-    font-family: 'Chiller';
-    font-weight: normal;
+    font-family: 'Rakkas', sans-serif;
     color: #fafafa;
-    font-size: 10em;
+    font-size: 9em;
     background-color: #208347;
     margin: .5em 0 .5em 0;
     padding: .1em;
@@ -98,7 +96,7 @@ footer a span:hover, footer i:hover {
     background-color:rgba(0,0,0, 0.6);
     color: #f2f2f2;
     padding: .5em;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     text-decoration: none;
 
@@ -186,7 +184,7 @@ footer a span:hover, footer i:hover {
     background-color: rgba(0,0,0, 0.6);
     padding: .2em;
     border-radius: .2em;
-    font-family: 'Chiller',sans-serif;
+    font-family: 'Rakkas',sans-serif;
     font-size: 2em;
 }
 
@@ -283,14 +281,13 @@ i {
 
 h3 {
     color: #208347;
-    font-family: 'Chiller';
+    font-family: 'Rakkas';
     font-size: 2.5em;
-    text-decoration: underline;
 }
 
 h5 {
     color:#992C1D;
-    font-family: 'Chiller', sans-serif;
+    font-family: 'Rakkas', sans-serif;
     font-size: 2em;
 }
 
@@ -313,7 +310,7 @@ a:hover {
 }
 
 .cb-login h3 {
-    font-family: 'Chiller', sans-serif;
+    font-family: 'Rakkas', sans-serif;
     font-size: 2em;
 }
 
@@ -378,7 +375,7 @@ a:hover {
     display: inline-block;
     padding: 0 .5em 0 .5em;
     margin-top:1em ;
-    font-family: 'Chiller';
+    font-family: 'Rakkas';
     font-size: 2.5em;
     background-color: rgba(0,0,0, 0.6);
 }
@@ -495,7 +492,7 @@ a:hover {
     color: #208347;
     font-size: 1.2em;
     width: 100%;
-    font-family: 'Exo 2', sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .cb-btn--home:hover {
@@ -557,7 +554,7 @@ a:hover {
 }
 /*------------------------------------------Forms styling */
 .cb-accept--content h5{
-    font-family: 'Chiller';
+    font-family: 'Rakkas';
     font-size: 3em;
 }
 .cb-accept--content {
@@ -574,7 +571,7 @@ a:hover {
     height: 100%;
     font-size: 1.5em;
     color: #208347;
-    font-family: 'Chiller';
+    font-family: 'Rakkas';
 } 
 
 .input-descriptions {
@@ -610,7 +607,7 @@ a:hover {
 }
 
 .cb-profile h3{
-    font-family: 'Chiller', sans-serif;
+    font-family: 'Rakkas', sans-serif;
     font-size: 3em;
 }
 
@@ -632,7 +629,13 @@ a:hover {
 
 @media screen and (max-width: 350px) {
     .cb-home h1 {
-        font-size: 5em;
+        font-size: 3em;
+    }
+    .cb-home h3 {
+        font-size: 1.6em;
+    }
+    footer span {
+        font-size: 1.6em;
     }
     .cb-profile span{
         font-size: 0.8em;
