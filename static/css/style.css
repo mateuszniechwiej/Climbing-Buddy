@@ -84,21 +84,30 @@ footer a span:hover, footer i:hover {
 
 .cb-home h1 {
     font-family: 'Indie Flower', sans-serif;
-    color: #fafafa;
+    color: #f2f2f2;
     font-size: 8em;
-    background-color: #208347;
+
     margin: .5em 0 .5em 0;
     padding: .25em 0 .25em 0;
     border-radius: .1em;
+    text-shadow: #208347 0 0 10px;
 }
 
+/* to learn how to make text readable on background https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color */
 .cb-home h3 {
-    background-color:rgba(0,0,0, 0.8);
-    color: #208347;
+    color: #f2f2f2;
     padding: .5em;
     font-family: 'Lato', sans-serif;
     font-size: 2em;
-    text-decoration: none;
+    font-weight: 400;
+    text-shadow: 0.05em 0 #000,
+    0 0.05em #000,
+    -0.05em 0 #000,
+    0 -0.05em #000,
+    -0.05em -0.05em #000,
+    -0.05em 0.05em #000,
+    0.05em -0.05em #000,
+    0.05em 0.05em #000;
 
 }
 
@@ -660,6 +669,7 @@ a:hover {
         margin-top: 2em;
     }
     .cb-search {
+
         width: 70%;
     }
 }
