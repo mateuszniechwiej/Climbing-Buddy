@@ -38,7 +38,7 @@
                         <a class="btn cb-btn--submit" href="{{ url_for('edit_event', event_id=event._id) }}" role="button">Edit</a>
                         <a class="btn cb-btn--cancel" href="#delete_event{{ event._id }}" role="button" data-mdb-toggle="modal" >Delete</a>
                     </div>
-                    <div class="modal fade cb-event--modal" id="delete_event{{ event._id }}" tabindex="-1" aria-labelledby="deleteEventModal"
+                    <div class="modal fade cb-delete--modal" id="delete_event{{ event._id }}" tabindex="-1" aria-labelledby="deleteEventModal"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content ">

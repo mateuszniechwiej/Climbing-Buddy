@@ -3,7 +3,7 @@
     <div class="container col-11 col-sm-8 col-lg-6 cb-add_climb">
         <div class="row py-3">
             <form action="{{ url_for('search_climber') }}" method="POST">
-                <h3 class="d-flex justify-content-center">SEARCH FOR A CLIMBER </h3>
+                <h3 class="d-flex justify-content-center text-center">SEARCH FOR A CLIMBER </h3>
                 <div class="input-group mb-3 flatpickr">
                     <input type="text" name="climb_date" class="form-control flatpickr-date" placeholder="Select Date.." data-input>
                     <div class="input-group-append">
@@ -40,7 +40,7 @@
                         <label class="form-check-label " for="full_equip">Providnig full climbing gear</label>
                     </div>
                 </div>
-                <div class="input-group-append pt-3">
+                <div class="input-group-append pt-3 text-center">
                     <button class="btn cb-btn--submit" type="submit">Add Climb<i class="fas fa-search-plus"></i></button>
                     <a href="{{ url_for('climbs') }}" class="btn cb-btn--back_climbs" >Back to Climbs<i class="fas fa-undo"></i></a> 
                 </div>

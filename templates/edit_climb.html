@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container col-11 col-sm-8 col-lg-6 cb-add_event mt-5">
+    <div class="container col-11 col-sm-8 col-lg-6 cb-edit_climb">
         <div class="row py-3">
             <form action="{{ url_for('edit_climb', climb_id=climb._id) }}" method="POST">
-                <h3 class="d-flex justify-content-center " style="font-family: Chiller; font-size: 2em;">EDIT CLIMB</h3>
+                <h3 class="d-flex justify-content-center " ">EDIT CLIMB</h3>
                 <div class="input-group mb-3 flatpickr">
                     <input type="text" id="climb_date" name="climb_date" value="{{ climb.climb_date }}" class="form-control"
                         placeholder="Date" data-input />
@@ -38,7 +38,7 @@
                 <div class="input-group pt-3">
                     <div class="form-check form-switch cb-form-switch">
                         {% if climb.full_equip == 'yes' %}
-                        <input class="form-check-input" type="checkbox" id="full_equip" name="full_equip" checked />
+                        <input class="form-check-input switcher" type="checkbox" id="full_equip" name="full_equip" checked />
                         {% else %}
                         <input class="form-check-input switcher" type="checkbox" id="full_equip" name="full_equip"/>
                         {% endif %}

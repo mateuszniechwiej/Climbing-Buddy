@@ -150,7 +150,7 @@
             </div>
         </div>
         <!-- Confirm delete modal -->
-        <div class="modal fade" id="delete_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Delete Climb"
+        <div class="modal fade cb-delete--modal" id="delete_climb{{ climb._id }}" tabindex="-1" aria-labelledby="DeleteClimb"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content ">
@@ -159,10 +159,10 @@
                             delete
                             this climbing request?</h5>
                     </div>
-                    <div class="modal-body"><i class="fas fa-times"></i></div>
-                    <div class="modal-footer">
-                        <a href="#" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</a>
-                        <a href="{{ url_for('delete_climb', climb_id=climb._id) }}" class="btn btn-danger">Delete</a>
+                    <div class="modal-body text-center"><i class="fas fa-trash-alt"></i></div>
+                    <div class="modal-footer justify-content-center">
+                        <a href="#" class="btn cb-btn--no" data-mdb-dismiss="modal">No</a>
+                        <a href="{{ url_for('delete_climb', climb_id=climb._id) }}" class="btn cb-btn--cancel">Delete</a>
                     </div>
                 </div>
             </div>

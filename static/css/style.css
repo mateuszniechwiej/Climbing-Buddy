@@ -28,7 +28,7 @@ p { font-style: 'Lato', sans-serif;
 .cb-navbar {
     background-color:#000;
     padding: 0;
-    border-bottom: .5px solid #f2f2f2;
+    /* border-bottom: .5px solid #f2f2f2; */
 }
 
 .cb-navbar img {
@@ -60,7 +60,7 @@ p { font-style: 'Lato', sans-serif;
 
 footer {
     background-color: #000;
-    border-top: .5px solid #f2f2f2;
+    /* border-top: .5px solid #f2f2f2; */
 }
 
 footer a span {
@@ -186,10 +186,11 @@ footer a span:hover, footer i:hover {
     border-bottom-right-radius:.2em;
     z-index: inherit;
 }
-
-.cb-event--modal i {
+/*----------------------------------- Delete Modals */
+.cb-delete--modal i {
     font-size: 3em;
     padding: 0;
+    color: #992C1D;
 }
 
 /*-------------------------------------- Find Climber page */
@@ -241,7 +242,7 @@ footer a span:hover, footer i:hover {
 }
 /*------------------------------------ Search for Climber page */
 
-.cb-add_climb, .cb-add_event {
+.cb-add_climb, .cb-add_event,.cb-edit_climb {
     background-color: #f2f2f2;
     padding: 2em;
     border: 1px solid #208347;
@@ -548,6 +549,7 @@ a:hover {
 }
 /*------------------------------------ flash mseggaes*/
 .flash-msg {
+    text-align: center;
     line-height: 3;
 }
 
@@ -681,6 +683,10 @@ a:hover {
     }
     .cb-btn--back {
         margin-top: 2em;
+    }
+    #cb-filter {
+        margin-left: 0;
+        margin-right: 0;
     }
     .cb-search {
 
