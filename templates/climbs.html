@@ -33,7 +33,7 @@
                                 <option disabled selected>Climbing type </option>
                                 <option value="sport">Sport</option>
                                 <option value="trad">Trad</option>
-                                <option value="sport&trad">Bouldering</option>
+                                <option value="bouldering">Bouldering</option>
                             </select>
                         </div>
                         <div class="input-group mt-3 mb-3">
@@ -60,20 +60,20 @@
     </div>
 </div>  
         {% for climb in climbs %}
-        <div class="row justify-content-center cb-climbs mt-5">
+        <div class="row justify-content-center cb-climbs my-5">
             <div class="col-12 col-md-6 card cb-climbs_card text-center">
                 <div class="card-body cb-climbs_body pt-3">
                     <h3 class="card-title"><i class="fas fa-thumbtack"></i> {{ climb.climb_location }}</h3>
                         <h5 class="card-title"><i class="far fa-calendar"></i> {{ climb.climb_date }}</h5>
+                        <p><i class="fas fa-user"></i> Climber: {{ climb.created_by }}</p>
                         <p><i class="fas fa-route"></i> Climbing Routes: {{ climb.climb_type|capitalize }}</p>
                         <p><i class="fas fa-tools"></i> Providing Equipment: {{ climb.full_equip|capitalize }}</p>
-                        <p><i class="fas fa-user"></i> Climber: {{ climb.created_by }}</p>
                         <button class="btn cb-btn--read_more mb-3" type="button" data-mdb-toggle="collapse" data-mdb-target="#climber_msg{{ loop.index }}"
                             aria-expanded="false" aria-controls="collapseMsg">
                             Read climber message
                         </button>
                         <!-- Collapsed content -->
-                        <div class="collapse mt-3" id="climber_msg{{ loop.index }}">
+                        <div class="collapse mt-3 cb-msg" id="climber_msg{{ loop.index }}" >
                             <p class="card-text">
                                 {{ climb.climb_description }}
                             </p>

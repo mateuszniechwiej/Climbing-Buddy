@@ -23,11 +23,18 @@ indoor.forEach((image) => {
 const Modals = document.querySelectorAll(".modal");
 const acceptFocus = document.querySelector("#message");
 
-Modals.forEach(modal => {
-    modal.addEventListener("shown.mdb.modal", () => {
-        acceptFocus.focus()
-    })
-});
+document.addEventListener('DOMContentLoaded', () => {
+    Modals.forEach(modal => {
+        modal.addEventListener("shown.mdb.modal", () => {
+            acceptFocus.focus()
+        })
+    });
+})
+// Modals.forEach(modal => {
+//     modal.addEventListener("shown.mdb.modal", () => {
+//         acceptFocus.focus()
+//     })
+// });
 
 // Pagination 
 

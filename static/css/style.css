@@ -184,45 +184,15 @@ footer a span:hover, footer i:hover {
     background-color: #000;
     border-bottom-left-radius:.2em;
     border-bottom-right-radius:.2em;
+    z-index: inherit;
 }
 
-/*---------------------------------- Error page*/
-
-.cb-error h5, h2 {
-    color: #f2f2f2;
-    background-color: rgba(0,0,0, 0.6);
-    padding: .2em;
-    border-radius: .2em;
-    font-family: 'Indie Flower',sans-serif;
-    font-size: 2em;
+.cb-event--modal i {
+    font-size: 3em;
+    padding: 0;
 }
 
-.cb-error h2 span {
-    font-size: 2em;
-}
-
-.cb-error a {
-    color: #208347;
-    text-decoration: underline;
-    font-size: 1.2em;
-}
-
-.cb-error h2 span, h4 span{
-    color: #992C1D;
-    background-color: rgba(0,0,0, 0.6);
-    padding: .2em;
-    border-radius: .2em;
-}
-
-.cb-error h1 {
-    margin: .3em 0 .1em 0;
-}
-
-.cb-error h5 {
-    margin-top: .3em;
-}
-
-/*-------------------------------------- Climbing buddy page */
+/*-------------------------------------- Find Climber page */
 .cb-btn--filter {
     color:#208347;
     padding-left:1em;
@@ -262,7 +232,11 @@ footer a span:hover, footer i:hover {
     border: 1px solid #208347;
     border-radius: 0.25em;
 }
-#climber_msg p {
+
+.cb-msg {
+    background-color: #f2f2f2;
+}
+.cb-msg p {
     padding-bottom: .5em;
 }
 /*------------------------------------ Search for Climber page */
@@ -368,6 +342,43 @@ a:hover {
     border-radius: 0.5em;
     margin: 2em;
 }
+
+/*---------------------------------- Error page*/
+
+.cb-error h5, h2 {
+    color: #f2f2f2;
+    background-color: rgba(0,0,0, 0.6);
+    padding: .2em;
+    border-radius: .2em;
+    font-family: 'Indie Flower',sans-serif;
+    font-size: 2em;
+}
+
+.cb-error h2 span {
+    font-size: 2em;
+}
+
+.cb-error a {
+    color: #208347;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+.cb-error h2 span, h4 span{
+    color: #992C1D;
+    background-color: rgba(0,0,0, 0.6);
+    padding: .2em;
+    border-radius: .2em;
+}
+
+.cb-error h1 {
+    margin: .3em 0 .1em 0;
+}
+
+.cb-error h5 {
+    margin-top: .3em;
+}
+
 /*-------------------------------------------------------- Pagination */
 .pagination {
     justify-content: center;
@@ -505,7 +516,7 @@ a:hover {
     font-family: 'Lato', sans-serif;
 }
 
-.cb-btn--home:hover {
+.cb-btn--home:hover, .cb-btn--no:hover {
     background-color: #1bab74;
     color: #f2f2f2;
 }
@@ -518,7 +529,10 @@ a:hover {
 .cb-btn--submit i {
     color: #f2f2f2;
 }
-
+.cb-btn--no {
+    background-color: #f2f2f2;
+    color: #208347;
+}
 .cb-btn--cancel {
     background-color: #992C1D;
     color: #f2f2f2;
@@ -589,7 +603,7 @@ a:hover {
 }
 /* to change default blue color for form-outline mdbootstrap*/
 /* https://mdbootstrap.com/snippets/standard/grzegorz-bujanski/2852722#css-tab-view */
-/* .form-outline .form-control:focus~.form-notch .form-notch-leading {
+.form-outline .form-control:focus~.form-notch .form-notch-leading {
     border-top: .125rem solid #3b945e;
     border-bottom: .125rem solid #3b945e;
     border-left: .125rem solid #3b945e;
