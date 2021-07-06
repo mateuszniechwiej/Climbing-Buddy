@@ -20,9 +20,9 @@ indoor.forEach((image) => {
 });
 
 // Modals script
-const myModal = document.getElementById("accept_climb");
-const modal = new mdb.Modal(myModal)
-modal.show()
+// const myModal = document.getElementById("accept_climb");
+// const modal = new mdb.Modal(myModal)
+// modal.show()
 
 // Modals.forEach(modal => {
 //     modal.addEventListener("shown.mdb.modal", () => {
@@ -32,3 +32,7 @@ modal.show()
 
 // Pagination 
 
+const myModal = new mdb.Modal(document.getElementById("accept_climb"), {});
+document.onreadystatechange = function () {
+  myModal.show();
+};
