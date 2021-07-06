@@ -20,16 +20,10 @@ indoor.forEach((image) => {
 });
 
 // Modals script
-const Modals = document.querySelectorAll(".modal");
-const acceptFocus = document.querySelector("#message");
+const myModal = document.getElementById("accept_climb");
+const modal = new mdb.Modal(myModal)
+modal.show()
 
-document.addEventListener('DOMContentLoaded', () => {
-    Modals.forEach(modal => {
-        modal.addEventListener("shown.mdb.modal", () => {
-            acceptFocus.focus()
-        })
-    });
-})
 // Modals.forEach(modal => {
 //     modal.addEventListener("shown.mdb.modal", () => {
 //         acceptFocus.focus()
