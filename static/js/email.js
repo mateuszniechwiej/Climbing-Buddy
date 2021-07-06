@@ -1,11 +1,11 @@
 
 function sendMail(acceptForm) {
     emailjs.send("gmail", "climbing_buddy", {
-        user: acceptForm.name.value,
-        user_email: acceptForm.email.value,
-        other_user: acceptForm.creator.value,
-        other_email: acceptForm.receiver.value,
-        message: acceptForm.message.value,
+        'user': acceptForm.name.value,
+        'user_email': acceptForm.email.value,
+        'other_user': acceptForm.creator.value,
+        'other_email': acceptForm.receiver.value,
+        'message': acceptForm.message.value,
         })
         .then(
             function() {
