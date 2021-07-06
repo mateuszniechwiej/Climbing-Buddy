@@ -1,4 +1,3 @@
-
 function sendMail(acceptForm) {
     acceptForm.preventDefault();
     emailjs.send("gmail", "climbing_buddy", {
