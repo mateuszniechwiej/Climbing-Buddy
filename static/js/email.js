@@ -1,5 +1,6 @@
 
 function sendMail(acceptForm) {
+    acceptForm.preventDefault();
     emailjs.send("gmail", "climbing_buddy", {
         'user': acceptForm.name.value,
         'user_email': acceptForm.email.value,
