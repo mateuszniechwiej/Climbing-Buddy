@@ -80,7 +80,7 @@
                         </div>
                         {% if session.user|lower != climb.created_by %}
                             <div class="card-footer cb-card--footer pb-2">
-                                <a href="#accept_climb{{ climb._id }}" class="btn cb-btn--accept" role="button" data-mdb-toggle="modal">Accept
+                                <a href="{{ url_for('confirm_climb', climb_id=climb._id) }}" class="btn cb-btn--accept" role="button" >Accept
                                     Climb</a>
                                 {% if session.user|lower == 'admin' %}
                                     <a href="#delete_climb{{ climb._id  }}" class="btn cb-btn--cancel" data-mdb-toggle="modal" role="button">Delete</a>
@@ -94,58 +94,6 @@
                                 <a href="#delete_climb{{ climb._id  }}" class="btn cb-btn--cancel" data-mdb-toggle="modal" role="button">Delete</a>
                             </div>
                         {% endif %}
-                </div>
-            </div>
-        </div>
-        <!-- Accept climb modal -->
-        <div class="modal fade " id="accept_climb{{ climb._id }}" tabindex="-1" aria-labelledby="Accept Climb"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content cb-accept--content">
-                    <div class="modal-header d-flex justify-content-center">
-                        <h5 class="modal-title" id="confirm_climb">Confirm Climb</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form id="submit_climb" onsubmit="return sendMail(this);">
-                            <!-- Name input -->
-                            <div class="form-outline mb-4">
-                                <i class="fas fa-user-check trailing accept-icons "></i>
-                                <input type="text" id="name" class="form-control active" value="{{ username.username  }}" readonly />
-                                <label class="form-label" for="name">Your Profile Name</label>
-                            </div>
-                            <!-- Email input -->
-                            <div class="form-outline mb-4">
-                                <i class="fas fa-at trailing accept-icons " ></i>
-                                <input type="email" id="email" class="form-control active" value=" {{ username.user_email }}" readonly />
-                                <label class="form-label" for="email">Your Email Address</label>
-                            </div>
-                            <!-- Reciver name -->
-                            <div class="form-outline mb-4">
-                                <i class="fas fa-id-badge trailing accept-icons "></i>
-                                <input type="text" id="creator" class="form-control active" value="{{ climb.created_by  }}" readonly />
-                                <label class="form-label" for="creator">Event Creator</label>
-                            </div>
-                            <!-- Reciver email -->
-                            <input type="email" id="receiver" class="form-control" value=" {{ climb.email }}" style="display: none;" >
-                            <!-- Message input -->
-                            <div class="form-outline mb-4">
-                                <i class="fas fa-keyboard trailing"></i>
-                                <textarea class="form-control" id="message" rows="4"></textarea>
-                                <label class="form-label" for="message">Message</label>
-                            </div>
-                            <div class="response text-center" >
-                            </div>
-                            </div>
-                            <!-- Submit button -->
-                            <div class="form-outline mb-4 text-center" >
-                                <button type="submit" class="btn cb-btn--submit mt-2"><i class="far fa-paper-plane"></i>
-                                    Send</button>
-                                <a href="#" class="btn cb-btn--cancel" data-mdb-dismiss="modal"><i class="fas fa-times"></i>
-                                    Close</a>
-                                
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -171,15 +119,5 @@
         <div class="col justify-content-center mt-1">
             {{ pagination.links }}
         </div>
-    {% block script %}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("user_Pe6VH6LXUub6khTthNcbC");
-        })();
-    </script>
-    <script src="static/js/email.js"></script>
-    {% endblock %}
     
 {% endblock %}

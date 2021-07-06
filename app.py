@@ -308,6 +308,18 @@ def edit_climb(climb_id):
     return render_template("edit_climb.html", climb=climb)
 
 
+@app.route("/confirm_climb/<climb_id>")
+def confirm_climb(climb_id):
+    """
+    Allows users to accept climb and send message to the event creator.
+    """
+
+    climb = mongo.db.climbs.find_one({"_id": ObjectId(climb_id)})
+    username = mongo.db.users.find_one({"username": session["user"]})
+
+    return render_template("confirm_climb.html", climb=climb, username=username)
+
+
 @app.route("/delete_climb/<climb_id>")
 def delete_climb(climb_id):
     """
