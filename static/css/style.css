@@ -15,6 +15,7 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
     scroll-behavior: initial;
+    font-family: 'Oswald',sans-serif;
 }
 
 p { font-style: 'Oswald', sans-serif;
@@ -659,10 +660,17 @@ a:hover {
     border-radius: 0.5em;
     border: 1px solid #208347;
 }
-
+.cb-profile span {
+    font-family: 'Oswald', sans-serif;
+    color: #992C1D;
+}
 .cb-profile h3{
     font-family: 'Indie Flower', sans-serif;
     font-size: 3em;
+}
+
+.cb-profile i {
+    font-size: 1.5em;
 }
 
 
