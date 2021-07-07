@@ -80,7 +80,7 @@
                         </div> --> 
                         {% if session.user|lower != climb.created_by %}
                             <div class="card-footer cb-card--footer pb-2">
-                                <a href="{{ url_for('confirm_climb', climb_id=climb._id) }}" class="btn cb-btn--accept" role="button" >Climb</a>
+                                <a href="{{ url_for('confirm_climb', climb_id=climb._id) }}" class="btn cb-btn--accept" role="button" >More Info</a>
                                 {% if session.user|lower == 'admin' %}
                                     <a href="#delete_climb{{ climb._id  }}" class="btn cb-btn--cancel" data-mdb-toggle="modal" role="button">Delete</a>
                             
