@@ -2,7 +2,7 @@
 
 This website allows climbers in Ireland to find a climbing partner for chosen date and time. Registered users will be able to create a request to look for a climbing partner at chosen time and place.
 
-![Climbing Buddy](static/media_README/mockUp.PNG)
+![Climbing Buddy](static/media_README/mockup.PNG)
 
 :globe_with_meridians:[Live website](https://climbing-buddy-project.herokuapp.com/)
 

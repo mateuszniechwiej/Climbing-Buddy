@@ -18,7 +18,7 @@ body, html {
     font-family: 'Oswald',sans-serif;
 }
 
-p { font-style: 'Oswald', sans-serif;
+p { 
     font-size: 1.6em;
     color: #000;
 } 
@@ -84,7 +84,6 @@ footer a span:hover, footer i:hover {
     color: #208347; 
 }
 .cb-footer a {
-    color: #f2f2f2;
     background-color: #f2f2f2;
 }
 .cb-footer i:hover {
@@ -144,11 +143,11 @@ footer a span:hover, footer i:hover {
 }
 
 .cb-search span {
-    color:#fafafa
+    color:#f2f2f2
 }
 
 .cb-search input:focus {
-    color:#fafafa
+    color:#f2f2f2
 }
 
 .cb-search input i:hover {
@@ -303,12 +302,6 @@ h5 {
     font-family: 'Indie Flower', sans-serif;
     font-size: 2em;
 }
-
-/* nav a:hover {
-    color: #f2f2f2;
-    border-style:solid;
-    border-width: thin;
-} */
 
 a:hover {
     color: #208347;
@@ -539,7 +532,7 @@ a:hover {
     margin: 0;
 }
 .cb-btn--home, .cb-btn--confirm_climb {
-    background-color: #fafafa;
+    background-color: #f2f2f2;
     color: #208347;
     font-size: 1.2em;
     width: 100%;
@@ -570,11 +563,11 @@ a:hover {
 
 .cb-btn--cancel:hover {
     background-color: rgb(255, 0, 0);
-    color: #fafafa;
+    color: #f2f2f2;
 }
 
 .cb-btn--cancel i {
-    color: #fafafa;
+    color: #f2f2f2;
 }
 /*------------------------------------ flash mseggaes*/
 .flash-msg {
@@ -598,7 +591,7 @@ a:hover {
     height: max-content;
 }
 
-/*---------------------------------------- Toggle Switch */
+/*----------------------------------------------------------- Toggle Switch */
 
 .cb-form-switch .switcher:checked[type=checkbox]::after {
     background-color: #208347;
@@ -607,13 +600,13 @@ a:hover {
 .switcher[type=checkbox]:checked[type=checkbox]:checked {
     background-color: #208347;
 }
-/*------------------------------------------Forms styling */
+/*-------------------------------------------------------------Forms styling */
 .cb-accept--content h5{
     font-family: 'Indie Flower';
     font-size: 3em;
 }
 .cb-accept--content {
-    background-color: #fafafa;
+    background-color: #f2f2f2;
     border: 1px solid #208347;
     border-radius: 0.5em ;
 }
@@ -653,13 +646,14 @@ a:hover {
 
 .form-outline .form-control:focus~.form-label {
     color: #3b945e;
-}		 */
+}		 
 
 .cb-profile {
-    background-color: #fafafa;
+    background-color: #f2f2f2;
     border-radius: 0.5em;
     border: 1px solid #208347;
 }
+
 .cb-profile span {
     font-family: 'Oswald', sans-serif;
     color: #992C1D;
@@ -675,7 +669,7 @@ a:hover {
 
 
 
-/* ----------- Media Query ------------- */
+/* -------------------------------------------------------------- Media Query */
 @media screen and (max-width: 500px) and (min-width: 351px) {
     .pagination li {
         font-size: 1.5em;
