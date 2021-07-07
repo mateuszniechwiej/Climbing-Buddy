@@ -2,6 +2,12 @@
 
 This website allows climbers in Ireland to find a climbing partner for chosen date and time. Registered users will be able to create a request to look for a climbing partner at chosen time and place.
 
+![Climbing Buddy](static/media_README/mockUp.PNG)
+
+:globe_with_meridians:[Live website](https://climbing-buddy-project.herokuapp.com/)
+
+:page_facing_up:[GitHub repository](https://github.com/mateuszniechwiej/Climbing-Buddy)
+
 # Table of Contest
 
 - [Project Workflow](#project-workflow)
@@ -248,11 +254,14 @@ Images used in this project come from [Unsplash](unsplash.com)
 * [Python](https://www.python.org/)
 
 ## Frameworks, Programmes and Libraries
+* [mdbootstrap](https://mdbootstrap.com/) - Material Design for Bootstrap 5 used for layouts, styling and custom components such as forms, navigation bar or modals.
+* [emailjs](https://www.emailjs.com/) -to allow users to respond to climbing request by sending an email message.
 * [JIRA](https://www.atlassian.com/software/jira) - project management tool to organize workflow.
 * [Adobe Xd](https://www.adobe.com/ie/products/xd/wireframing-tool.html#:~:text=Adobe%20XD%20is%20a%20powerful,all%20in%20one%20design%20tool.) - to create wireframes
 * [Canva](https://www.canva.com/) - Canva was used to create logo for the website.
 * [JPEG-OPTIMIZER](http://jpeg-optimizer.com/) - optimized the size of images used in this project.
-* [techsini](https://techsini.com/) - to generate website mock-up.=
+* [techsini](https://techsini.com/) - to generate website mock-up.
+* [Google Fonts](https://fonts.google.com/) - used to import fonts 'Indie Flower' and 'Oswald' for this project.
 * [Font Awesome](https://fontawesome.com/) - for social media links and forms icons.
 * [MDBootstrap](https://mdbootstrap.com/) - Material design for bootstrap is used for layouts, styling and responsiveness.
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Flask Python micro framework is used in this project to help develop the application.
