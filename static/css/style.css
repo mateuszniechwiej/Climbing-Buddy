@@ -237,22 +237,20 @@ footer a span:hover, footer i:hover {
     text-decoration: none;
 }
 
-.cb-climbs_card {
-    border: 1px solid #208347;
-    border-radius: 0.25em;
-}
-
 .cb-climbs_body {
     padding: 0;
-    border: 1px solid #208347;
-    border-radius: 0.25em;
+}
+.cb-climbs_body i {
+    font-size: .5em;
 }
 
 .cb-msg {
     background-color: #f2f2f2;
 }
 .cb-msg p {
-    padding-bottom: .5em;
+    padding: 1em;
+    font-family: 'Indie Flower', sans-serif;
+    
 }
 /*------------------------------------ Search for Climber page */
 
