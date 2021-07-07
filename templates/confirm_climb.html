@@ -1,7 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="row justify-content-center cb-climbs my-5 mt-5 pt-5">
+    <div class="col-12 col-md-6 card cb-climbs_card text-center">
+        <div class="card-body cb-climbs_body pt-3">
+            <h3 class="card-title"><i class="fas fa-thumbtack"></i> {{ climb.climb_location }}</h3>
+                <h5 class="card-title"><i class="far fa-calendar"></i> {{ climb.climb_date }}</h5>
+                <p><i class="fas fa-user"></i> Climber: {{ climb.created_by }}</p>
+                <p><i class="fas fa-route"></i> Climbing Routes: {{ climb.climb_type|capitalize }}</p>
+                <p><i class="fas fa-tools"></i> Providing Equipment: {{ climb.full_equip|capitalize }}</p>
+                <button class="btn cb-btn--read_more mb-3" type="button" data-mdb-toggle="collapse" data-mdb-target="#climber_msg"
+                    aria-expanded="false" aria-controls="collapseMsg">
+                    Read climber message
+                </button>
+                <!-- Collapsed content -->
+                <div class="collapse mt-3 cb-msg" id="climber_msg" >
+                    <p class="card-text">
+                        {{ climb.climb_description }}
+                    </p>
+                </div>
+        </div>
+    </div>
+</div>
+    <div class="row justify-content-center mt-3 cb-btn--rows">
+        <div class="col-11 col-md-4 text-center">
+            <a href="#accept_climb" class="btn cb-btn--confirm_climb mt-5 " role="button" data-mdb-toggle="modal">Accept This
+                Climb <i class="far fa-paper-plane"></i></a>
+        </div>
+    </div>
+    <div class="row justify-content-center my-3 cb-btn--rows">
+        <div class="col-11 col-md-4 text-center">
+            <a href="{{ url_for('climbs') }}" class="btn cb-btn--confirm_climb">Return to Climbs <i class="fas fa-undo"></i></a> 
+        </div>
+    </div>
     <!-- Accept climb modal -->
-    <div class="modal fade" id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true">
+    <div class="modal fade" id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true" >
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content cb-accept--content">
                 <div class="modal-header d-flex justify-content-center">
@@ -46,7 +78,7 @@
                         <div class="form-outline mb-4 text-center">
                         <button type="submit" class="btn cb-btn--submit mt-2"><i class="far fa-paper-plane"></i>
                             Send</button>
-                        <a href="{{ url_for('climbs') }}" class="btn cb-btn--cancel" data-mdb-dismiss="modal"><i class="fas fa-times"></i>
+                        <a href="#" class="btn cb-btn--cancel" data-mdb-dismiss="modal"><i class="fas fa-times"></i>
                             Close</a>
                     </div>
                 </form>

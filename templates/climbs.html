@@ -68,20 +68,19 @@
                         <p><i class="fas fa-user"></i> Climber: {{ climb.created_by }}</p>
                         <p><i class="fas fa-route"></i> Climbing Routes: {{ climb.climb_type|capitalize }}</p>
                         <p><i class="fas fa-tools"></i> Providing Equipment: {{ climb.full_equip|capitalize }}</p>
-                        <button class="btn cb-btn--read_more mb-3" type="button" data-mdb-toggle="collapse" data-mdb-target="#climber_msg{{ loop.index }}"
+                        <!-- <button class="btn cb-btn--read_more mb-3" type="button" data-mdb-toggle="collapse" data-mdb-target="#climber_msg{{ loop.index }}"
                             aria-expanded="false" aria-controls="collapseMsg">
                             Read climber message
                         </button>
-                        <!-- Collapsed content -->
-                        <div class="collapse mt-3 cb-msg" id="climber_msg{{ loop.index }}" >
+                        <! Collapsed content -->
+                        <!-- <div class="collapse mt-3 cb-msg" id="climber_msg{{ loop.index }}" >
                             <p class="card-text">
                                 {{ climb.climb_description }}
                             </p>
-                        </div>
+                        </div> --> 
                         {% if session.user|lower != climb.created_by %}
                             <div class="card-footer cb-card--footer pb-2">
-                                <a href="{{ url_for('confirm_climb', climb_id=climb._id) }}" class="btn cb-btn--accept" role="button" >Accept
-                                    Climb</a>
+                                <a href="{{ url_for('confirm_climb', climb_id=climb._id) }}" class="btn cb-btn--accept" role="button" >Climb</a>
                                 {% if session.user|lower == 'admin' %}
                                     <a href="#delete_climb{{ climb._id  }}" class="btn cb-btn--cancel" data-mdb-toggle="modal" role="button">Delete</a>
                             

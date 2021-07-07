@@ -1,8 +1,8 @@
 
-const form = document.getElementById('accept_climb');
-// to dispaly modal on page load as didn't work by calling it in a different way
-form.classList.add('show')
-form.style.display = 'block';
+// const form = document.getElementById('accept_climb');
+// // to dispaly modal on page load as didn't work by calling it in a different way
+// form.classList.add('show')
+// form.style.display = 'block';
 
 
 document.getElementById('submit_climb').onsubmit = event => {

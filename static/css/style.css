@@ -457,7 +457,7 @@ a:hover {
     color: #208347;
 }
 
-.cb-btn--back i, .cb-btn--back_events i, .cb-btn--back_climbs i {
+.cb-btn--back i, .cb-btn--back_events i, .cb-btn--back_climbs i, .cb-btn--confirm_climb i {
     font-size: 1.2em;
     padding-left: .8em;
 }
@@ -509,7 +509,7 @@ a:hover {
 .cb-btn--rows {
     margin: 0;
 }
-.cb-btn--home {
+.cb-btn--home, .cb-btn--confirm_climb {
     background-color: #fafafa;
     color: #208347;
     font-size: 1.2em;
@@ -517,7 +517,7 @@ a:hover {
     font-family: 'Lato', sans-serif;
 }
 
-.cb-btn--home:hover, .cb-btn--no:hover {
+.cb-btn--home:hover,.cb-btn--confirm_climb:hover, .cb-btn--no:hover {
     background-color: #1bab74;
     color: #f2f2f2;
 }
@@ -683,6 +683,9 @@ a:hover {
     }
     .cb-btn--back {
         margin-top: 2em;
+    }
+    .cb-btn--submit {
+        margin-top: .5em;
     }
     #cb-filter {
         margin-left: 0;
