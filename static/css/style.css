@@ -78,6 +78,20 @@ footer a span:hover, footer i:hover {
     color: #1bab74;
 }
 
+.cb-footer i {
+    font-size: 1.2em;
+    color: #208347; 
+}
+.cb-footer a {
+    color: #f2f2f2;
+    background-color: #f2f2f2;
+}
+.cb-footer i:hover {
+    color: #f2f2f2;   
+}
+ .cb-footer a:hover {
+     background-color: #208347;
+ }
 
 
 /*------------------------------------- Home page styling */
