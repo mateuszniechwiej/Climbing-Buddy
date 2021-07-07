@@ -196,19 +196,22 @@ A solution to satisfy user requirements:
 ### Design
 
 #### Colour Scheme
-* Two colours used in this project are green ![#03dd84][https://via.placeholder.com/15/03dd84/000000?text=+] and shade of white ![#fafafa][https://via.placeholder.com/15/#fafafa/000000?text=+]
+* Used Adobe Color to choose the colour pallet.
+![Colour Pallet](static/media_README/colours.jpeg)
 
 #### Typography
 
 :black_nib:
 
-* The primary font used in this project is "Chiller".A fun font with modern look widely used for entertaiment suitable for the topic of Climbing presented in this project.
+* The primary font used in this project is **'Indie Flower'**.A fun handwritting font easy to read with rounded edges.Which was what i was looking for in this project.
+* The second font used for this website is **'Oswald'** with *sans-serif* as a fallback font. A readable and interesting font that fits best for body content. 
 
 ### Imagery
 
 Images used in this project come from [Unsplash](unsplash.com)
 - [Background Image by Patrick Hendry](https://unsplash.com/photos/WrCvD2Cgb4c)
-
+- [Outdoor Climbing Image by PatrickHendry](https://unsplash.com/photos/w5hNCbJfX3w)
+- 
 ## Features
 
 ### Existing Features
