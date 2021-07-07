@@ -18,14 +18,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 ELEMENTS_PER_PAGE = 3
 
-# to learn how to make pagination using flask https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+# to learn how to make pagination using flask
+# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+
+
 def get_elements(elements):
     """
-    Getting added elements for pagination 
+    Getting added elements for pagination
     on events and climbing request pages
     to organize the content.
     """
-    page,per_page, offset = get_page_args(
+    page, per_page, offset = get_page_args(
                             page_parameter='page',
                             per_page_parameter='per_page')
 
@@ -43,7 +46,7 @@ def pagination_elements(elements):
                             per_page_parameter='per_page')
     total = len(elements)
 
-    return Pagination(page=page, per_page=ELEMENTS_PER_PAGE, total=total)    
+    return Pagination(page=page, per_page=ELEMENTS_PER_PAGE, total=total)
 
 
 @app.route("/")
@@ -63,11 +66,13 @@ def events():
     events = list(mongo.db.events.find())
     paginated_events = get_elements(events)
     pagination = pagination_elements(events)
-    return render_template("events.html", 
-                          events=paginated_events,
-                          pagination=pagination)
+    return render_template(
+        "events.html",
+        events=paginated_events,
+        pagination=pagination
+        )
 
-# FIXME: not every word searched in event description
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -75,7 +80,11 @@ def search():
     paginated_events = get_elements(events)
     pagination = pagination_elements(events)
 
-    return render_template("events.html", events=paginated_events, pagination=pagination)
+    return render_template(
+        "events.html",
+        events=paginated_events,
+        pagination=pagination
+        )
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -232,32 +241,43 @@ def climbs():
     pagination = pagination_elements(climbs)
     username = mongo.db.users.find_one({"username": session["user"]})
 
-    return render_template("climbs.html", climbs=paginated_climbs,pagination=pagination, username=username)
+    return render_template(
+        "climbs.html",
+        climbs=paginated_climbs,
+        pagination=pagination,
+        username=username
+        )
 
 
 @app.route("/filter", methods=["GET", "POST"])
 def filter():
     """
-    Filters available climbs from select drop dwon menues and autocolpete places location field 
+    Filters available climbs from select drop dwon menu
+    and autocomlpete places location field
     """
     climb_date = request.form.get("climbing_date")
     climb_type = request.form.get("climbing_style")
     climb_location = request.form.get("climbing_location")
     full_equip = request.form.get("equipment")
 
-
-    climbs = list(mongo.db.climbs.find({"$or": [{"climb_date": climb_date},
-                                                 {"climb_type": climb_type},
-                                                 {"climb_location": climb_location},
-                                                 {"full_equip": full_equip}]}))
+    climbs = list(mongo.db.climbs.find({"$or": [
+        {"climb_date": climb_date},
+        {"climb_type": climb_type},
+        {"climb_location": climb_location},
+        {"full_equip": full_equip}
+        ]}))
 
     username = mongo.db.users.find_one({"username": session["user"]})
-    
+
     paginated_climbs = get_elements(climbs)
     pagination = pagination_elements(climbs)
 
-
-    return render_template("climbs.html", climbs=paginated_climbs, pagination=pagination, username=username)
+    return render_template(
+        "climbs.html",
+        climbs=paginated_climbs,
+        pagination=pagination,
+        username=username
+        )
 
 
 @app.route("/search_climber", methods=["GET", "POST"])
@@ -317,7 +337,11 @@ def confirm_climb(climb_id):
     climb = mongo.db.climbs.find_one({"_id": ObjectId(climb_id)})
     username = mongo.db.users.find_one({"username": session["user"]})
 
-    return render_template("confirm_climb.html", climb=climb, username=username)
+    return render_template(
+        "confirm_climb.html",
+        climb=climb,
+        username=username
+        )
 
 
 @app.route("/delete_climb/<climb_id>")
@@ -345,8 +369,10 @@ def internal_error(error):
     error = 500
     error_msg = "We're sorry! There is an internal server error.\
         please try again later."
-    return render_template("error.html",
-                           error=error, error_msg=error_msg), 500
+    return render_template(
+        "error.html",
+        error=error,
+        error_msg=error_msg), 500
 
 
 @app.errorhandler(Exception)
