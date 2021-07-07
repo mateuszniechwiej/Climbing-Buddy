@@ -65,19 +65,9 @@
                 <div class="card-body cb-climbs_body pt-3">
                     <h3 class="card-title"><i class="fas fa-thumbtack"></i> {{ climb.climb_location }}</h3>
                         <h5 class="card-title"><i class="far fa-calendar"></i> {{ climb.climb_date }}</h5>
-                        <p><i class="fas fa-user"></i> Climber: {{ climb.created_by }}</p>
-                        <p><i class="fas fa-route"></i> Climbing Routes: {{ climb.climb_type|capitalize }}</p>
-                        <p><i class="fas fa-tools"></i> Providing Equipment: {{ climb.full_equip|capitalize }}</p>
-                        <!-- <button class="btn cb-btn--read_more mb-3" type="button" data-mdb-toggle="collapse" data-mdb-target="#climber_msg{{ loop.index }}"
-                            aria-expanded="false" aria-controls="collapseMsg">
-                            Read climber message
-                        </button>
-                        <! Collapsed content -->
-                        <!-- <div class="collapse mt-3 cb-msg" id="climber_msg{{ loop.index }}" >
-                            <p class="card-text">
-                                {{ climb.climb_description }}
-                            </p>
-                        </div> --> 
+                        <p><i class="fas fa-user"></i> Climber:<span> {{ climb.created_by }}</span></p>
+                        <p><i class="fas fa-route"></i> Climbing Routes:<span> {{ climb.climb_type|capitalize }}</span></p>
+                        <p><i class="fas fa-tools"></i> Providing Equipment:<span> {{ climb.full_equip|capitalize }} </span></p>
                         {% if session.user|lower != climb.created_by %}
                             <div class="card-footer cb-card--footer pb-2">
                                 <a href="{{ url_for('confirm_climb', climb_id=climb._id) }}" class="btn cb-btn--accept" role="button" >More Info</a>

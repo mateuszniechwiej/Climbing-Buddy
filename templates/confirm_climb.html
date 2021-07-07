@@ -1,81 +1,83 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row justify-content-center cb-climbs my-5 mt-5 pt-5">
+<div class="row justify-content-center cb-climbs mt-5 pt-5">
     <div class="col-12 col-md-6 card cb-climbs_card text-center">
         <div class="card-body cb-climbs_body pt-3">
             <h3 class="card-title"><i class="fas fa-thumbtack"></i> {{ climb.climb_location }}</h3>
-                <h5 class="card-title"><i class="far fa-calendar"></i> {{ climb.climb_date }}</h5>
-                <p><i class="fas fa-user"></i> Climber: {{ climb.created_by }}</p>
-                <p><i class="fas fa-route"></i> Climbing Routes: {{ climb.climb_type|capitalize }}</p>
-                <p><i class="fas fa-tools"></i> Providing Equipment: {{ climb.full_equip|capitalize }}</p>
-                <button class="btn cb-btn--read_more mb-3" type="button" data-mdb-toggle="collapse" data-mdb-target="#climber_msg"
-                    aria-expanded="false" aria-controls="collapseMsg">
-                    Read climber message
-                </button>
-                <!-- Collapsed content -->
-                <div class="collapse mt-3 cb-msg" id="climber_msg" >
-                    <p class="card-text">
-                        {{ climb.climb_description }}
-                    </p>
-                </div>
+            <h5 class="card-title"><i class="far fa-calendar"></i> {{ climb.climb_date }}</h5>
+            <p><i class="fas fa-user"></i> Climber:<span> {{ climb.created_by }}</span></p>
+            <p><i class="fas fa-route"></i> Climbing Routes:<span> {{ climb.climb_type|capitalize }}</span></p>
+            <p><i class="fas fa-tools"></i> Providing Equipment:<span> {{ climb.full_equip|capitalize }} </span></p>
+            <button class="btn cb-btn--read_more mb-3" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#climber_msg" aria-expanded="false" aria-controls="collapseMsg">
+                Read climber message
+            </button>
+            <!-- Collapsed content -->
+            <div class="collapse mt-3 cb-msg" id="climber_msg">
+                <p class="card-text">
+                    {{ climb.climb_description }}
+                </p>
+            </div>
         </div>
     </div>
 </div>
-    <div class="row justify-content-center mt-3 cb-btn--rows">
-        <div class="col-11 col-md-4 text-center">
-            <a href="#accept_climb" class="btn cb-btn--confirm_climb mt-5 " role="button" data-mdb-toggle="modal">Contact
-                Climber <i class="far fa-paper-plane"></i></a>
-        </div>
+<div class="row justify-content-center cb-btn--rows">
+    <div class="col-11 col-md-4 text-center ">
+        <a href="#accept_climb" class="btn cb-btn--confirm_climb mt-5 " role="button" data-mdb-toggle="modal">Contact
+            Climber <i class="far fa-paper-plane"></i></a>
     </div>
-    <div class="row justify-content-center my-3 cb-btn--rows">
-        <div class="col-11 col-md-4 text-center">
-            <a href="{{ url_for('climbs') }}" class="btn cb-btn--confirm_climb">Return to Climbs <i class="fas fa-undo"></i></a> 
-        </div>
+</div>
+<div class="row justify-content-center my-3 cb-btn--rows">
+    <div class="col-11 col-md-4 text-center">
+        <a href="{{ url_for('climbs') }}" class="btn cb-btn--confirm_climb">Return to Climbs <i
+                class="fas fa-undo"></i></a>
     </div>
-    <!-- Contact climber modal -->
-    <div class="modal fade" id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true" >
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content cb-accept--content">
-                <div class="modal-header d-flex justify-content-center">
-                    <h5 class="modal-title" id="confirm_climb">Contact Climber</h5>
-                </div>
-                <div class="modal-body">
-                    <form id="submit_climb" >
-                        <!-- Name input -->
-                        <div class="form-outline mb-4">
-                            <i class="fas fa-user-check trailing accept-icons "></i>
-                            <input type="text" class="form-control active" id="name" name="name" value="{{ username.username  }}"
-                                readonly />
-                            <label class="form-label" >Your Profile Name</label>
-                        </div>
-                        <!-- Email input -->
-                        <div class="form-outline mb-4">
-                            <i class="fas fa-at trailing accept-icons "></i>
-                            <input type="email" class="form-control active" id="email" name="email" value="{{ username.user_email }}"
-                                readonly />
-                            <label class="form-label">Your Email Address</label>
-                        </div>
-                        <!-- Reciver name -->
-                        <div class="form-outline mb-4">
-                            <i class="fas fa-id-badge trailing accept-icons "></i>
-                            <input type="text"  class="form-control active" id="creator" name="creator" value="{{ climb.created_by  }}"
-                                readonly />
-                            <label class="form-label" >Event Creator</label>
-                        </div>
-                        <!-- Reciver email -->
-                        <div class="form-outline mb-4">
-                            <input type="email"  class="form-control active" id="receiver" name="receiver" value="{{ climb.email }}" hidden>
-                        </div>
-                        <!-- Message input -->
-                        <div class="form-outline mb-4">
-                            <i class="fas fa-keyboard trailing"></i>
-                            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
-                            <label class="form-label" for="message">Message</label>
-                        </div>
-                        <div class="response text-center">
-                        </div>
-                        <!-- Submit button -->
-                        <div class="form-outline mb-4 text-center">
+</div>
+<!-- Contact climber modal -->
+<div class="modal fade" id="accept_climb" tabindex="-1" aria-labelledby="Accept Climb" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content cb-accept--content">
+            <div class="modal-header d-flex justify-content-center">
+                <h5 class="modal-title" id="confirm_climb">Contact Climber</h5>
+            </div>
+            <div class="modal-body">
+                <form id="submit_climb">
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <i class="fas fa-user-check trailing accept-icons "></i>
+                        <input type="text" class="form-control active" id="name" name="name"
+                            value="{{ username.username  }}" readonly />
+                        <label class="form-label">Your Profile Name</label>
+                    </div>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <i class="fas fa-at trailing accept-icons "></i>
+                        <input type="email" class="form-control active" id="email" name="email"
+                            value="{{ username.user_email }}" readonly />
+                        <label class="form-label">Your Email Address</label>
+                    </div>
+                    <!-- Reciver name -->
+                    <div class="form-outline mb-4">
+                        <i class="fas fa-id-badge trailing accept-icons "></i>
+                        <input type="text" class="form-control active" id="creator" name="creator"
+                            value="{{ climb.created_by  }}" readonly />
+                        <label class="form-label">Event Creator</label>
+                    </div>
+                    <!-- Reciver email -->
+                    <div class="form-outline mb-4">
+                        <input type="email" class="form-control active" id="receiver" name="receiver"
+                            value="{{ climb.email }}" hidden>
+                    </div>
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                        <i class="fas fa-keyboard trailing"></i>
+                        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                        <label class="form-label" for="message">Message</label>
+                    </div>
+                    <div class="response text-center">
+                    </div>
+                    <!-- Submit button -->
+                    <div class="form-outline mb-4 text-center">
                         <button type="submit" class="btn cb-btn--submit mt-2"><i class="far fa-paper-plane"></i>
                             Send</button>
                         <a href="#" class="btn cb-btn--cancel" data-mdb-dismiss="modal"><i class="fas fa-times"></i>
@@ -85,15 +87,15 @@
             </div>
         </div>
     </div>
-    
-{% endblock %}
-{% block scripts %}
-        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
-        <script type="text/javascript">
-            (function () {
-                emailjs.init("user_Pe6VH6LXUub6khTthNcbC");
-            })();
-        </script>
-        <script src="{{ url_for('static', filename='js/email.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
-{% endblock %}
+
+    {% endblock %}
+    {% block scripts %}
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_Pe6VH6LXUub6khTthNcbC");
+        })();
+    </script>
+    <script src="{{ url_for('static', filename='js/email.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+    {% endblock %}

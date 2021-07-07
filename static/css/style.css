@@ -6,7 +6,7 @@
     font-style: normal;
 
 } */
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@300;400;500;600&display=swap');
 
 body, html {
     background: url(/static/images/darkbg.jpg) no-repeat center center fixed;
@@ -17,7 +17,7 @@ body, html {
     scroll-behavior: initial;
 }
 
-p { font-style: 'Lato', sans-serif;
+p { font-style: 'Oswald', sans-serif;
     font-size: 1.6em;
     color: #000;
 } 
@@ -44,7 +44,7 @@ p { font-style: 'Lato', sans-serif;
 #cb-navbar--collapse li {
     max-width: max-content;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
 }
 #cb-navbar--collapse li span {
@@ -65,7 +65,7 @@ footer {
 
 footer a span {
     color: #f2f2f2;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 1.6em;
 }
 
@@ -111,7 +111,7 @@ footer a span:hover, footer i:hover {
 .cb-home h3 {
     color: #f2f2f2;
     padding: .5em;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 2em;
     font-weight: 400;
     text-shadow: 0.05em 0 #000,
@@ -131,7 +131,7 @@ footer a span:hover, footer i:hover {
 
 .cb-home p {
     font-size: 2em;
-    font-family: sans-serif;
+    font-family:'Oswald', sans-serif;
     background-color:rgba(0,0,0, 0.6) ;
     color: #f2f2f2;
 }
@@ -172,6 +172,11 @@ footer a span:hover, footer i:hover {
     overflow: hidden;
     padding: 0;
     margin: 0;
+}
+
+.cb-events p {
+    font-family: 'Oswald', sans-serif;
+    color:#208347
 }
 
 .cb-events img {
@@ -229,19 +234,30 @@ footer a span:hover, footer i:hover {
     margin:0;
 }
 
+.cb-climbs p {
+    font-family: 'Oswald', sans-serif;
+}
+
+.cb-climbs span {
+    color: #208347;
+    font-family: 'Indie Flower', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
 .cb-climbs i {
     color: #992C1D;
 }
 
 .cb-climbs h3 {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .cb-climbs_body {
     padding: 0;
 }
 .cb-climbs_body i {
-    font-size: .5em;
+    font-size: .7em;
 }
 
 .cb-msg {
@@ -526,7 +542,7 @@ a:hover {
     color: #208347;
     font-size: 1.2em;
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .cb-btn--home:hover,.cb-btn--confirm_climb:hover, .cb-btn--no:hover {
