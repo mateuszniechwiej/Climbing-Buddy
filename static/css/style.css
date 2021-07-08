@@ -489,7 +489,7 @@ a:hover {
     padding-left: .8em;
 }
 
-.cb-btn--confirm_climb i {
+.cb-btn--contact_climber i {
     font-size: 1em;
     padding-left: 1em;
     color: #208347;
@@ -554,7 +554,7 @@ a:hover {
     font-family: 'Oswald', sans-serif; 
 }
 
-.cb-btn--confirm_climb {
+.cb-btn--contact_climber {
     background-color: #f2f2f2;
     color:#208347; 
     font-size: 1.2em;
@@ -562,7 +562,7 @@ a:hover {
     font-weight: 400;
 }
 
-.cb-btn--confirm_climb:hover {
+.cb-btn--contact_climber:hover {
     background-color: #fff;
     color:#208347
 }

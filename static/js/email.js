@@ -4,7 +4,7 @@
 // form.classList.add('show')
 // form.style.display = 'block';
 
-document.getElementById('submit_climb').onsubmit = event => {
+document.getElementById('message_climber').onsubmit = event => {
     event.preventDefault();
     
     fields = {

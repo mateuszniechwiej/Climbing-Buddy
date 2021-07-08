@@ -328,8 +328,8 @@ def edit_climb(climb_id):
     return render_template("edit_climb.html", climb=climb)
 
 
-@app.route("/confirm_climb/<climb_id>")
-def confirm_climb(climb_id):
+@app.route("/contact_climber/<climb_id>")
+def contact_climber(climb_id):
     """
     Allows users to accept climb and send message to the event creator.
     """
@@ -338,7 +338,7 @@ def confirm_climb(climb_id):
     username = mongo.db.users.find_one({"username": session["user"]})
 
     return render_template(
-        "confirm_climb.html",
+        "contact_climber.html",
         climb=climb,
         username=username
         )
