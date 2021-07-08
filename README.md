@@ -25,6 +25,7 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
   - [Design](#design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
+    - [Database Architecture](#database-architecture)
     - [Imagery](#imagery)
 - [Features](#features)
   - [Existing Features](#existing-features)
@@ -209,8 +210,19 @@ A solution to satisfy user requirements:
 
 :black_nib:
 
-* The primary font used in this project is **'Indie Flower'**.A fun handwritting font easy to read with rounded edges.Which was what i was looking for in this project.
+* The primary font used in this project is **'Indie Flower'**. A fun handwriting font easy to read with rounded edges. Which was what I was looking for in this project.
+
 * The second font used for this website is **'Oswald'** with *sans-serif* as a fallback font. A readable and interesting font that fits best for body content. 
+
+### Database Architecture
+* **MongoDB** non-relational is used to store data for this project
+* Database design for this project is based on three collections: 
+    * __*users*__(stores: users name and email)
+    * __*climbs*__(stores: climbs events(requests) raised by registered users)
+    * __*events*__(stores: climbing events raised by _**admin**_)
+
+
+![MongoDB Database Desgin](static/media_README/database.png)
 
 ### Imagery
 
@@ -223,17 +235,34 @@ Images used in this project come from [Unsplash](unsplash.com)
 ### Existing Features
 
 :one: The landing page displaying information about the website's purpose.
-:two: Events page displaying three events per page.    
-:three: Create events page available for the admin.  
-:four: Register and login functionality.   
-:five: Climbing events displaying three climbs per page.   
-:six: Climber search event available for all registered users.   
-:seven: Profile page with username name and email.   
-:eight: Accept climb request form using EmailJS functionality.   
-:nine: Email link on all pages to contact the website owner for any information needed.  
-:one::zero: Places Autocomplete by Google(a feature of Places library in the Maps JavaScript API) to look for locations in Ireland and the Uk only.   
+
+:two: Events page displaying three events per page.
+
+:three: Create an events page available for the admin.
+
+:four: Register and login functionality.
+
+:five: Climbing events displaying three climbs per page.
+
+:six: Add Find Climber request event available for all registered users.
+
+:seven: Profile page with username name and email.
+
+:eight: Message climber form using EmailJS functionality.
+
+:nine: Email link on all pages to contact the website owner for any information needed.
+
+:one::zero: Places Autocomplete by Google(a feature of Places library in the Maps JavaScript API) to look for locations in Ireland and the Uk only.
+
 :one::one: Mobile responsive design.
+
 :one::two: Error page to display error messages with website background.
+
+:one::three: filter climbs functionality searched by categories selected.
+
+:one::four: searched bar on events page to look for phrases in the events text.
+
+:one::five: Google _**Place Autocomplete**_ functionality for each location input field in this project.
 
 ### Future Features
 
@@ -257,8 +286,12 @@ Images used in this project come from [Unsplash](unsplash.com)
 * [mdbootstrap](https://mdbootstrap.com/) - Material Design for Bootstrap 5 used for layouts, styling and custom components such as forms, navigation bar or modals.
 * [emailjs](https://www.emailjs.com/) -to allow users to respond to climbing request by sending an email message.
 * [JIRA](https://www.atlassian.com/software/jira) - project management tool to organize workflow.
+
+* [Adobe Photoshop Express](https://photoshop.adobe.com/?promoid=SYBNM1DC&mv=other) - To crop the full-page background image.
 * [Adobe Xd](https://www.adobe.com/ie/products/xd/wireframing-tool.html#:~:text=Adobe%20XD%20is%20a%20powerful,all%20in%20one%20design%20tool.) - to create wireframes
+
 * [Canva](https://www.canva.com/) - Canva was used to create logo for the website.
+* [Lucidchart](https://www.lucidchart.com/) - used to create Database design diagram.
 * [JPEG-OPTIMIZER](http://jpeg-optimizer.com/) - optimized the size of images used in this project.
 * [techsini](https://techsini.com/) - to generate website mock-up.
 * [Google Fonts](https://fonts.google.com/) - used to import fonts 'Indie Flower' and 'Oswald' for this project.
@@ -269,7 +302,9 @@ Images used in this project come from [Unsplash](unsplash.com)
 * [MongoDB](https://www.mongodb.com/) - MongoDb document-oriented database used to store information about users,events and climbs.
 * [Visual Studio Code](https://code.visualstudio.com/) - used for developing this website and commit the project to GitHub repository.
 * [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - used to debug the styling issues, test the website responsiveness  and to ensure colour contrast.
-* [Github](https://github.com/) - Github as the hosting site was used to store the source code of this Website.
+* [Autocomplete Places Google API](https://developers.google.com/maps/documentation/places/web-service/autocomplete) - provides a fast and easy to use address search autocomplete functionality for locations fields input.
+* [Flatpickr](https://flatpickr.js.org/) - lightweight DateTime picker used to select dates in this project.
+* [Github](https://github.com/) - Github as the hosting site was used to store the source code of this website.
 * [Git](https://git-scm.com/) - used Git to commit and push code to the GitHub repository.
 * [Favicon](https://favicon.io/) - to create a favicon for this Website.
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse) - as a part of the chrome dev tool was used to improve the quality of the web page.
