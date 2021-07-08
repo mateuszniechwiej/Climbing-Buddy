@@ -26,6 +26,7 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Database Architecture](#database-architecture)
+    - [Design Changes](#design-changes)
     - [Imagery](#imagery)
 - [Features](#features)
   - [Existing Features](#existing-features)
@@ -37,10 +38,12 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
 
   - [Testing Plan](#Testing-Plan)
   - [Testing Results](#Testing-Results)
+  - [Issues](#issues)
 
 - [Deployment](#deployment)
   - [Project Initiation](#project-initiation)
-  - [GitHub Pages](#github-pages)
+  - [Connecting to MongoDB](#connecting-to-mongodb)
+  - [Heroku Deployment](#heroku-deployment)
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
@@ -212,10 +215,12 @@ A solution to satisfy user requirements:
 
 * The primary font used in this project is **'Indie Flower'**. A fun handwriting font easy to read with rounded edges. Which was what I was looking for in this project.
 
-* The second font used for this website is **'Oswald'** with *sans-serif* as a fallback font. A readable and interesting font that fits best for body content. 
+* The second font used for this website is **'Oswald'** with *sans-serif* as a fallback font. A readable and interesting font that fits best for body content.
+
+#### Design Changes
 
 ### Database Architecture
-* **MongoDB** non-relational is used to store data for this project
+* **MongoDB** non-relational database is used to store data for this project
 * Database design for this project is based on three collections: 
     * __*users*__(stores: users name and email)
     * __*climbs*__(stores: climbs events(requests) raised by registered users)
@@ -309,3 +314,65 @@ Images used in this project come from [Unsplash](unsplash.com)
 * [Favicon](https://favicon.io/) - to create a favicon for this Website.
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse) - as a part of the chrome dev tool was used to improve the quality of the web page.
 
+## Testing
+
+This website is for Milestone Project 3.Bulit with HTML, CSS, JavaScript and Python
+
+
+
+### Testing Plan
+
+### Testing Results
+
+### Issues
+
+## Deployment
+
+### Local Clone
+1. Navigating to the GitHub [Repository](https://github.com/mateuszniechwiej/Climbing-Buddy)
+2. Click on Code green button.
+3. Under the Clone section, copy the URL from the HTTPS : 
+
+![Clone](static/media_README/clone.png)
+
+5. Use the IDE of choice to open the terminal.
+
+6. Use git clone command followed by the copied URL.
+
+7. A clone of the project will now be created locally on your machine.
+
+### Create a Virtual Environment(VSCode)
+__(You need to have instaled Python extensions and Python version 3 before taking following steps )__
+1. On the the local system create project folder e.g MS3
+2. In that folder use(for Windows) the command: `python -m venv venv`
+3. Select and activate an environment (To select a specific environment, use the `Python: Select Interpreter` command from the `Command Palette (Ctrl+Shift+P)`.
+
+Source: [VSCode docs](https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment)
+
+### Connecting to MongoDB
+1. Logged to MongoDB account.
+2. Within the "Cluster1" tab selected, I clicked on "Connect".
+
+![Connect](static/media_README/connect.png)
+
+3. Then selected "Connect your application".
+
+![ConnectApp](static/media_README/connect_app2.png)
+
+4. Select _Python_ version 3.6 or later.
+5. Copy _connection string_ and then paste it to env.py
+
+![mongoDB](static/media_README/mongodb.png)
+
+6. Finaly create an instance of PyMongo and pass the application to that instance.
+* Like:  `mongo = PyMongo(app`)
+
+### Heroku Deployment
+
+## Credits
+
+### Code
+
+### Media
+
+### Acknowledgements
