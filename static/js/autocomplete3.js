@@ -1,3 +1,5 @@
+// Places Autocomplete for  locations input field to filter climbs
+//location autocomplate for Uk and Ireland searches
 let autocomplete3;
 function initAutocomplete() {
     autocomplete3 = new google.maps.places.Autocomplete(

@@ -1,3 +1,5 @@
+// Places Autocomplete for  locations input field to edit event
+//location autocomplate for Uk and Ireland searches
 let autocomplete5;
 function initAutocomplete() {
     autocomplete5 = new google.maps.places.Autocomplete(

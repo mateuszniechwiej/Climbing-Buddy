@@ -1,3 +1,5 @@
+// Places Autocomplete for  locations input field to add climb
+//location autocomplate for Uk and Ireland searches
 let autocomplete;
 function initAutocomplete() {
     autocomplete = new google.maps.places.Autocomplete(
