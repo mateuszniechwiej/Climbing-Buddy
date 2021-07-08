@@ -280,11 +280,11 @@ def filter():
         )
 
 
-@app.route("/search_climber", methods=["GET", "POST"])
-def search_climber():
+@app.route("/add_climb", methods=["GET", "POST"])
+def add_climb():
     """
-    Allows users to add climbing events by getting search climber
-    form and stores into DB.Finaly renders search_climber.html.html.
+    Allows users to add climbing events by getting add climb
+    form and stores into DB.Finaly renders add_climb.html.html.
     """
     user_email = (
         mongo.db.users.find_one({"username": session["user"]})["user_email"])
@@ -300,10 +300,10 @@ def search_climber():
             "email": user_email
         }
         mongo.db.climbs.insert_one(climb)
-        flash("Climbing search added", "message")
+        flash("Climb added", "message")
         return redirect(url_for("climbs"))
 
-    return render_template("search_climber.html")
+    return render_template("add_climb.html")
 
 
 @app.route("/edit_climb/<climb_id>", methods=["GET", "POST"])
@@ -351,7 +351,7 @@ def delete_climb(climb_id):
     Flash message displays if successful.
     """
     mongo.db.climbs.remove({"_id": ObjectId(climb_id)})
-    flash("Climb search removed", "message")
+    flash("Climb removed", "message")
     return redirect(url_for("climbs"))
 
 

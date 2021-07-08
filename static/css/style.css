@@ -24,7 +24,6 @@ p {
 } 
 
 
-
 /*------------------------------------- Base page*/
 .cb-navbar {
     background-color:#000;
@@ -218,6 +217,12 @@ footer a span:hover, footer i:hover {
     padding-left:1em;
 }
 
+.cb-climbs--header h2 {
+    font-size: 4em;
+    text-shadow: #f2f2f2 0 0 10px;
+    background: none;
+}
+
 .cb-filter--container a {
     background-color: #f2f2f2;
     color: #208347;
@@ -268,7 +273,7 @@ footer a span:hover, footer i:hover {
     font-family: 'Indie Flower', sans-serif;
     
 }
-/*------------------------------------ Search for Climber page */
+/*------------------------------------ Add Climb page */
 
 .cb-add_climb, .cb-add_event,.cb-edit_climb {
     background-color: #f2f2f2;
@@ -689,6 +694,9 @@ a:hover {
 @media screen and (max-width: 350px) {
     .cb-home h1 {
         font-size: 4em;
+    }
+    .cb-climbs--header h2 {
+        font-size: 3em;
     }
     .cb-home h3 {
         font-size: 1.6em;
