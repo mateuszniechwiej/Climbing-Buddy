@@ -484,13 +484,23 @@ a:hover {
     color: #208347;
 }
 
-.cb-btn--back i, .cb-btn--back_events i, .cb-btn--back_climbs i, .cb-btn--confirm_climb i {
+.cb-btn--back i, .cb-btn--back_events i, .cb-btn--back_climbs i {
     font-size: 1.2em;
     padding-left: .8em;
 }
 
-.cb-btn--back:hover, .cb-btn--back_events:hover, .cb-btn--back_climbs:hover {
+.cb-btn--confirm_climb i {
+    font-size: 1em;
+    padding-left: 1em;
     color: #208347;
+}
+
+.cb-btn--back:hover, .cb-btn--back_events:hover {
+    color: #208347;
+    background-color: #fff;
+}
+
+.cb-btn--back_climbs:hover {
     background-color: #fff;
 }
 
@@ -536,15 +546,28 @@ a:hover {
 .cb-btn--rows {
     margin: 0;
 }
-.cb-btn--home, .cb-btn--confirm_climb {
+.cb-btn--home {
     background-color: #f2f2f2;
     color: #208347;
     font-size: 1.2em;
     width: 100%;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif; 
 }
 
-.cb-btn--home:hover,.cb-btn--confirm_climb:hover, .cb-btn--no:hover {
+.cb-btn--confirm_climb {
+    background-color: #f2f2f2;
+    color:#208347; 
+    font-size: 1.2em;
+    width: 100%;
+    font-weight: 400;
+}
+
+.cb-btn--confirm_climb:hover {
+    background-color: #fff;
+    color:#208347
+}
+
+.cb-btn--home:hover, .cb-btn--no:hover {
     background-color: #1bab74;
     color: #f2f2f2;
 }
