@@ -177,10 +177,13 @@ A solution to satisfy user requirements:
 
 A solution to satisfy user requirements:
 
+- once the interested user clicks the `More Info` button from the find climber .The climb_info page where he can press `Contact Climber` details about the climb and have a a modal form with session username, email and message to fill out will appear for the user to submit. After submitting the modal form, an email will be sent to the climbing search event creator with the user name and email details of who accepted the request.
 
-  - once the interested user clicks the "Accept Climb" button from the climbing buddy page a modal form with session username, email and message to fill out will appear for the user to submit. After submitting the modal form, an email will be sent to the climbing search event creator with the user name and email details of who accepted the request.
+- emailjs.com will be used to send mail after accepting the climbing request.
 
-  - emailjs.com will be used to send mail after accepting the climbing request.
+* Example of an email received from user whom is intrested in cthe climb:
+![emialjs](static/media_README/emailJS.png)
+
 
 Comments: Feature implementation: private chat messages between users to be available for each climbing event so users emails don't need to be revealed(Consider solution: Sending private messages using Flask-SocketIO).
 
