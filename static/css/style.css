@@ -1,11 +1,3 @@
-/* @font-face {
-    font-family: 'Chiller';
-    src: url('/static/font/chiller-webfont.woff2') format('woff2'),
-         url('/static/font/chiller-webfont.woff') format('woff'); 
-    font-weight: normal;
-    font-style: normal;
-
-} */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@300;400;500;600&display=swap');
 
 body, html {
@@ -19,12 +11,11 @@ body, html {
 }
 
 p { 
-    font-size: 1.6em;
     color: #000;
 } 
 
 
-/*------------------------------------- Base page*/
+/*--------------------------------------------------------------- Base page*/
 .cb-navbar {
     background-color:#000;
     padding: 0;
@@ -93,7 +84,7 @@ footer a span:hover, footer i:hover {
  }
 
 
-/*------------------------------------- Home page styling */
+/*----------------------------------------------------------- Home page styling */
 
 .cb-home h1 {
     font-family: 'Indie Flower', sans-serif;
@@ -105,7 +96,7 @@ footer a span:hover, footer i:hover {
     border-radius: .1em;
     text-shadow: #208347 0 0 10px;
 }
-
+/*:TODO: move this comment to credits code in README!
 /* to learn how to make text readable on background https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color */
 .cb-home h3 {
     color: #f2f2f2;
@@ -134,7 +125,7 @@ footer a span:hover, footer i:hover {
     background-color:rgba(0,0,0, 0.6) ;
     color: #f2f2f2;
 }
-/*------------------------------------ Events page*/
+/*------------------------------------------------------------- Events page*/
 
 .cb-search {
     background-color: rgba(0,0,0, 0.8);
@@ -204,14 +195,14 @@ footer a span:hover, footer i:hover {
     border-bottom-right-radius:.2em;
     z-index: inherit;
 }
-/*----------------------------------- Delete Modals */
+/*---------------------------------------------------------- Delete Modals */
 .cb-delete--modal i {
     font-size: 3em;
     padding: 0;
     color: #992C1D;
 }
 
-/*-------------------------------------- Find Climber page */
+/*---------------------------------------------------------- Find Climber page */
 .cb-btn--filter {
     color:#208347;
     padding-left:1em;
@@ -264,6 +255,15 @@ footer a span:hover, footer i:hover {
 .cb-climbs_body i {
     font-size: .7em;
 }
+
+#cb-filter {
+    background-color: #f2f2f2;
+    padding: 2em;
+    border: 1px solid #208347;
+    border-radius: 0.5em;
+    margin: 2em;
+}
+
 
 .cb-msg {
     background-color: #f2f2f2;
@@ -362,16 +362,7 @@ a:hover {
     padding: 0;
 }
 
-
-#cb-filter {
-    background-color: #f2f2f2;
-    padding: 2em;
-    border: 1px solid #208347;
-    border-radius: 0.5em;
-    margin: 2em;
-}
-
-/*---------------------------------- Error page*/
+/*------------------------------------------------------------- Error page*/
 
 .cb-error h5, h2 {
     color: #f2f2f2;
@@ -407,7 +398,7 @@ a:hover {
     margin-top: .3em;
 }
 
-/*-------------------------------------------------------- Pagination */
+/*--------------------------------------------------------------------- Pagination */
 .pagination {
     justify-content: center;
 }
@@ -428,7 +419,7 @@ a:hover {
     font-size: 2.5em;
     background-color: rgba(0,0,0, 0.6);
 }
-/*---------------------------------------------------------- Buttons */
+/*--------------------------------------------------------------------------- Buttons */
 
 .cb-btn-add button{
     padding:1em;
@@ -597,7 +588,7 @@ a:hover {
 .cb-btn--cancel i {
     color: #f2f2f2;
 }
-/*------------------------------------ flash mseggaes*/
+/*---------------------------------------------------------------------------------- flash mseggaes*/
 .flash-msg {
     text-align: center;
     line-height: 3;
@@ -619,17 +610,8 @@ a:hover {
     height: max-content;
 }
 
-/*----------------------------------------------------------- Toggle Switch */
-
-.cb-form-switch .switcher:checked[type=checkbox]::after {
-    background-color: #208347;
-    box-shadow: 0 0 0 .625rem rgba(59, 148, 94, 0.5) ;
-}
-.switcher[type=checkbox]:checked[type=checkbox]:checked {
-    background-color: #208347;
-}
-/*-------------------------------------------------------------Forms styling */
-.cb-accept--content h5{
+/*----------------------------------------------------------------------    Forms styling */
+.cb-accept--content h5 {
     font-family: 'Indie Flower';
     font-size: 3em;
 }
@@ -676,6 +658,18 @@ a:hover {
     color: #3b945e;
 }		 
 
+/*----------------------------------------------------------- Toggle Switch */
+
+.cb-form-switch .switcher:checked[type=checkbox]::after {
+    background-color: #208347;
+    box-shadow: 0 0 0 .625rem rgba(59, 148, 94, 0.5) ;
+}
+.switcher[type=checkbox]:checked[type=checkbox]:checked {
+    background-color: #208347;
+}
+
+
+/*------------------------------------------------------------ Profile page  */
 .cb-profile {
     background-color: #f2f2f2;
     border-radius: 0.5em;
@@ -697,7 +691,7 @@ a:hover {
 
 
 
-/* -------------------------------------------------------------- Media Query */
+/* ------------------------------------------------------------------ Media Query */
 @media screen and (max-width: 500px) and (min-width: 351px) {
     .pagination li {
         font-size: 1.5em;
