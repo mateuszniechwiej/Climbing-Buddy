@@ -30,7 +30,7 @@
                 <img src="" class="card-img-top hover-shadow {{ event.event_type }}" alt="..." />
                 <h3 class="card-title mt-2">{{ event.event_location }}</h3>
                 <h5 class="card-title"><i class="far fa-calendar"></i>{{ event.event_date }}</h5>
-                <p class="card-text">
+                <p class="card-text pb-3">
                     {{ event.event_description }}
                 </p>
                 {% if session.user|lower == 'admin' %}
