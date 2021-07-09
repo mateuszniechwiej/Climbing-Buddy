@@ -169,11 +169,6 @@ footer a span:hover, footer i:hover {
     color:#208347
 }
 
-.cb-events img {
-    max-width: 100%;
-    max-height: 70%;
-} 
-
 .cb-events-card {
     border: 1px solid #208347;
     padding: 0;

@@ -231,10 +231,10 @@ A solution to satisfy user requirements:
 
 ### Imagery
 
-Images used in this project come from [Unsplash](unsplash.com)
+Images for this project 
 - [Background Image by Patrick Hendry](https://unsplash.com/photos/WrCvD2Cgb4c)
 - [Outdoor Climbing Image by PatrickHendry](https://unsplash.com/photos/w5hNCbJfX3w)
-- 
+- [Indoor Climbing by Pavel Danilyuk](https://www.pexels.com/photo/landscape-man-people-woman-7591312/)
 ## Features
 
 ### Existing Features
