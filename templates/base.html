@@ -53,7 +53,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
-                            href="{{ url_for('profile', username=session['user']) }}"><span>Profile</span></a>
+                            href="{{ url_for('profile', username=session['user']) }}"><span>Profile</span><a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('logout') }}"><span>Logout</span></a>
@@ -70,21 +70,19 @@
             </div>
         </nav>
     </header>
-    <!-- flash messages-->
-    <section>
+    <main class="flex-shrink-0">
+        <!-- flash messages-->
         <!-- to return list of tuples in the form of (category,message) used get_flashed_messages() -->
         {% with messages = get_flashed_messages(with_categories=True) %}
-        {% if messages %}
-        {% for category, message in messages %}
-        <div class="row flash-msg mt-5">
-            <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3>
-        </div>
-        {% endfor %}
-        {% endif %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="row flash-msg mt-5">
+                    <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3>
+                </div>
+                {% endfor %}
+            {% endif %}
         {% endwith %}
-    </section>
 
-    <main class="flex-shrink-0">
         {% block content %}
         {% endblock %}
     </main>
