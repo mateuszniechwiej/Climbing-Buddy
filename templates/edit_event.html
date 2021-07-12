@@ -2,10 +2,10 @@
 {% block content %}
 <div class="container col-11 col-sm-8 col-lg-6 cb-add_event">
     <div class="row py-3">
-        <h3 class="d-flex justify-content-center " >EDIT EVENT</h3>
+        <h3 class="d-flex justify-content-center ">EDIT EVENT</h3>
         <form action="{{ url_for('edit_event', event_id=event._id) }}" method="POST">
-            <div class="input-group mb-3 flatpickr" >
-                <input type="text" name="event_date" id="event_date" class="form-control" value="{{ event.event_date }}"   
+            <div class="input-group mb-3 flatpickr">
+                <input type="text" name="event_date" id="event_date" class="form-control" value="{{ event.event_date }}"
                     placeholder="Date" data-input>
                 <div class="input-group-append">
                     <a class="input-button btn" title="toggle" data-toggle>
@@ -19,7 +19,7 @@
             <div class="input-group mt-3 mb-3">
                 <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
                 <input value="{{ event.event_location }}" type="text" id="autocomplete5" name="event_location"
-                    class="form-control" placeholder="Location" aria-label="Location" aria-describedby="time"
+                    class="form-control" placeholder="Location" aria-label="Location" aria-describedby="autocomplete5"
                     required />
             </div>
             <div class="input-group">
@@ -39,18 +39,20 @@
                 <a href="{{ url_for('events') }}" class="btn btn-danger cb-btn--back">Bact to Events
                     <i class="fas fa-undo"></i>
                 </a>
-                    
-                <button class="btn btn-primary cb-btn--submit" type="submit">Submit <i class="far fa-paper-plane"></i></button>
+
+                <button class="btn btn-primary cb-btn--submit" type="submit">Submit <i
+                        class="far fa-paper-plane"></i></button>
             </div>
         </form>
     </div>
+</div>
 {% endblock %}
 {% block scripts %}
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="{{ url_for('static', filename='js/flatpickr.js' ) }}"></script>
-    <script src="{{ url_for('static', filename='js/autocomplete5.js') }}"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxmvO8Q4IkYaxhRkesueMk7Qpin2lYjY&libraries=places&callback=initAutocomplete"
-        async defer>
-        </script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="{{ url_for('static', filename='js/flatpickr.js' ) }}"></script>
+<script src="{{ url_for('static', filename='js/autocomplete5.js') }}"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxmvO8Q4IkYaxhRkesueMk7Qpin2lYjY&libraries=places&callback=initAutocomplete"
+    async defer>
+    </script>
 {% endblock %}

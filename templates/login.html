@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
-    
 <div class="container cb-login col-12 col-md-8 col-lg-8 col-xl-5 text-center pt-5 mb-2">
     <h3 class="d-flex justify-content-center">Login</h3>
     <form method="POST" action="{{ url_for('login') }}">
@@ -9,8 +7,8 @@
         <div class="input-group mb-3">
             <div class="input-group-prepend input-descriptions col-12 col-sm-3">
                 <span class="input-group-text border-0">Username</span>
-            </div>            
-            <span class="input-group-text form-icons"><i class="far fa-user"></i></span>            
+            </div>
+            <span class="input-group-text form-icons"><i class="far fa-user"></i></span>
             <input type="text" id="username" name="username" class="form-control" minlength="3" maxlength="20"
                 pattern="^[a-zA-Z0-9]{3,20}$" required />
         </div>
@@ -19,23 +17,21 @@
             <div class="input-group-prepend input-descriptions col-12 col-sm-3">
                 <span class="input-group-text border-0">Password</span>
             </div>
-            <span class="input-group-text form-icons"><i class="fas fa-key"></i></span> 
+            <span class="input-group-text form-icons"><i class="fas fa-key"></i></span>
             <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="20"
                 pattern="^[a-zA-Z0-9]{6,20}$" required />
         </div>
         <!-- Submit button -->
         <button type="submit" id="submit" name="submit" class="btn btn-primary cb-btn--submit mb-4">Login</button>
-        </div>
     </form>
-    </div>
-    
-    <div class="row">
-        <div class="col cb-redirect">
-            <p class="d-flex justify-content-center">
-                <span>Not Registered?
-                <a href="{{ url_for('register') }}">Join here</a></span>
-            </p>
-        </div>
+</div>
+<div class="row">
+    <div class="col cb-redirect">
+        <p class="d-flex justify-content-center">
+            <span>Not Registered?
+                <a href="{{ url_for('register') }}">Join here</a>
+            </span>
+        </p>
     </div>
 </div>
 {% endblock %}

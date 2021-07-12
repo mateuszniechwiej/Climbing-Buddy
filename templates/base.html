@@ -6,22 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"
+        type="text/css" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" type="text/css" />
     <!-- Flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
     <!--CSS-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block style %}
     {% endblock %}
     <title>Climbing Buddy</title>
-   
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -29,8 +33,9 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md cb-navbar fixed-top">
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#cb-navbar--collapse"
-                aria-controls="cb-navbar--collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#cb-navbar--collapse" aria-controls="cb-navbar--collapse" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <a class="navbar-brand" href="{{ url_for('home') }}"><img src="/static/images/logo.png" alt="logo"></a>
@@ -47,7 +52,8 @@
                         <a class="nav-link" href="{{ url_for('climbs') }}"><span>Find Climber</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><span>Profile</span></a>
+                        <a class="nav-link"
+                            href="{{ url_for('profile', username=session['user']) }}"><span>Profile</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('logout') }}"><span>Logout</span></a>
@@ -63,22 +69,18 @@
                 </ul>
             </div>
         </nav>
-        
-        
-        <!-- Background image -->
-        </header>
-
+    </header>
     <!-- flash messages-->
     <section>
-        <!-- to return list of tuples in the form of (category,message) used get_flashed_messages() -->   
+        <!-- to return list of tuples in the form of (category,message) used get_flashed_messages() -->
         {% with messages = get_flashed_messages(with_categories=True) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="row flash-msg mt-5">
-                        <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3> 
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="row flash-msg mt-5">
+            <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 
@@ -86,14 +88,14 @@
         {% block content %}
         {% endblock %}
     </main>
-
     <!-- Footer -->
     <footer class="footer mt-auto pb-3">
-        <div class="container" >
+        <div class="container">
             <div class="row">
                 <div class="col pt-2 cb-footer text-center">
                     <h3>Contact Us</h3>
-                    <a href="mailto:searchforclimber@gmail.com" class="btn btn-lg btn-floating text-center"><i class="far fa-envelope"></i></a>
+                    <a href="mailto:searchforclimber@gmail.com" class="btn btn-lg btn-floating text-center"><i
+                            class="far fa-envelope"></i></a>
                 </div>
             </div>
         </div>

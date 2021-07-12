@@ -1,38 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="justify-content-center ">
-            <div class="row justify-content-center cb-home">
-                <div class="row text-center"></div>
-                    <div class="col-11 col-md-8 text-center mt-5">
-                        <h1 >Climbing Buddy</h1>
-                    </div>
-                </div>
-            </div> 
-        {% if not session['user'] %}
-            <div class="row align-items-center">
-                <div class="col text-center cb-home" >
-                        <div class="row justify-content-center">
-                            <div class="col col-md-8 text-center cb-stripe--bg">
-                                <h3 >Website for Climbers <br>Register to our website to find your climbing partner!
-                                </h3>
-                            </div>
-                        </div>                    
-                </div>
-                <div class="row justify-content-center mt-5 cb-btn--rows">
-                    <div class="col-11 col-md-4 text-center">
-                        <a href="{{ url_for('register') }}" class="btn cb-btn--home">Register</a>
-                    </div>
-                </div>
-                <div class="row justify-content-center my-3 cb-btn--rows">
-                    <div class="col-11 col-md-4 text-center">
-                        <a href="{{ url_for('login') }}" class="btn cb-btn--home">Login</a>
-                    </div>
+<div class="justify-content-center ">
+    <div class="row justify-content-center cb-home">
+        <div class="col-11 col-md-8 text-center mt-5">
+            <h1>Climbing Buddy</h1>
+        </div>
+    </div>
+    {% if not session['user'] %}
+    <div class="row align-items-center">
+        <div class="col text-center cb-home">
+            <div class="row justify-content-center">
+                <div class="col col-md-8 text-center cb-stripe--bg">
+                    <h3>Website for Climbers <br>Register to our website to find your climbing partner!
+                    </h3>
                 </div>
             </div>
-        {% else %}
-        <div class="row justify-content-center">
-            <div class="col col-md-6 text-center cb-home">
-                <h3>Send your events suggestion on the email bellow, and have fun climbing with your new friends
-        {% endif %}
         </div>
+        <div class="row justify-content-center mt-5 cb-btn--rows">
+            <div class="col-11 col-md-4 text-center">
+                <a href="{{ url_for('register') }}" class="btn cb-btn--home">Register</a>
+            </div>
+        </div>
+        <div class="row justify-content-center my-3 cb-btn--rows">
+            <div class="col-11 col-md-4 text-center">
+                <a href="{{ url_for('login') }}" class="btn cb-btn--home">Login</a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="row justify-content-center">
+        <div class="col col-md-6 text-center cb-home">
+            <h3>Send your events suggestion on the email bellow, and have fun climbing with your new friends
+        </div>
+    </div>
+    {% endif %}
+</div>
 {% endblock %}

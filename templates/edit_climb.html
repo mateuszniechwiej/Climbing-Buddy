@@ -3,7 +3,7 @@
     <div class="container col-11 col-sm-8 col-lg-6 cb-edit_climb">
         <div class="row py-3">
             <form action="{{ url_for('edit_climb', climb_id=climb._id) }}" method="POST">
-                <h3 class="d-flex justify-content-center " ">EDIT CLIMB</h3>
+                <h3 class="d-flex justify-content-center">EDIT CLIMB</h3>
                 <div class="input-group mb-3 flatpickr">
                     <input type="text" id="climb_date" name="climb_date" value="{{ climb.climb_date }}" class="form-control"
                         placeholder="Date" data-input />
@@ -27,8 +27,8 @@
                 </div>
                 <div class="input-group mt-3 mb-3">
                     <span class="input-group-text"><i class="fas fa-map-marked-alt"></i></span>
-                    <input value="{{ climb.climb_location }}"type="text" id="autocomplete2" name="climb_location" class="form-control" placeholder="Location"
-                        aria-label="Location" aria-describedby="location" required />
+                    <input value="{{ climb.climb_location }}" type="text" id="autocomplete2" name="climb_location" class="form-control" placeholder="Location"
+                        aria-label="Location" aria-describedby="autocomplete2" required />
                 </div>
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-align-left"></i></span>
@@ -49,7 +49,7 @@
                     <a href="{{ url_for('climbs') }}" class="btn btn-danger cb-btn--back">Back to Climbs
                         <i class="fas fa-undo"></i>
                     </a>
-                    <a class="btn cb-btn--submit" type="edit">Edit Climb  <i class="far fa-edit"></i></a>
+                    <a href="#" class="btn cb-btn--submit" type="submit"> Edit Climb  <i class="far fa-edit"></i></a>
                 </div>
             </form>
         </div>
