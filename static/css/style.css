@@ -172,7 +172,6 @@ footer a span:hover, footer i:hover {
 .cb-events-card {
     border: 1px solid #208347;
     padding: 0;
-    max-width: 500px; */
 }
 
 .cb-events-body {
@@ -338,7 +337,7 @@ a:hover {
     background-color: rgba(0,0,0, 0.6);
     padding: 0.5em;
     color: #f2f2f2;
-    font-size: 0.7em;
+    font-size: 1.2em;
 
 }
 .cb-redirect a {
