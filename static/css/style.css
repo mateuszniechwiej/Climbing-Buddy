@@ -158,7 +158,7 @@ footer a span:hover, footer i:hover {
 }
 
 .cb-events {
-    height: auto;
+    height: auto; 
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -172,7 +172,7 @@ footer a span:hover, footer i:hover {
 .cb-events-card {
     border: 1px solid #208347;
     padding: 0;
-    max-width: 500px;
+    max-width: 500px; */
 }
 
 .cb-events-body {
@@ -268,7 +268,7 @@ footer a span:hover, footer i:hover {
     font-family: 'Indie Flower', sans-serif;
     
 }
-/*------------------------------------ Add Climb page */
+/*------------------------------------------------------------ Add Climb page */
 
 .cb-add_climb, .cb-add_event,.cb-edit_climb {
     background-color: #f2f2f2;
@@ -306,7 +306,7 @@ h5 {
 a:hover {
     color: #208347;
 }
-/* -------------------------------------   login and registration page */
+/* ------------------------------------------------------------- login and registration page */
 .cb-login {
     background-color: #f2f2f2;
     border: 1px solid #208347;
@@ -393,7 +393,7 @@ a:hover {
     margin-top: .3em;
 }
 
-/*--------------------------------------------------------------------- Pagination */
+/*------------------------------------------------------------------------- Pagination */
 .pagination {
     justify-content: center;
 }
@@ -632,11 +632,15 @@ a:hover {
 }
 /* to change default blue color for form-outline mdbootstrap*/
 /* https://mdbootstrap.com/snippets/standard/grzegorz-bujanski/2852722#css-tab-view */
-.form-outline .form-control:focus~.form-notch .form-notch-leading {
+.form-outline .form-control:focus~.form-notch .form-notch-leading, .form-outline .form-control:focus~.form-notch .form-notch-trailing {
     border-top: .125rem solid #3b945e;
     border-bottom: .125rem solid #3b945e;
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-leading {
     border-left: .125rem solid #3b945e;
 }
+
  .form-outline .form-control:focus~.form-notch .form-notch-middle {
     border-bottom: .125rem solid;
     border-color: #3b945e;
@@ -644,9 +648,7 @@ a:hover {
 
 .form-outline .form-control:focus~.form-notch .form-notch-trailing {
     border-color: currentcolor currentcolor currentcolor #3b945e;
-    border-bottom: .125rem solid #3b945e;
     border-right: .125rem solid #3b945e;
-    border-top: .125rem solid #3b945e;
 }
 
 .form-outline .form-control:focus~.form-label {
