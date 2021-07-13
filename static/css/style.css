@@ -1,749 +1,689 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@300;400;500;600&display=swap");
 
-body, html {
-    background: url(/static/images/darkbg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    scroll-behavior: initial;
-    font-family: 'Oswald',sans-serif;
+body,
+html {
+  background: url(/static/images/darkbg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  scroll-behavior: initial;
+  font-family: "Oswald", sans-serif;
 }
 
-p { 
-    color: #000;
-} 
+p {
+  color: #000;
+}
 
+i {
+  color: #208347;
+}
 
-/*--------------------------------------------------------------- Base page*/
+nav {
+  height: 4em;
+}
+
+h3 {
+  color: #208347;
+  font-family: "Indie Flower";
+  font-size: 2.5em;
+}
+
+h5 {
+  color: #992c1d;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 2em;
+}
+
+a:hover {
+  color: #208347;
+}
+
+/*-------------------------------------------------------------- Base page*/
+.nav-item {
+  padding-right: 15px;
+  font-size: 1em;
+}
+
 .cb-navbar {
-    background-color:#000;
-    padding: 0;
-    /* border-bottom: .5px solid #f2f2f2; */
+  background-color: #000;
+  padding: 0;
 }
 
 .cb-navbar img {
-    margin: 0 1em 0 1em;
-    height: 2.5em;
+  margin: 0 1em 0 1em;
+  height: 2.5em;
 }
 
 #cb-navbar--collapse {
-    background-color: rgba(0,0,0, 0.8);
-    z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
 }
 
 #cb-navbar--collapse li {
-    max-width: max-content;
-    padding: 0;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.2em;
+  max-width: max-content;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
 }
 #cb-navbar--collapse li span {
-    margin:.5em;
-    color:#f2f2f2;
+  margin: 0.5em;
+  color: #f2f2f2;
 }
 
 #cb-navbar--collapse li span:hover {
-    color: #208347;
-    border-bottom:1px solid #208347;
-    padding-bottom: 2px;
-} 
+  color: #208347;
+  border-bottom: 1px solid #208347;
+  padding-bottom: 2px;
+}
 
 footer {
-    background-color: #000;
-    /* border-top: .5px solid #f2f2f2; */
-}
-
-footer a span {
-    color: #f2f2f2;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.6em;
-}
-
-footer i {
-    color: #f2f2f2;
-    font-size: 1.6em;
-}
-
-footer a span:hover, footer i:hover {
-    color: #1bab74;
+  background-color: #000;
 }
 
 .cb-footer i {
-    font-size: 1.2em;
-    color: #208347; 
+  font-size: 1.2em;
+  color: #208347;
 }
 .cb-footer a {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 .cb-footer i:hover {
-    color: #f2f2f2;   
+  color: #f2f2f2;
 }
- .cb-footer a:hover {
-     background-color: #208347;
- }
+.cb-footer a:hover {
+  background-color: #208347;
+}
 
-
-/*----------------------------------------------------------- Home page styling */
-
+/*--------------------------------------------------------------------- Home page  */
 .cb-home h1 {
-    font-family: 'Indie Flower', sans-serif;
-    color: #f2f2f2;
-    font-size: 8em;
-
-    margin: .5em 0 .5em 0;
-    padding: .25em 0 .25em 0;
-    border-radius: .1em;
-    text-shadow: #208347 0 0 10px;
+  font-family: "Indie Flower", sans-serif;
+  color: #f2f2f2;
+  font-size: 8em;
+  margin: 0.5em 0 0.5em 0;
+  padding: 0.25em 0 0.25em 0;
+  border-radius: 0.1em;
+  text-shadow: #208347 0 0 10px;
 }
-/*:TODO: move this comment to credits code in README!
+
 /* to learn how to make text readable on background https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color */
 .cb-home h3 {
-    color: #f2f2f2;
-    padding: .5em;
-    font-family: 'Oswald', sans-serif;
-    font-size: 2em;
-    font-weight: 400;
-    text-shadow: 0.05em 0 #000,
-    0 0.05em #000,
-    -0.05em 0 #000,
-    0 -0.05em #000,
-    -0.05em -0.05em #000,
-    -0.05em 0.05em #000,
-    0.05em -0.05em #000,
+  color: #f2f2f2;
+  padding: 0.5em;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  text-shadow: 0.05em 0 #000, 0 0.05em #000, -0.05em 0 #000, 0 -0.05em #000,
+    -0.05em -0.05em #000, -0.05em 0.05em #000, 0.05em -0.05em #000,
     0.05em 0.05em #000;
-
-}
-
-.cb-bg-events {
-    background-color: #777777;
 }
 
 .cb-home p {
-    font-size: 2em;
-    font-family:'Oswald', sans-serif;
-    background-color:rgba(0,0,0, 0.6) ;
-    color: #f2f2f2;
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f2f2f2;
 }
-/*------------------------------------------------------------- Events page*/
+/*---------------------------------------------------------------------- Events page*/
 
 .cb-search {
-    background-color: rgba(0,0,0, 0.8);
-    width: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 50%;
 }
 
 .cb-search span {
-    color:#f2f2f2
+  color: #f2f2f2;
 }
 
 .cb-search input:focus {
-    color:#f2f2f2
+  color: #f2f2f2;
 }
 
 .cb-search input i:hover {
-    font-size: 3em;
-}
-
-.cb-btn--search {
-    background-color: #208347;
-}
-
-.cb-btn--search i {
-    color:#f2f2f2;
-    font-size: 1.5em;
-}
-
-.cb-btn--search:hover {
-    background-color: #1bab74;
+  font-size: 3em;
 }
 
 .cb-events {
-    height: auto; 
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
+  height: auto;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .cb-events p {
-    font-family: 'Oswald', sans-serif;
-    color:#208347
+  font-family: "Oswald", sans-serif;
+  color: #208347;
 }
 
 .cb-events-card {
-    border: 1px solid #208347;
-    padding: 0;
+  border: 1px solid #208347;
+  padding: 0;
 }
 
 .cb-events-body {
-    padding: 0;
+  padding: 0;
 }
 
 .cb-events-body i {
-    color:#992C1D;
-    padding-right: 1em;
+  color: #992c1d;
+  padding-right: 1em;
 }
 
 .cb-card--footer {
-    background-color: #000;
-    border-bottom-left-radius:.2em;
-    border-bottom-right-radius:.2em;
-    z-index: inherit;
+  background-color: #000;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  z-index: inherit;
 }
-/*---------------------------------------------------------- Delete Modals */
+
+/*-------------------------------------------------------------- Delete Modals */
 .cb-delete--modal i {
-    font-size: 3em;
-    padding: 0;
-    color: #992C1D;
+  font-size: 3em;
+  padding: 0;
+  color: #992c1d;
 }
 
 /*---------------------------------------------------------- Find Climber page */
 .cb-btn--filter {
-    color:#208347;
-    padding-left:1em;
+  color: #208347;
+  padding-left: 1em;
 }
 
 .cb-climbs--header h2 {
-    font-size: 4em;
-    text-shadow: #f2f2f2 0 0 10px;
-    background: none;
+  font-size: 4em;
+  text-shadow: #f2f2f2 0 0 10px;
+  background: none;
 }
 
 .cb-filter--container a {
-    background-color: #f2f2f2;
-    color: #208347;
+  background-color: #f2f2f2;
+  color: #208347;
 }
 
-.cb-filter--container a:hover, .cb-filter--container a:focus {
-    background-color: #fff;
-    color:#208347;
+.cb-filter--container a:hover,
+.cb-filter--container a:focus {
+  background-color: #fff;
+  color: #208347;
 }
 
 .cb-climbs {
-    height: auto;
-    padding: 0;
-    margin:0;
-}
-
-.cb-climbs p {
-    font-family: 'Oswald', sans-serif;
+  height: auto;
+  padding: 0;
+  margin: 0;
 }
 
 .cb-climbs span {
-    color: #208347;
-    font-family: 'Indie Flower', sans-serif;
-    font-weight: 500;
-    font-size: 1.2em;
+  color: #208347;
+  font-family: "Indie Flower", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 .cb-climbs i {
-    color: #992C1D;
+  color: #992c1d;
 }
 
 .cb-climbs h3 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .cb-climbs_body {
-    padding: 0;
+  padding: 0;
 }
 .cb-climbs_body i {
-    font-size: .7em;
-}
-
-#cb-filter {
-    background-color: #f2f2f2;
-    padding: 2em;
-    border: 1px solid #208347;
-    border-radius: 0.5em;
-    margin: 2em;
-}
-
-
-.cb-msg {
-    background-color: #f2f2f2;
-}
-.cb-msg p {
-    padding: 1em;
-    font-family: 'Indie Flower', sans-serif;
-    
-}
-/*------------------------------------------------------------ Add Climb page */
-
-.cb-add_climb, .cb-add_event,.cb-edit_climb {
-    background-color: #f2f2f2;
-    padding: 2em;
-    border: 1px solid #208347;
-    border-radius: 0.5em;
-    margin-top: 6em;
-}
-
-.nav-item {
-    padding-right: 15px;
-    font-size: 1em; 
-}
-
-i {
-    color: #208347;
-}
-
- nav {
- height:4em;
- }
-
-h3 {
-    color: #208347;
-    font-family: 'Indie Flower';
-    font-size: 2.5em;
-}
-
-h5 {
-    color:#992C1D;
-    font-family: 'Indie Flower', sans-serif;
-    font-size: 2em;
-}
-
-a:hover {
-    color: #208347;
-}
-/* ------------------------------------------------------------- login and registration page */
-.cb-login {
-    background-color: #f2f2f2;
-    border: 1px solid #208347;
-    border-radius: 0.5em ; 
-    padding: 2em;
-    margin-top:6em;
-}
-
-.cb-login h3 {
-    font-family: 'Indie Flower', sans-serif;
-    font-size: 2.5em;
-    padding-bottom: .2em;
-}
-
-.cb-register {
-    background-color: #f2f2f2;
-    border: 1px solid #208347;
-    border-radius: 0.5em ; 
-    padding: 2em;
-    margin-top: 6em;   
-}
-
-.cb-register label {
-    margin-right: 2em;
-    font-size: 1.2em;
-    font-weight: 500;
-}
-.cb-redirect span{
-    background-color: rgba(0,0,0, 0.6);
-    padding: 0.5em;
-    color: #f2f2f2;
-    font-size: 1.2em;
-
-}
-.cb-redirect a {
-    margin-left: .5em;
-    color: #208347;
-}
-
-.cb-redirect a:hover {
-    text-decoration: underline;
-    color: #208347;
+  font-size: 0.7em;
 }
 
 .cb-climbs_card {
-    max-height: 400px;
-    background-color:#f2f2f2 ;
-    padding: 0;
+  max-height: 400px;
+  background-color: #f2f2f2;
+  border: 1px solid #208347;
+  padding: 0;
+}
+
+#cb-filter {
+  background-color: #f2f2f2;
+  padding: 2em;
+  border: 1px solid #208347;
+  border-radius: 0.5em;
+  margin: 2em;
+}
+
+.cb-msg {
+  background-color: #f2f2f2;
+}
+.cb-msg p {
+  padding: 1em;
+  font-family: "Indie Flower", sans-serif;
+}
+
+/*------------------------------------------------------------ Add Climb page */
+
+.cb-add_climb,
+.cb-add_event,
+.cb-edit_climb {
+  background-color: #f2f2f2;
+  padding: 2em;
+  border: 1px solid #208347;
+  border-radius: 0.5em;
+  margin-top: 6em;
+}
+
+/* ------------------------------------------------------------- login and registration page */
+.cb-login {
+  background-color: #f2f2f2;
+  border: 1px solid #208347;
+  border-radius: 0.5em;
+  padding: 2em;
+  margin-top: 6em;
+}
+
+.cb-login h3 {
+  font-size: 2.5em;
+  padding-bottom: 0.2em;
+}
+
+.cb-register {
+  background-color: #f2f2f2;
+  border: 1px solid #208347;
+  border-radius: 0.5em;
+  padding: 2em;
+  margin-top: 6em;
+}
+
+.cb-register label {
+  margin-right: 2em;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.cb-redirect span {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5em;
+  color: #f2f2f2;
+  font-size: 1.2em;
+}
+.cb-redirect a {
+  margin-left: 0.5em;
+  color: #208347;
+}
+
+.cb-redirect a:hover {
+  text-decoration: underline;
+  color: #208347;
+}
+
+/*------------------------------------------------------------ Profile page  */
+.cb-profile {
+  background-color: #f2f2f2;
+  border-radius: 0.5em;
+  border: 1px solid #208347;
+}
+
+.cb-profile span {
+  color: #992c1d;
+}
+.cb-profile h3 {
+  font-size: 3em;
+}
+
+.cb-profile i {
+  font-size: 1.5em;
 }
 
 /*------------------------------------------------------------- Error page*/
 
-.cb-error h5, h2 {
-    color: #f2f2f2;
-    background-color: rgba(0,0,0, 0.6);
-    padding: .2em;
-    border-radius: .2em;
-    font-family: 'Indie Flower',sans-serif;
-    font-size: 2em;
+.cb-error h5,
+h2 {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 2em;
+}
+
+.cb-error h4 {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cb-error h2 span {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .cb-error a {
-    color: #208347;
-    text-decoration: underline;
-    font-size: 1.2em;
+  color: #208347;
+  text-decoration: underline;
+  font-size: 1.2em;
 }
 
-.cb-error h2 span, h4 span{
-    color: #992C1D;
-    background-color: rgba(0,0,0, 0.6);
-    padding: .2em;
-    border-radius: .2em;
+.cb-error h2 span,
+h4 span {
+  color: #992c1d;
+  padding: 0.2em;
+  border-radius: 0.2em;
 }
 
 .cb-error h1 {
-    margin: .3em 0 .1em 0;
+  margin: 0.3em 0 0.1em 0;
 }
 
 .cb-error h5 {
-    margin-top: .3em;
+  margin-top: 0.3em;
 }
 
 /*------------------------------------------------------------------------- Pagination */
 .pagination {
-    justify-content: center;
+  justify-content: center;
 }
 
 .pagination a {
-    color: #f2f2f2;
+  color: #f2f2f2;
 }
 
 .pagination a:hover {
-    color: #208347;
+  color: #208347;
 }
 
 .pagination li {
-    display: inline-block;
-    padding: 0 .5em 0 .5em;
-    margin-top:1em ;
-    font-family: 'Indie Flower';
-    font-size: 2.5em;
-    background-color: rgba(0,0,0, 0.6);
+  display: inline-block;
+  padding: 0 0.5em 0 0.5em;
+  margin-top: 1em;
+  font-family: "Indie Flower";
+  font-size: 2.5em;
+  background-color: rgba(0, 0, 0, 0.6);
 }
+
 /*--------------------------------------------------------------------------- Buttons */
+.cb-btn--search {
+  background-color: #208347;
+}
 
-.cb-btn-add button{
-    padding:1em;
+.cb-btn--search i {
+  color: #f2f2f2;
+  font-size: 1.5em;
+}
 
+.cb-btn-add button {
+  padding: 1em;
 }
 
 .cb-btn--add {
-    background-color: #208347;
-    color:#f2f2f2;
-    min-width: 50%;
-    font-size: .8em;
+  min-width: 50%;
+  font-size: 0.8em;
 }
 
 .cb-btn--add i {
-    font-size: 1em;
-    padding-left: .8em;
-    color:#f2f2f2;
-
+  font-size: 1em;
+  padding-left: 0.8em;
+  color: #f2f2f2;
 }
 
-.cb-btn--add:hover{
-    background-color: #1bab74;
-    color:#f2f2f2;
+.cb-btn--add:hover {
+  background-color: #1bab74;
+  color: #f2f2f2;
 }
 
 .cb-btn--add_event {
-    background-color: #1bab74;
-    color: #f2f2f2;
-    font-size: .8em;
+  background-color: #208347;
+  color: #f2f2f2;
+  font-size: 0.8em;
 }
 
 .cb-btn--add_event:hover {
-    background-color: #208347;
-    color:#f2f2f2;
+  background-color: #1bab74;
+  color: #f2f2f2;
 }
 
 .cb-btn--add_event i {
-    color: #f2f2f2;
-    padding-left: 1.5em;
-    font-size: 1.2em;
+  color: #f2f2f2;
+  padding-left: 1.5em;
+  font-size: 1.2em;
 }
 
 .cb-btn--back {
-    padding: .8em;
-    background-color: #f2f2f2;
-    color: #208347;
+  padding: 0.8em;
+  background-color: #f2f2f2;
+  color: #208347;
 }
 
-.cb-btn--back_events, .cb-btn--back_climbs {
-    margin: 1em .5em 0 .5em;
-    padding: .8em 2em .8em 2.4em;
-    background-color: #f2f2f2;
-    color: #208347;
+.cb-btn--back_events,
+.cb-btn--back_climbs {
+  margin: 1em 0.5em 0 0.5em;
+  padding: 0.8em 2em 0.8em 2.4em;
+  background-color: #f2f2f2;
+  color: #208347;
 }
 
-.cb-btn--back i, .cb-btn--back_events i, .cb-btn--back_climbs i {
-    font-size: 1.2em;
-    padding-left: .8em;
+.cb-btn--back i,
+.cb-btn--back_events i,
+.cb-btn--back_climbs i {
+  font-size: 1.2em;
+  padding-left: 0.8em;
 }
 
 .cb-btn--contact_climber i {
-    font-size: 1em;
-    padding-left: 1em;
-    color: #208347;
+  font-size: 1em;
+  padding-left: 1em;
+  color: #208347;
 }
 
-.cb-btn--back:hover, .cb-btn--back_events:hover {
-    color: #208347;
-    background-color: #fff;
+.cb-btn--back:hover,
+.cb-btn--back_events:hover,
+.cb-btn--back_climbs:hover,
+.cb-btn--contact_climber:hover {
+  color: #208347;
+  background-color: #fff;
 }
 
-.cb-btn--back_climbs:hover {
-    background-color: #fff;
+.cb-btn--edit:hover,
+.cb-btn--accept:hover,
+.cb-btn--search:hover {
+  background-color: #1bab74;
+  color: #f2f2f2;
 }
 
-.cb-btn--edit, .cb-btn--accept {
-    background-color: #f2f2f2;
-    color: #208347;
+.cb-btn--add_climb,
+.cb-btn--submit,
+.cb-btn--read_more,
+.cb-btn--add {
+  color: #f2f2f2;
+  background-color: #208347;
 }
 
-.cb-btn--edit:hover, .cb-btn--accept:hover {
-    background-color: #1bab74;
-    color: #f2f2f2;
-}
-
-.cb-btn--add_climb {
-    color: #f2f2f2;
-    background-color: #208347;
-}
-
-.cb-btn--add_climb:hover {
-    background-color: #1bab74;
-    color: #f2f2f2;
+.cb-btn--edit,
+.cb-btn--accept,
+.cb-btn--no,
+.cb-btn--home {
+  background-color: #f2f2f2;
+  color: #208347;
 }
 
 .cb-btn--add_climb i {
-    font-size: 1.2em;
-    padding-left: .8em;
-    color: #f2f2f2;
+  font-size: 1.2em;
+  padding-left: 0.8em;
+  color: #f2f2f2;
 }
 
 .cb-btn-filter i {
-    padding-left: .8em;
-}
-
-.cb-btn--submit, .cb-btn--read_more {
-    background-color: #208347;
-    color:#f2f2f2
+  padding-left: 0.8em;
 }
 
 .cb-btn--submit i {
-    padding-left: .8em;
+  padding-left: 0.8em;
 }
 
 .cb-btn--rows {
-    margin: 0;
+  margin: 0;
 }
 .cb-btn--home {
-    background-color: #f2f2f2;
-    color: #208347;
-    font-size: 1.2em;
-    width: 100%;
-    font-family: 'Oswald', sans-serif; 
+  font-size: 1.2em;
+  width: 100%;
 }
 
 .cb-btn--contact_climber {
-    background-color: #f2f2f2;
-    color:#208347; 
-    font-size: 1.2em;
-    width: 100%;
-    font-weight: 400;
+  background-color: #f2f2f2;
+  color: #208347;
+  font-size: 1.2em;
+  width: 100%;
+  font-weight: 400;
 }
 
-.cb-btn--contact_climber:hover {
-    background-color: #fff;
-    color:#208347
+.cb-btn--home:hover,
+.cb-btn--no:hover,
+.cb-btn--add_climb:hover,
+.cb-btn--submit:hover,
+.cb-btn--read_more:hover {
+  background-color: #1bab74;
+  color: #f2f2f2;
 }
 
-.cb-btn--home:hover, .cb-btn--no:hover {
-    background-color: #1bab74;
-    color: #f2f2f2;
+.cb-btn--submit i,
+.cb-btn--cancel i {
+  color: #f2f2f2;
 }
 
-.cb-btn--submit:hover, .cb-btn--read_more:hover {
-    background-color:#1bab74;
-    color:#f2f2f2;
-}
-
-.cb-btn--submit i {
-    color: #f2f2f2;
-}
-.cb-btn--no {
-    background-color: #f2f2f2;
-    color: #208347;
-}
 .cb-btn--cancel {
-    background-color: #992C1D;
-    color: #f2f2f2;
+  background-color: #992c1d;
+  color: #f2f2f2;
 }
 
 .cb-btn--cancel:hover {
-    background-color: rgb(255, 0, 0);
-    color: #f2f2f2;
+  background-color: rgb(255, 0, 0);
+  color: #f2f2f2;
 }
 
-.cb-btn--cancel i {
-    color: #f2f2f2;
-}
 /*---------------------------------------------------------------------------------- flash mseggaes*/
 .flash-msg {
-    text-align: center;
-    line-height: 3;
+  text-align: center;
+  line-height: 3;
 }
 
 .flash-error {
-    color:#992C1D;
+  color: #992c1d;
 }
 
 .flash-message {
-    color:#208347;
+  color: #208347;
 }
 
 #event_description {
-    height: max-content;
+  height: max-content;
 }
 
 #climb_description {
-    height: max-content;
+  height: max-content;
 }
 
 /*----------------------------------------------------------------------    Forms styling */
 .cb-accept--content h5 {
-    font-family: 'Indie Flower';
-    font-size: 3em;
+  font-size: 3em;
 }
 .cb-accept--content {
-    background-color: #f2f2f2;
-    border: 1px solid #208347;
-    border-radius: 0.5em ;
+  background-color: #f2f2f2;
+  border: 1px solid #208347;
+  border-radius: 0.5em;
 }
 .accept-icons {
-    color: #208347;
-    font-size: 1.2em;
+  color: #208347;
+  font-size: 1.2em;
 }
 .response {
-    width: 100%;
-    height: 100%;
-    font-size: 1.5em;
-    color: #208347;
-    font-family: 'Indie Flower';
-} 
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  color: #208347;
+  font-family: "Indie Flower";
+}
 
 .input-descriptions {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 /* to change default blue color for form-outline mdbootstrap*/
 /* https://mdbootstrap.com/snippets/standard/grzegorz-bujanski/2852722#css-tab-view */
-.form-outline .form-control:focus~.form-notch .form-notch-leading, .form-outline .form-control:focus~.form-notch .form-notch-trailing {
-    border-top: .125rem solid #3b945e;
-    border-bottom: .125rem solid #3b945e;
+.form-outline .form-control:focus ~ .form-notch .form-notch-leading {
+  border-top: 0.125rem solid #3b945e;
+  border-bottom: 0.125rem solid #3b945e;
+  border-left: 0.125rem solid #3b945e;
 }
-
-.form-outline .form-control:focus~.form-notch .form-notch-leading {
-    border-left: .125rem solid #3b945e;
+.form-outline .form-control:focus ~ .form-notch .form-notch-middle {
+  border-bottom: 0.125rem solid;
+  border-color: #3b945e;
 }
-
- .form-outline .form-control:focus~.form-notch .form-notch-middle {
-    border-bottom: .125rem solid;
-    border-color: #3b945e;
+.form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
+  border-color: currentcolor currentcolor currentcolor #3b945e;
+  border-bottom: 0.125rem solid #3b945e;
+  border-right: 0.125rem solid #3b945e;
+  border-top: 0.125rem solid #3b945e;
 }
-
-.form-outline .form-control:focus~.form-notch .form-notch-trailing {
-    border-color: currentcolor currentcolor currentcolor #3b945e;
-    border-right: .125rem solid #3b945e;
+.form-outline .form-control:focus ~ .form-label {
+  color: #3b945e;
 }
-
-.form-outline .form-control:focus~.form-label {
-    color: #3b945e;
-}		 
 
 /*----------------------------------------------------------- Toggle Switch */
 
-.cb-form-switch .switcher:checked[type=checkbox]::after {
-    background-color: #208347;
-    box-shadow: 0 0 0 .625rem rgba(59, 148, 94, 0.5) ;
+.cb-form-switch .switcher:checked[type="checkbox"]::after {
+  background-color: #208347;
+  box-shadow: 0 0 0 0.625rem rgba(59, 148, 94, 0.5);
 }
-.switcher[type=checkbox]:checked[type=checkbox]:checked {
-    background-color: #208347;
+.switcher[type="checkbox"]:checked[type="checkbox"]:checked {
+  background-color: #208347;
 }
-
-
-/*------------------------------------------------------------ Profile page  */
-.cb-profile {
-    background-color: #f2f2f2;
-    border-radius: 0.5em;
-    border: 1px solid #208347;
-}
-
-.cb-profile span {
-    font-family: 'Oswald', sans-serif;
-    color: #992C1D;
-}
-.cb-profile h3{
-    font-family: 'Indie Flower', sans-serif;
-    font-size: 3em;
-}
-
-.cb-profile i {
-    font-size: 1.5em;
-}
-
-
 
 /* ------------------------------------------------------------------ Media Query */
 @media screen and (max-width: 500px) and (min-width: 351px) {
-    .pagination li {
-        font-size: 1.5em;
-    }
-    .cb-home h1 {
-        font-size: 5em;
-    }
-    .cb-climbs p {
-        font-size: 1.5em;
-    }
-    .cb-btn--back {
-        margin-top: 2em;
-    }
+  .pagination li {
+    font-size: 1.5em;
+  }
+  .cb-home h1 {
+    font-size: 5em;
+  }
+  .cb-climbs p {
+    font-size: 1.5em;
+  }
+  .cb-btn--back {
+    margin-top: 2em;
+  }
 }
 
-
 @media screen and (max-width: 350px) {
-    .cb-home h1 {
-        font-size: 4em;
-    }
-    .cb-climbs--header h2 {
-        font-size: 3em;
-    }
-    .cb-home h3 {
-        font-size: 1.6em;
-    }
-    footer a span {
-        font-size: 1em;
-    }
-    .cb-profile span{
-        font-size: 0.8em;
-    }
-    .cb-profile h3{
-        font-size: 1.8em;
-    }
-    .pagination li {
-        font-size:1.3em;
-    }
-    .cb-climbs p {
-        font-size: 1em;
-    }
-    .cb-climbs h3 {
-        font-size: 1.5em;
-    }
-    .cb-btn--back {
-        margin-top: 2em;
-    }
-    .cb-btn--submit {
-        margin-top: .5em;
-    }
-    #cb-filter {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .cb-search {
-
-        width: 70%;
-    }
+  .cb-home h1 {
+    font-size: 4em;
+  }
+  .cb-climbs--header h2 {
+    font-size: 3em;
+  }
+  .cb-home h3 {
+    font-size: 1.6em;
+  }
+  footer a span {
+    font-size: 1em;
+  }
+  .cb-profile span {
+    font-size: 0.8em;
+  }
+  .cb-profile h3 {
+    font-size: 1.8em;
+  }
+  .pagination li {
+    font-size: 1.3em;
+  }
+  .cb-climbs p {
+    font-size: 1em;
+  }
+  .cb-climbs h3 {
+    font-size: 1.5em;
+  }
+  .cb-btn--back {
+    margin-top: 2em;
+  }
+  .cb-btn--submit {
+    margin-top: 0.5em;
+  }
+  #cb-filter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .cb-search {
+    width: 70%;
+  }
 }
