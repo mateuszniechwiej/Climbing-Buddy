@@ -319,11 +319,17 @@ Images for this project
 
 ## Testing
 
-This website is for Milestone Project 3.Bulit with HTML, CSS, JavaScript and Python
-
+This website is for Milestone Project 3.
+Built with HTML, CSS, JavaScript and Python.
 
 
 ### Testing Plan
+
+Testing required:
+* responsiveness of all elements on all pages(both for logged and logged out users) 
+* all users stories included in this README file
+* links on pages must work properly and redirect to correct pages.
+* code must pass the HTML, CSS, JS and python(PEP8) Validators
 
 ### Testing Results
 
