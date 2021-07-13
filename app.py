@@ -75,6 +75,9 @@ def events():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Search words in events cards
+    """
     query = request.form.get("query")
     events = list(mongo.db.events.find({"$text": {"$search": query}}))
     paginated_events = get_elements(events)
@@ -252,7 +255,7 @@ def climbs():
 @app.route("/filter", methods=["GET", "POST"])
 def filter():
     """
-    Filters available climbs from select drop dwon menu
+    Filters available climbs from select drop down menu
     and autocomlpete places location field
     """
     climb_date = request.form.get("climbing_date")
@@ -359,6 +362,9 @@ def delete_climb(climb_id):
 # Testing errrors by importing abort from flask and return it in homepage
 @app.errorhandler(404)
 def page_not_found(error):
+    """
+    Error handler to display unique message for error 404.
+    """
     error = 404
     error_msg = "I'm sorry but the page you looking for doesn't exist."
     return render_template("error.html", error=error, error_msg=error_msg), 404
@@ -366,6 +372,9 @@ def page_not_found(error):
 
 @app.errorhandler(500)
 def internal_error(error):
+    """
+    Error handler to display unique message for error 500.
+    """
     error = 500
     error_msg = "We're sorry! There is an internal server error.\
         please try again later."
@@ -377,6 +386,9 @@ def internal_error(error):
 
 @app.errorhandler(Exception)
 def other_exceptions(error):
+    """
+    Error handler to display message for errors other then 404 and 500.
+    """
     error_msg = "We're sorry but the error above has occured"
     return render_template("error.html", error=error, error_msg=error_msg)
 
