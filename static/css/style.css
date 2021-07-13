@@ -25,13 +25,13 @@ nav {
 
 h3 {
   color: #208347;
-  font-family: "Indie Flower";
+  font-family: "Indie Flower", cursive;
   font-size: 2.5em;
 }
 
 h5 {
   color: #992c1d;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Indie Flower", cursive;
   font-size: 2em;
 }
 
@@ -97,7 +97,7 @@ footer {
 
 /*--------------------------------------------------------------------- Home page  */
 .cb-home h1 {
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Indie Flower", cursive;
   color: #f2f2f2;
   font-size: 8em;
   margin: 0.5em 0 0.5em 0;
@@ -213,7 +213,7 @@ footer {
 
 .cb-climbs span {
   color: #208347;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Indie Flower", cursive;
   font-weight: 500;
   font-size: 1.2em;
 }
@@ -253,7 +253,7 @@ footer {
 }
 .cb-msg p {
   padding: 1em;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Indie Flower", cursive;
 }
 
 /*------------------------------------------------------------ Add Climb page */
@@ -338,7 +338,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0.2em;
   border-radius: 0.2em;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Indie Flower", cursive;
   font-size: 2em;
 }
 
@@ -388,7 +388,7 @@ h4 span {
   display: inline-block;
   padding: 0 0.5em 0 0.5em;
   margin-top: 1em;
-  font-family: "Indie Flower";
+  font-family: "Indie Flower", cursive;
   font-size: 2.5em;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -592,7 +592,7 @@ h4 span {
   height: 100%;
   font-size: 1.5em;
   color: #208347;
-  font-family: "Indie Flower";
+  font-family: "Indie Flower", cursive;
 }
 
 .input-descriptions {
