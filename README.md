@@ -10,7 +10,6 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
 
 # Table of Contest
 
-- [Project Workflow](#project-workflow)
 - [UX](#ux)
   - [The Strategy Plane](#the-strategy-plane)
     - [Project Goal](#project-goal)
@@ -35,10 +34,7 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
   - [Languages Used](#languages-used)
   - [Frameworks, Programmes and Libraries](#frameworks-programmes-and-libraries)
 - [Testing](#testing)
-
-  - [Testing Plan](#Testing-Plan)
-  - [Testing Results](#Testing-Results)
-  - [Issues](#issues)
+- [Code Issues](#code-issues)
 
 - [Deployment](#deployment)
   - [Project Initiation](#project-initiation)
@@ -216,7 +212,7 @@ A solution to satisfy user requirements:
 
 :black_nib:
 
-* The primary font used in this project is **'Indie Flower'**. A fun handwriting font easy to read with rounded edges. Which was what I was looking for in this project.
+* Two fonts are used in this project.For most of the headings i used **'Indie Flower'** with *cursive* as a fallback font. A fun handwriting font easy to read with rounded edges. Which was what I was looking for in this project.
 
 * The second font used for this website is **'Oswald'** with *sans-serif* as a fallback font. A readable and interesting font that fits best for body content.
 
@@ -319,21 +315,9 @@ Images for this project
 
 ## Testing
 
-This website is for Milestone Project 3.
-Built with HTML, CSS, JavaScript and Python.
+Testing :point_right: [TESTING.md](TESTING.md)
 
-
-### Testing Plan
-
-Testing required:
-* responsiveness of all elements on all pages(both for logged and logged out users) 
-* all users stories included in this README file
-* links on pages must work properly and redirect to correct pages.
-* code must pass the HTML, CSS, JS and python(PEP8) Validators
-
-### Testing Results
-
-### Issues
+## Code Issues
 
 ## Deployment
 

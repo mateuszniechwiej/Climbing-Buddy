@@ -1,9 +1,4 @@
-
-// const form = document.getElementById('accept_climb');
-// // to dispaly modal on page load as didn't work by calling it in a different way
-// form.classList.add('show')
-// form.style.display = 'block';
-
+// sending email to climb creators and passing the appropriate information by using email.js
 document.getElementById('message_climber').onsubmit = event => {
     event.preventDefault();
     
@@ -29,7 +24,7 @@ document.getElementById('message_climber').onsubmit = event => {
 
 };
 
-
+// :TODO: put the below code in the README as it wasn't working 
 // function sendMail(acceptForm) {
 //     acceptForm.preventDefault();
 //     emailjs.send("gmail", "climbing_buddy", {
