@@ -68,7 +68,7 @@ a:hover {
 }
 #cb-navbar--collapse li span {
   margin: 0.5em;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 #cb-navbar--collapse li span:hover {
@@ -86,10 +86,10 @@ footer {
   color: #208347;
 }
 .cb-footer a {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
 }
 .cb-footer i:hover {
-  color: #f2f2f2;
+  color: #fafafa;
 }
 .cb-footer a:hover {
   background-color: #208347;
@@ -98,7 +98,7 @@ footer {
 /*--------------------------------------------------------------------- Home page  */
 .cb-home h1 {
   font-family: "Indie Flower", cursive;
-  color: #f2f2f2;
+  color: #fafafa;
   font-size: 8em;
   margin: 0.5em 0 0.5em 0;
   padding: 0.25em 0 0.25em 0;
@@ -108,7 +108,7 @@ footer {
 
 /* to learn how to make text readable on background https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color */
 .cb-home h3 {
-  color: #f2f2f2;
+  color: #fafafa;
   padding: 0.5em;
   font-family: "Oswald", sans-serif;
   font-size: 2em;
@@ -121,7 +121,7 @@ footer {
 .cb-home p {
   font-size: 2em;
   background-color: rgba(0, 0, 0, 0.6);
-  color: #f2f2f2;
+  color: #fafafa;
 }
 /*---------------------------------------------------------------------- Events page*/
 
@@ -131,11 +131,11 @@ footer {
 }
 
 .cb-search span {
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-search input:focus {
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-search input i:hover {
@@ -190,12 +190,12 @@ footer {
 
 .cb-climbs--header h2 {
   font-size: 4em;
-  text-shadow: #f2f2f2 0 0 10px;
+  text-shadow: #fafafa 0 0 10px;
   background: none;
 }
 
 .cb-filter--container a {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   color: #208347;
 }
 
@@ -235,13 +235,13 @@ footer {
 
 .cb-climbs_card {
   max-height: 400px;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   border: 1px solid #208347;
   padding: 0;
 }
 
 #cb-filter {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   padding: 2em;
   border: 1px solid #208347;
   border-radius: 0.5em;
@@ -249,7 +249,7 @@ footer {
 }
 
 .cb-msg {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
 }
 .cb-msg p {
   padding: 1em;
@@ -261,7 +261,7 @@ footer {
 .cb-add_climb,
 .cb-add_event,
 .cb-edit_climb {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   padding: 2em;
   border: 1px solid #208347;
   border-radius: 0.5em;
@@ -270,7 +270,7 @@ footer {
 
 /* ------------------------------------------------------------- login and registration page */
 .cb-login {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   border: 1px solid #208347;
   border-radius: 0.5em;
   padding: 2em;
@@ -283,7 +283,7 @@ footer {
 }
 
 .cb-register {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   border: 1px solid #208347;
   border-radius: 0.5em;
   padding: 2em;
@@ -299,7 +299,7 @@ footer {
 .cb-redirect span {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0.5em;
-  color: #f2f2f2;
+  color: #fafafa;
   font-size: 1.2em;
 }
 .cb-redirect a {
@@ -314,7 +314,7 @@ footer {
 
 /*------------------------------------------------------------ Profile page  */
 .cb-profile {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   border-radius: 0.5em;
   border: 1px solid #208347;
 }
@@ -334,7 +334,7 @@ footer {
 
 .cb-error h5,
 h2 {
-  color: #f2f2f2;
+  color: #fafafa;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0.2em;
   border-radius: 0.2em;
@@ -377,7 +377,7 @@ h4 span {
 }
 
 .pagination a {
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .pagination a:hover {
@@ -399,7 +399,7 @@ h4 span {
 }
 
 .cb-btn--search i {
-  color: #f2f2f2;
+  color: #fafafa;
   font-size: 1.5em;
 }
 
@@ -415,34 +415,34 @@ h4 span {
 .cb-btn--add i {
   font-size: 1em;
   padding-left: 0.8em;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn--add:hover {
   background-color: #1bab74;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn--add_event {
   background-color: #208347;
-  color: #f2f2f2;
+  color: #fafafa;
   font-size: 0.8em;
 }
 
 .cb-btn--add_event:hover {
   background-color: #1bab74;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn--add_event i {
-  color: #f2f2f2;
+  color: #fafafa;
   padding-left: 1.5em;
   font-size: 1.2em;
 }
 
 .cb-btn--back {
   padding: 0.8em;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   color: #208347;
 }
 
@@ -450,7 +450,7 @@ h4 span {
 .cb-btn--back_climbs {
   margin: 1em 0.5em 0 0.5em;
   padding: 0.8em 2em 0.8em 2.4em;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   color: #208347;
 }
 
@@ -479,14 +479,14 @@ h4 span {
 .cb-btn--accept:hover,
 .cb-btn--search:hover {
   background-color: #1bab74;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn--add_climb,
 .cb-btn--submit,
 .cb-btn--read_more,
 .cb-btn--add {
-  color: #f2f2f2;
+  color: #fafafa;
   background-color: #208347;
 }
 
@@ -494,14 +494,14 @@ h4 span {
 .cb-btn--accept,
 .cb-btn--no,
 .cb-btn--home {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   color: #208347;
 }
 
 .cb-btn--add_climb i {
   font-size: 1.2em;
   padding-left: 0.8em;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn-filter i {
@@ -521,7 +521,7 @@ h4 span {
 }
 
 .cb-btn--contact_climber {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   color: #208347;
   font-size: 1.2em;
   width: 100%;
@@ -534,22 +534,22 @@ h4 span {
 .cb-btn--submit:hover,
 .cb-btn--read_more:hover {
   background-color: #1bab74;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn--submit i,
 .cb-btn--cancel i {
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn--cancel {
   background-color: #992c1d;
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 .cb-btn--cancel:hover {
   background-color: rgb(255, 0, 0);
-  color: #f2f2f2;
+  color: #fafafa;
 }
 
 /*---------------------------------------------------------------------------------- flash mseggaes*/
@@ -579,7 +579,7 @@ h4 span {
   font-size: 3em;
 }
 .cb-accept--content {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   border: 1px solid #208347;
   border-radius: 0.5em;
 }

@@ -5,7 +5,7 @@ Built with HTML, CSS, JavaScript and Python.
 
 To go back to README :point_right: [README.md](README.md)
 
-## Testing Plan
+# Testing Plan
 
 Testing required:
 * responsiveness of all elements on all pages(both for logged and logged out users) 
@@ -14,7 +14,7 @@ Testing required:
 * code must pass the HTML, CSS, JS and python(PEP8) Validators
 
 
-## Responsivnes Testing
+# Responsivnes Testing
 
 |Screen size\Browser |Chrome            |Opera             |Edge              |Firefox           |Safari            
 |--------------------|------------------|------------------|------------------|------------------|------------------| 
@@ -42,6 +42,7 @@ The website was tested on a varied number of devices:
 
   
 Also, friends and family were asked to test this website and I did not receive any information on noticed bugs in the feedback from them.
+# Validators Test
 
 ### HTML Validator - Test
 
@@ -55,16 +56,16 @@ HTML Validator - [W3C HTML Validator](https://validator.w3.org/) - PASS
 
 Errors: Fixed.
 
-Warning left: ![Warning](static\media_README\HTMLvalidator.PNG)
+Warning left: 
+
+![Warning](static/media_README/HTMLvalidator.PNG)
 ### CSS Validator - Test 
 
 CSS Validator - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - PASS
 
-![CSS](static\media_README\CSS.gif)
+![CSS](static/media_README/CSS.gif)
 
 Comments: Tested by direct input and copying CSS from my project.
-
-
 
 ### JavaScript Validator - Test 
 
@@ -75,4 +76,10 @@ JS Validator  - [JSHint Validator](https://jshint.com/) - PASS
  ### Python PEP8 Validator - Test
 
  [PEP8 Validator](http://pep8online.com/) - PASS
+
+
+Comments: Tested and fixed all spacing and empty spaces.
+
+# Performance
+### To improve and check performance for this website I used [Lighthouse](https://developers.google.com/web/tools/lighthouse), which is part of [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools).
 

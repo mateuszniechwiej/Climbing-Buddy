@@ -206,7 +206,7 @@ A solution to satisfy user requirements:
 
 #### Colour Scheme
 * Used Adobe Color to choose the colour pallet.
-![Colour Pallet](static/media_README/colours.jpeg)
+![Colour Pallet](static/media_README/colours.png)
 
 #### Typography
 
