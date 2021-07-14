@@ -107,7 +107,7 @@ Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) an
 1. As a user, I want to understand the purpose of this website.
 *  On arrival to the home page, the user can find the title of the page with description and two buttons. One to register and the other for login.There are also navbar links for events,register and login. And in the footer an icon with anchor email link to contact the site owner. 
 
-![home](static/media_README/home.png)
+![home](static/media_README/home.PNG)
 
 2. As a user, I want to find an easy navigate website and find all the content.
  * For unregistered users:
