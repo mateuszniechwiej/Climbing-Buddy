@@ -42,7 +42,6 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
   - [Heroku Deployment](#heroku-deployment)
 - [Credits](#credits)
   - [Code](#code)
-  - [Media](#media)
   - [Acknowledgements](#acknowledgements)
 
 # UX
@@ -366,6 +365,8 @@ Source: [VSCode docs](https://code.visualstudio.com/docs/python/environments#_se
 
 ### Code
 
-### Media
-
-### Acknowledgements
+## Acknowledgements
+* My mentor, **_Maranatha Ilesanmi_** for advice, guidance and support on this project.
+* Sean and Igor from **Tutor Support** - for helping to fix the issues with my modals and email.js functionality.
+* **Slack Community** - for feedback on my project.
+* **My friends and family** - for giving feedback on my project and testing this website.
