@@ -53,6 +53,7 @@ a:hover {
 .cb-navbar img {
   margin: 0 1em 0 1em;
   height: 2.5em;
+  width: auto;
 }
 
 #cb-navbar--collapse {

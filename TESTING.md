@@ -83,3 +83,21 @@ Comments: Tested and fixed all spacing and empty spaces.
 # Performance
 ### To improve and check performance for this website I used [Lighthouse](https://developers.google.com/web/tools/lighthouse), which is part of [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools).
 
+* Test for user not logged:
+1. Home page :heavy_check_mark:
+![performance](static/media_README/performance.PNG)
+2. Events page  :heavy_check_mark:
+3. Register page :heavy_check_mark:
+4. Login page :heavy_check_mark:
+
+* Test performance for admin logged in:
+1. Home page :heavy_check_mark:
+2. Events :heavy_check_mark:
+3. Find climber :
+    * edit climb :heavy_check_mark:
+    * add climb :heavy_check_mark:
+    * contact climber :heavy_check_mark:
+4. Profile :heavy_check_mark:
+
+Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) and add meta description and set logo img size.
+
