@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This website is for climbers in Ireland to find a climbing partner for chosen date and time.">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"
         type="text/css" />
@@ -74,13 +76,13 @@
         <!-- flash messages-->
         <!-- to return list of tuples in the form of (category,message) used get_flashed_messages() -->
         {% with messages = get_flashed_messages(with_categories=True) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                <div class="row flash-msg mt-5">
-                    <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3>
-                </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="row flash-msg mt-5">
+            <h3 class="d-flex justify-content-center mt-5 flash-{{ category }}">{{ message }}</h3>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
 
         {% block content %}
