@@ -215,7 +215,30 @@ A solution to satisfy user requirements:
 
 * The second font used for this website is **'Oswald'** with *sans-serif* as a fallback font. A readable and interesting font that fits best for body content.
 
-#### Design Changes
+### Differences to design:
+After consultation with my mentor and from receiving feedback this are the changes to this project:
+
+1. Navbar changes:
+    - changing locations of the link to left side and adding logo on the right side on navbar
+    - hover on links adding underline only now.
+    - relocating links: to add event and add climb to other pages
+2. Footer - email link icon replaced email address as design improvement
+3. Events page:
+    - 2 events cards per row with images showing up to 4 events card per page
+    - search bar added for better user experience
+    - add pagination to event page to show up to 4 events per page
+    - add climb moved from navbar beside search bar as a button for better UX
+4. Register page:
+    - add confirm password functionality
+    - add redirect to login page if already registered for better user experience
+5. Login page:
+    - add link to registration page for better user experience
+6. Finding Climber:
+    - page renamed from Climbing Buddy for better meaning
+    - filter climbs added to allow user filter by date,type of climbing and location
+    - add climb moved from navlink
+    - `Accept Climb` button replaced with `More Info` to redirect users to new page where they can read a message from user and send message to that user.
+
 
 ### Database Architecture
 * **MongoDB** non-relational database is used to store data for this project
@@ -282,8 +305,12 @@ Images for this project
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
 
 * [JavaScript](https://pl.wikipedia.org/wiki/JavaScript)
+    - emailjs for sending message between users
+    - places autocomplete for location input field for better user experience
+    - flatpick for date picker
 
 * [Python](https://www.python.org/)
+    - Python Modules used in this project can be found in the requirements.txt project file)
 
 ## Frameworks, Programmes and Libraries
 * [mdbootstrap](https://mdbootstrap.com/) - Material Design for Bootstrap 5 used for layouts, styling and custom components such as forms, navigation bar or modals.
@@ -360,6 +387,8 @@ Source: [VSCode docs](https://code.visualstudio.com/docs/python/environments#_se
 * Like:  `mongo = PyMongo(app`)
 
 ### Heroku Deployment
+
+
 
 ## Credits
 
