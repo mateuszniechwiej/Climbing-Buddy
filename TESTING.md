@@ -92,7 +92,7 @@ Comments: Tested and fixed all spacing and empty spaces.
 3. Register page :heavy_check_mark:
 ![registration performance](static/media_README/performance_register.PNG)
 4. Login page :heavy_check_mark:
-![login performance](static\media_README\performance_login.PNG)
+![login performance](static/media_README/performance_login.PNG)
 
 * Test performance for admin logged in:
 1. Home page :heavy_check_mark:
