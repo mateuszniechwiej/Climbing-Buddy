@@ -205,7 +205,7 @@ A solution to satisfy user requirements:
 
 #### Colour Scheme
 * Used Adobe Color to choose the colour pallette.
-![Colour Pallette](static/media_README/colours.png)
+![Colour Pallette](static/media_README/colours.PNG)
 
 #### Typography
 
@@ -368,7 +368,7 @@ This was the initial code: (with:`onsubmit="return sendMail(this);` in html form
     return false;
  }
  ```
-**Understanding the problem** - was not sure what was causing this issue problem.
+**Understanding the problem** - was not sure what was causing this problem.
 
 **Solution** - I needed to change the approach with help from Tutor support by:
 *Getting the form in the script file, and stopped the page from reloading.*
