@@ -49,7 +49,7 @@ Also, friends and family were asked to test this website and I did not receive a
 
 HTML Validator - [W3C HTML Validator](https://validator.w3.org/) - PASS
 
- Comments: Tested by pasting below urls to the validator:
+ Comments: Tested by pasting below URL's to the validator:
  * [Home](https://climbing-buddy-project.herokuapp.com/) - PASS
  * [Events](https://climbing-buddy-project.herokuapp.com/events) - PASS
  * [Register](https://climbing-buddy-project.herokuapp.com/register) - PASS
@@ -103,7 +103,7 @@ Comments: Tested and fixed all spacing and empty spaces.
     * contact climber :heavy_check_mark:
 4. Profile :heavy_check_mark:
 
-Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) and add meta description and set logo img size.
+Comments: Update colour palette after testing(change from #f2f2f2 to #fafafa) and add meta description and set logo image size.
 
 # Users Stories Test
 
@@ -131,7 +131,7 @@ Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) an
 
 
 3. As a user, I want the website to be responsive and allow me to use it comfortably on all size devices(particularly mobiles phones). :heavy_check_mark:
-* [Responsivnes Testing](#responsivnes-testing)
+* [Responsivness Testing](#responsivnes-testing)
 
 
 4. As a user, I want to be able to register to the website and then create a request to look for a climbing partner. :heavy_check_mark:
@@ -144,7 +144,7 @@ Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) an
     - add climb within "Find Climber" page tested. :heavy_check_mark:
     - delete, edit and add climb functionality tested for admin and other logged in users.(Flash messages displaying correctly) :heavy_check_mark:
       * after pressing the "add climb" button flash message `"Climb added"` is being displayed and the newly created climb card is available. :heavy_check_mark:
-      * after pressing `delete` button modal confirming deletation is showing. :heavy_check_mark:
+      * after pressing `delete` button modal confirming deleted is showing. :heavy_check_mark:
       ![delete climb](static/media_README/delete_climb.PNG)
       * when `DELETE` button pressed flash message("Climb removed") displayed. :heavy_check_mark:
 
@@ -183,7 +183,7 @@ Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) an
 
 # Site Goals Test
 
-1. To provide users with a simple- and easily navigated website to help them to create a request to find the correct partner for the climbing day. :heavy_check_mark:
+1. To provide users with a simple and easily navigated website to help them to create a request to find the correct partner for the climbing day. :heavy_check_mark:
 
 2. To increase the number of climbing events and allowing participating expanding network of new friends who share the same passion. 
 
@@ -193,7 +193,7 @@ Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) an
 
     - edit and delete event functionality for admin :heavy_check_mark:
 
-    - add climb for registed user :heavy_check_mark:
+    - add climb for registered user :heavy_check_mark:
 
     - delete your own climb(and any climb for admin user) :heavy_check_mark:
 

@@ -50,11 +50,11 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
 
 ### _Project Goal_
 
-This website project targets the climbing community in Ireland. The primary focus is to allow users to create a request to find a climbing partner- and check any climbing events created on this site.
+This website project targets the climbing community in Ireland. The primary focus is to allow users to create a request to find a climbing partner and check any climbing events created on this site.
 
 ### _Site Goals_
 
-- To provide users with a simple- and easily navigated website to help them to create a request to find the correct partner for the climbing day.
+- To provide users with a simple and easily navigated website to help them to create a request to find the correct partner for the climbing day.
 - To increase the number of climbing events and allowing participating expanding network of new friends who share the same passion.
 - Create a website fully responsive on mobiles, tablets, and desktop devices.
 
@@ -166,17 +166,17 @@ A solution to satisfy user requirements:
   - prefered climbing type: sport, traditional or bouldering.
   - equipment provided by the user who makes a request.
   - desire level of skills from the other climber.
-  - dropdown list for climbing location.
+  - autocomplete places location input for climbing location.
 
 > As a user, I would like to get notified once a person accepted my request.
 
 A solution to satisfy user requirements:
 
-- once the interested user clicks the `More Info` button from the find climber .The climb_info page where he can press `Contact Climber` details about the climb and have a a modal form with session username, email and message to fill out will appear for the user to submit. After submitting the modal form, an email will be sent to the climbing search event creator with the user name and email details of who accepted the request.
+- once the interested user clicks the `More Info` button from the 'Find Climber' page. The climb_info page where he can press `Contact Climber` details about the climb and have a modal form with session username, email and message to fill out will appear for the user to submit. After submitting the modal form, an email will be sent to the climbing search event creator with the user name and email details of who accepted the request.
 
 - emailjs.com will be used to send mail after accepting the climbing request.
 
-* Example of an email received from user whom is intrested in cthe climb:
+* Example of an email received from user whom is interested in the climb:
 ![emialjs](static/media_README/emailJS.png)
 
 
@@ -204,8 +204,8 @@ A solution to satisfy user requirements:
 ### Design
 
 #### Colour Scheme
-* Used Adobe Color to choose the colour pallet.
-![Colour Pallet](static/media_README/colours.png)
+* Used Adobe Color to choose the colour pallette.
+![Colour Pallette](static/media_README/colours.png)
 
 #### Typography
 
@@ -314,7 +314,7 @@ Images for this project
 
 ## Frameworks, Programmes and Libraries
 * [mdbootstrap](https://mdbootstrap.com/) - Material Design for Bootstrap 5 used for layouts, styling and custom components such as forms, navigation bar or modals.
-* [emailjs](https://www.emailjs.com/) -to allow users to respond to climbing request by sending an email message.
+* [emailjs](https://www.emailjs.com/) - to allow users to respond to climbing request by sending an email message.
 * [JIRA](https://www.atlassian.com/software/jira) - project management tool to organize workflow.
 
 * [Adobe Photoshop Express](https://photoshop.adobe.com/?promoid=SYBNM1DC&mv=other) - To crop the full-page background image.
@@ -331,7 +331,7 @@ Images for this project
 * [Heroku](https://heroku.com) - Heroku was to deploy and host the live website.
 * [MongoDB](https://www.mongodb.com/) - MongoDb document-oriented database used to store information about users,events and climbs.
 * [Visual Studio Code](https://code.visualstudio.com/) - used for developing this website and commit the project to GitHub repository.
-* [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - used to debug the styling issues, test the website responsiveness  and to ensure colour contrast.
+* [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - used to debug the styling issues, test the website responsiveness  and to make sure colour contrast is correct.
 * [Autocomplete Places Google API](https://developers.google.com/maps/documentation/places/web-service/autocomplete) - provides a fast and easy to use address search autocomplete functionality for locations fields input.
 * [Flatpickr](https://flatpickr.js.org/) - lightweight DateTime picker used to select dates in this project.
 * [Github](https://github.com/) - Github as the hosting site was used to store the source code of this website.
@@ -375,7 +375,7 @@ This was the initial code: (with:`onsubmit="return sendMail(this);` in html form
 
 2. Some modals not displaying borders and lack of response message display confirming message send by email.js(however the message was send by email.js at that time):
 
-**Understanding the problem** : The issue occured because of repeating Id's on the same html page in the modal forms.
+**Understanding the problem** : The issue was caused by repeating Id's on the same html page in the modal forms.
 
 **Solution**: Moving Modal to another page and passing single climbing id by introducing `More Info` button to the climb event card.
 
@@ -409,7 +409,7 @@ This was the initial code: (with:`onsubmit="return sendMail(this);` in html form
 7. A clone of the project will now be created locally on your machine.
 
 ### Create a Virtual Environment(VSCode)
-__(You need to have instaled Python extensions and Python version 3 before taking following steps )__
+__(You need to have installed Python extensions and Python version 3 before taking following steps )__
 1. On the the local system create project folder e.g MS3
 2. In that folder use(for Windows) the command: `python -m venv venv`
 3. Select and activate an environment (To select a specific environment, use the `Python: Select Interpreter` command from the `Command Palette (Ctrl+Shift+P)`.
