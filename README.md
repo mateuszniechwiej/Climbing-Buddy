@@ -25,7 +25,7 @@ This website allows climbers in Ireland to find a climbing partner for chosen da
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Database Architecture](#database-architecture)
-    - [Design Changes](#design-changes)
+    - [Differences to design](#differences-to-design)
     - [Imagery](#imagery)
 - [Features](#features)
   - [Existing Features](#existing-features)
@@ -344,6 +344,54 @@ Images for this project
 Testing :point_right: [TESTING.md](TESTING.md)
 
 ## Code Issues
+1. Email.js functionality issue:
+Not sending emails when followed the steps from emailjs documentation after moving climber modal contact form to "contact climber" page.
+
+This was the initial code: (with:`onsubmit="return sendMail(this);` in html form):
+```function sendMail(acceptForm) {
+     acceptForm.preventDefault();
+        emailjs.send("gmail", "climbing_buddy", {
+            'user': acceptForm.name.value,         
+            'user_email':   acceptForm.email.value,
+            'other_user': acceptForm.creator.value,
+            'other_email': acceptForm.receiver.value,
+            'message': acceptForm.message.value,
+        })
+         .then(
+            function() {
+                document.querySelector('.response').innerHTML = "Your message was sent!";
+            },
+            function() {
+                document.querySelector('.response').innerHtml = "There was an error to send your message. Try again later..."
+            }
+        );
+    return false;
+ }
+ ```
+**Understanding the problem** - was not sure what was causing this issue problem.
+
+**Solution** - I needed to change the approach with help from Tutor support by:
+*Getting the form in the script file, and stopped the page from reloading.*
+
+2. Some modals not displaying borders and lack of response message display confirming message send by email.js(however the message was send by email.js at that time):
+
+**Understanding the problem** : The issue occured because of repeating Id's on the same html page in the modal forms.
+
+**Solution**: Moving Modal to another page and passing single climbing id by introducing `More Info` button to the climb event card.
+
+3. Modal opening on page load in contact climber page:
+
+**Understanding the problem**: Probably issue caused by MDBootstrap framework as steps taken from mdbootstrap documentation didn't work
+
+**Solution** - introduce `CONTACT CLIMBER` button to open the modal.
+
+4. Manipulator js error in the console on contact climber page
+
+**Understanding the problem**: Probably issue caused by MDBootstrap framework
+
+![console error](static/media_README/consoleError.PNG)
+
+**Solution** - Not resolved
 
 ## Deployment
 
@@ -411,6 +459,14 @@ Create Heroku application:
 ## Credits
 
 ### Code
+
+* [MBBootstrap libary](https://mdbootstrap.com/) used to create a responsive design and how add focus message field in modal.
+* [MDBootstrap](https://mdbootstrap.com/snippets/standard/grzegorz-bujanski/2852722#css-tab-view ) - to change default blue for form-outline. 
+* [Places Autocomplete by Google](https://developers.google.com/maps/documentation/places/web-service/autocomplete) - to set up correctly location autocomplete functionality.
+* <a href="https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9"> pagination flask</a> - to learn how to make pagination using flask
+* [flatpickr examples](https://flatpickr.js.org/examples/) - to learn how to set up date picker.
+* [Stack Overflow](https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color) - how to make headings more visible on the background image
+
 
 ## Acknowledgements
 * My mentor, **_Maranatha Ilesanmi_** for advice, guidance and support on this project.
