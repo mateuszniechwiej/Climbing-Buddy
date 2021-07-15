@@ -50,7 +50,7 @@ def pagination_elements(elements):
 @app.route("/home")
 def home():
     """
-    Renders home page when main website loaded
+    Renders home page when main website loaded.
     """
     return render_template("index.html")
 
@@ -253,7 +253,7 @@ def climbs():
 def filter():
     """
     Filters available climbs from select drop down menu
-    and autocomlpete places location field
+    and autocomlpete places location field.
     """
     climb_date = request.form.get("climbing_date")
     climb_type = request.form.get("climbing_style")
@@ -284,7 +284,7 @@ def filter():
 def add_climb():
     """
     Allows users to add climbing events by getting add climb
-    form and stores into DB.Finaly renders add_climb.html.html.
+    form and stores into DB.Finaly renders add_climb.html.
     """
     user_email = (
         mongo.db.users.find_one({"username": session["user"]})["user_email"])
@@ -386,7 +386,7 @@ def other_exceptions(error):
     """
     Error handler to display message for errors other then 404 and 500.
     """
-    error_msg = "We're sorry but the error above has occured"
+    error_msg = "We're sorry but the error above has occurred"
     return render_template("error.html", error=error, error_msg=error_msg)
 
 
