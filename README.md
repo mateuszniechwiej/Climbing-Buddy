@@ -366,7 +366,7 @@ __(You need to have instaled Python extensions and Python version 3 before takin
 2. In that folder use(for Windows) the command: `python -m venv venv`
 3. Select and activate an environment (To select a specific environment, use the `Python: Select Interpreter` command from the `Command Palette (Ctrl+Shift+P)`.
 
-Source: [VSCode docs](https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment)
+More info: [VSCode docs](https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment)
 
 ### Connecting to MongoDB
 1. Logged to MongoDB account.
@@ -388,7 +388,25 @@ Source: [VSCode docs](https://code.visualstudio.com/docs/python/environments#_se
 
 ### Heroku Deployment
 
+Preparing Local workspace for Heroku:
+1. Creating a *__requirements.txt__* file(Required for the Heroku to know which apps need to be installed for the app) by typing in the CLI: :
+`pip freeze --local > requirements.txt`
 
+2. Creating *__Procfile__* file to declare what commands are run by the application's dynos on the Heroku.
+Type in file `web: python app.py` and save.
+
+Create Heroku application:
+1. Create Heroku account.
+2. Press `New` button. 
+2. Select `Create a new app`.
+3. Enter the app name.
+4. Select region.
+5. Under `Settings`, __click__ `Config Vars` to add Configuration Variables from the env.py file.
+6. In your CLI install Heroku by typing `npm install -g heroku`  
+7. Select `Deploy` option.
+8. Under `Deployment method` select the __GitHub__ option.
+9. Select Automatic deploys from the main branch and select `Deploy Branch`.
+10. Click `Open App` button located in the top-right corner of your Heroku account.
 
 ## Credits
 
