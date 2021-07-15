@@ -13,6 +13,8 @@ Testing required:
 * site owner goals
 * links on pages must work properly and redirect to correct pages.
 * code must pass the HTML, CSS, JS and python(PEP8) Validators
+* error testing
+* performance testing
 
 
 # Responsivnes Testing
@@ -137,7 +139,8 @@ Comments: Update colour palette after testing(change from #f2f2f2 to #fafafa) an
 4. As a user, I want to be able to register to the website and then create a request to look for a climbing partner. :heavy_check_mark:
     - registration button on Home page available. :heavy_check_mark:
     - navbar with registration link on all pages available and tested :heavy_check_mark:
-    - registration link under login form tested :heavy_check_mark:
+    - login link under registration form tested :heavy_check_mark:
+    - type different passwords to check if confirmed passwords work correctly (flash message displayed in red colour):heavy_check_mark:
 
     Looking for climbing partner:
     - Find Climber in navbar link available and tested from all pages. :heavy_check_mark:
@@ -231,3 +234,26 @@ Comments: Update colour palette after testing(change from #f2f2f2 to #fafafa) an
 
  6. Logout functionality:
  - - Tested during user and site goals testing(after logout we are redirected to login page with a flash message `"You've been logged out. See you again"`) :heavy_check_mark:
+
+ # Error testing 
+ 1.Test 404 error message by typing `https://climbing-buddy-project.herokuapp.com/wrong` in the address bar:
+ ![error](static/media_README/error.PNG)
+ - test link to go back to home page :heavy_check_mark:
+
+ 2.Testing 500 error message:
+ - Imported abort() from Flask
+ - Next return reteurn_render_template(abort(500))
+![error500](static/media_README/error500.PNG)
+``` 
+@app.route("/")
+    @app.route("/home")
+    def home():
+        """
+        Renders home page when main website loaded.
+        """
+        return render_template(abort(500))
+```
+3.Testing error 403 :
+- followed the same steps for test error 500:
+
+![error403](static/media_README/error403.PNG)
