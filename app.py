@@ -216,7 +216,7 @@ def edit_event(event_id):
             "event_type": request.form.get("event_type")
         }
         mongo.db.events.update({"_id": ObjectId(event_id)}, submit)
-        flash("Event Successfully updated!!!", "message")
+        flash("Event Successfully updated!", "message")
 
     event = mongo.db.events.find_one({"_id": ObjectId(event_id)})
     return render_template("edit_event.html", event=event)
@@ -325,7 +325,7 @@ def edit_climb(climb_id):
             "created_by": session["user"]
         }
         mongo.db.climbs.update({"_id": ObjectId(climb_id)}, edit)
-        flash("Climbing request updated", "message")
+        flash("Climbing request updated!", "message")
 
     climb = mongo.db.climbs.find_one({"_id": ObjectId(climb_id)})
     return render_template("edit_climb.html", climb=climb)
