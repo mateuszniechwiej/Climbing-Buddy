@@ -104,74 +104,79 @@ Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) an
 
 # Users Stories Test
 
-1. As a user, I want to understand the purpose of this website.
+1. As a user, I want to understand the purpose of this website. :heavy_check_mark:
 *  On arrival to the home page, the user can find the title of the page with description and two buttons. One to register and the other for login.There are also navbar links for events,register and login. And in the footer an icon with anchor email link to contact the site owner. 
 
 ![home](static/media_README/home.PNG)
 
-2. As a user, I want to find an easy navigate website and find all the content.
+2. As a user, I want to find an easy navigate website and find all the content. :heavy_check_mark:
  * For unregistered users:
-    - navbar with links for Home,Events,Register and Login pages.
-    - login available from home page and a link under register form.
-    - register button available on home page and link under login form.
+    - navbar with links for Home, Events, Register and Login pages. :heavy_check_mark:
+    - login available from home page and a link under register form. :heavy_check_mark:
+    - register button available on home page and link under login form. :heavy_check_mark:
 
 ![login](static/media_README/login.PNG)
 ![register](static/media_README/register.PNG)
 
 * For registered users:
-     - navbar with links for Home,Events,Find Climber, Profile and Logout functionality.
-     - add climb,filter climbs and functionality to respond to climbing request on "Find Climber" page.
-     - profile with username and email
-     - events page with search words in events cards. 
-     - places autocomplete for all locations input fields for better user experience.
+     - navbar with links for Home, Events, Find Climber, Profile and Logout functionality. :heavy_check_mark:
+     - add climb,filter climbs and functionality to respond to climbing request on "Find Climber" page. :heavy_check_mark:
+     - profile with username and email displaying :heavy_check_mark:
+     - events page with search words in events cards.  :heavy_check_mark:
+     - places autocomplete for all locations input fields for better user experience.All fields tested :heavy_check_mark:
 
 
 
-3. As a user, I want the website to be responsive and allow me to use it comfortably on all size devices(particularly mobiles phones).
+3. As a user, I want the website to be responsive and allow me to use it comfortably on all size devices(particularly mobiles phones). :heavy_check_mark:
 * [Responsivnes Testing](#responsivnes-testing)
 
 
-4. As a user, I want to be able to register to the website and then create a request to look for a climbing partner.
-    - registration button on home page available and working
-    - navbar with registration link on all pages available and tested
-    - registration link under login form tested
+4. As a user, I want to be able to register to the website and then create a request to look for a climbing partner. :heavy_check_mark:
+    - registration button on Home page available. :heavy_check_mark:
+    - navbar with registration link on all pages available and tested :heavy_check_mark:
+    - registration link under login form tested :heavy_check_mark:
 
     Looking for climbing partner:
-    - Find Climber in navbar link available and tested from all pages.
-    - add climb within "Find Climber" page tested and working
-    - delete,edit and add climb functionality tested.
+    - Find Climber in navbar link available and tested from all pages. :heavy_check_mark:
+    - add climb within "Find Climber" page tested. :heavy_check_mark:
+    - delete, edit and add climb functionality tested for admin and other logged in users.(Flash messages displaying correctly) :heavy_check_mark:
+      * after pressing the "add climb" button flash message `"Climb added"` is being displayed and the newly created climb card is available. :heavy_check_mark:
+      * after pressing `delete` button modal confirming deletation is showing. :heavy_check_mark:
+      ![delete climb](static/media_README/delete_climb.PNG)
+      * when `DELETE` button pressed flash message("Climb removed") displayed. :heavy_check_mark:
 
-5. As a user, I want to see if anyone created a request for a climbing partner.
+5. As a user, I want to see if anyone created a request for a climbing partner. :heavy_check_mark:
 
-    - Find Climber list of climbs available with the date of climb name, type of climbing, and if the equipment is provided available.
+    - Find Climber list of climbs available with the date of climb name, type of climbing, and if the equipment is provided. :heavy_check_mark:
 
-    - button to get more info tested and working
+    - button `more info` tested. :heavy_check_mark:
 
-    - inside more info "read climber message working
+    - inside more info `read climber message` tested :heavy_check_mark:
 
-    - contact climber opening modal with focus on message working.
+    - contact climber opening modal with focus on message. :heavy_check_mark:
 
-    - send a message in modal giving confirmation of the message sent.
+    - send a message in modal giving confirmation of the message sent. :heavy_check_mark:
 
      ![sent message](static/media_README/sent.PNG)
 
-6. As a user, I want to be able to select the requirements I have for a climbing person I'm looking for(skills, equipment and what type of climbing I want to do that day).
+6. As a user, I want to be able to select the requirements I have for a climbing person I'm looking for(skills, equipment and what type of climbing I want to do that day). :heavy_check_mark:
 
-    - from the Find Climber link button add climb working
+    - from the Find Climber link button "add climb" tested :heavy_check_mark:
 
-    - inside add climb page: date, climbing type, providing equipment switch button and message input field available.
+    - inside add climb page: date, climbing type, providing equipment switch button and message input field available. :heavy_check_mark:
+    - after pressing the "add climb" button flash message `"Climb added"` is being displayed and the newly created climb card is available. :heavy_check_mark:
 
-7. As a user, I would like to get notified once a person accepted my request.
-    - an email with the user name, message and interested user email address would be send using email.js.
+7. As a user, I would like to get notified once a person accepted my request. :heavy_check_mark:
+    - an email with the user name, message and interested user email address would be send using email.js. :heavy_check_mark:
 
 ![emailjs](static/media_README/emailJS.png)
 
-8. As a user, I want to find about any climbing events taking place.
-    - event page available for all website users with a search bar to look for words in the events cards tested and working.
-    Comments(admin add event climb functionality tested and working)
+8. As a user, I want to find about any climbing events taking place. :heavy_check_mark:
+    - event page available for all website users with a search bar to look for words in the events cards tested, :heavy_check_mark:
+    Comments(admin add/edit event climb functionality tested and working) :heavy_check_mark:
 
-9. As a user, I want to be able to contact the site owner for any questions or suggestions I might have.
-    - email link icon available on all pages in the footer tested for registered and unregistered users.
+9. As a user, I want to be able to contact the site owner for any questions or suggestions I might have. :heavy_check_mark:
+    - email link icon available on all pages in the footer tested for registered and unregistered users. :heavy_check_mark:
 
 # Site Goals Test
 
@@ -220,3 +225,6 @@ Comments: Update colour palette after testing(chnage from #f2f2f2 to #fafafa) an
  - after pressing logo, the user is being redirected to the home page(for logged users it would be different content then for not logged users) :heavy_check_mark:
 
  - Tested on all pages(for logged users,admin login and unregistered users) :heavy_check_mark:
+
+ 6. Logout functionality:
+ - - Tested during user and site goals testing(after logout we are redirected to login page with a flash message `"You've been logged out. See you again"`) :heavy_check_mark:
